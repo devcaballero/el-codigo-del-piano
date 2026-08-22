@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./vendor/react.production.min.js"></script>
+<script src="./vendor/react-dom.production.min.js"></script>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./_ds/organic-253c5260-2d65-466a-8a5e-f0e151004a6a/styles.css">
+<link rel="stylesheet" href="./course.css">
+</head>
+<body>
+  <nav class="nav" style="max-width:1000px;margin:0 auto;" aria-label="Curso">
+    <a class="nav-brand" href="./index.html">El Código del Piano</a>
+    <span class="tag tag-neutral">Teoría visual desde cero</span>
+    <span class="text-muted" style="font-size:13px;">Capítulo 3</span>
+    <span class="course-nav-links">
+      <a href="./Capitulo%202%20-%20La%20Arquitectura%20del%20Acorde.dc.html">Anterior</a>
+      <a href="./index.html">Inicio</a>
+      <a href="./Capitulo%204%20-%20El%20Color%20y%20la%20Gravedad.dc.html">Siguiente</a>
+    </span>
+  </nav>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="./_ds/organic-253c5260-2d65-466a-8a5e-f0e151004a6a/styles.css">
+  <link rel="stylesheet" href="./course.css">
+  <script src="./_ds/organic-253c5260-2d65-466a-8a5e-f0e151004a6a/_ds_bundle.js"></script>
+  <style>
+    @keyframes revealUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+    .chap-scroll::-webkit-scrollbar { height: 8px; }
+    .chap-scroll::-webkit-scrollbar-thumb { background: var(--color-neutral-300); border-radius: 999px; }
+    a { color: var(--color-accent-700); }
+    a:hover { color: var(--color-accent); }
+  </style>
+</helmet>
+<div style="min-height:100vh;background:var(--color-bg);">
+
+
+
+  <article style="max-width:880px;margin:0 auto;padding:0 28px 120px;">
+
+    <!-- HERO -->
+    <header style="padding:48px 0 24px;">
+      <span class="tag tag-accent" style="margin-bottom:20px;">Capítulo 3</span>
+      <h1 style="font-size:58px;line-height:1.02;margin:16px 0 10px;max-width:14ch;">La Conexión Inteligente</h1>
+      <p style="font-size:22px;color:var(--color-accent-700);font-family:var(--font-heading);margin-bottom:28px;">Inversiones, Diatonismo y Conducción de Voces</p>
+      <p style="font-size:18px;max-width:62ch;">En los capítulos anteriores aprendiste a orientarte en el teclado, medir distancias y construir tríadas mayores y menores. Ahora conectaremos esas estructuras para formar progresiones fluidas.</p>
+      <p style="font-size:18px;max-width:62ch;">Cuando los acordes se presentan siempre en estado fundamental, la mano puede verse obligada a realizar desplazamientos amplios. Las <strong>inversiones</strong> permiten reorganizar sus notas para mantenerlas dentro de una zona próxima del teclado. La <strong>conducción de voces</strong> añade un criterio musical: conservar las notas comunes y mover las demás de forma clara y económica.</p>
+      <p style="font-size:18px;max-width:62ch;">El objetivo no es encontrar una única posición correcta, sino comprender cómo se desplaza cada nota de un acorde al siguiente.</p>
+    </header>
+
+    <div class="hr" style="margin:16px 0 44px;"></div>
+
+    <!-- SECTION 1 -->
+    <section style="margin-bottom:72px;">
+      <div style="display:flex;gap:18px;align-items:baseline;margin-bottom:8px;">
+        <span style="flex:none;width:46px;height:46px;border-radius:999px;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-size:22px;display:grid;place-items:center;">1</span>
+        <h2 style="font-size:34px;">Las inversiones de una tríada</h2>
+      </div>
+      <div style="padding-left:64px;">
+        <p>Una <strong>inversión</strong> se produce cuando una nota distinta de la fundamental aparece como la nota más grave del acorde.</p>
+        <p>La <strong>fundamental</strong> continúa dando nombre al acorde, aunque no se encuentre en el bajo. Por ejemplo, las notas E–G–C siguen formando un acorde de C mayor porque contienen la misma estructura básica que C–E–G.</p>
+        <p>En una tríada existen tres estados posibles, determinados por la nota más grave:</p>
+        <div style="display:flex;flex-direction:column;gap:10px;margin:16px 0;">
+          <div style="display:flex;gap:12px;align-items:center;"><span class="tag tag-accent" style="flex:none;">Fundamental en el bajo</span><span>→ estado fundamental</span></div>
+          <div style="display:flex;gap:12px;align-items:center;"><span class="tag tag-accent-2" style="flex:none;">Tercera en el bajo</span><span>→ primera inversión</span></div>
+          <div style="display:flex;gap:12px;align-items:center;"><span class="tag tag-neutral" style="flex:none;">Quinta en el bajo</span><span>→ segunda inversión</span></div>
+        </div>
+
+        <h3 style="margin-top:32px;">Los tres estados de C mayor</h3>
+        <p>La nota situada después de la barra indica el bajo. La fundamental sigue siendo C en los tres casos; lo que cambia es qué nota suena en el registro más grave.</p>
+        <figure class="chap-scroll" style="overflow-x:auto;margin:22px 0;">{{ invStates }}</figure>
+
+        <h3 style="margin-top:32px;">Inversión y disposición no son lo mismo</h3>
+        <p>Una tríada tiene tres estados de inversión, pero puede adoptar muchas <strong>disposiciones</strong> diferentes. Sus notas pueden cambiar de octava, separarse o duplicarse sin que necesariamente cambie la inversión.</p>
+        <p>Estas dos disposiciones de C mayor están <strong>ambas en estado fundamental</strong>, porque C es la nota más grave en las dos:</p>
+        <figure style="margin:22px 0;">{{ dispNode }}</figure>
+        <div class="card" style="background:var(--color-surface);">
+          <p style="margin:0;">Para identificar una inversión no basta con observar el orden de las letras. Debes saber cuál es la nota que realmente suena en el <strong>registro más grave</strong>. La inversión conserva la fundamental y la cualidad del acorde, pero modifica el bajo, la sonoridad y su grado de estabilidad.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2 -->
+    <section style="margin-bottom:72px;">
+      <div style="display:flex;gap:18px;align-items:baseline;margin-bottom:8px;">
+        <span style="flex:none;width:46px;height:46px;border-radius:999px;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-size:22px;display:grid;place-items:center;">2</span>
+        <h2 style="font-size:34px;">Los acordes diatónicos de la escala mayor</h2>
+      </div>
+      <div style="padding-left:64px;">
+        <p>En el Capítulo 1 construimos la escala de C mayor. Ahora formaremos una tríada sobre cada grado usando exclusivamente las notas de esa escala: partimos de cada nota y seleccionamos <strong>una nota sí y otra no</strong>. Estas tríadas se llaman <strong>acordes diatónicos</strong> porque están construidas únicamente con las notas de la tonalidad.</p>
+        <div class="chap-scroll" style="overflow-x:auto;margin:20px 0;">
+          <table class="table" style="min-width:560px;">
+            <thead><tr><th>Grado</th><th>Símbolo</th><th>Notas</th><th>Cualidad</th></tr></thead>
+            <tbody>
+              <tr><td><span style="font-family:var(--font-heading);color:var(--color-accent-700);font-size:16px;">I</span></td><td style="font-weight:700;">C</td><td>C – E – G</td><td><span class="tag tag-accent">Mayor</span></td></tr>
+              <tr><td><span style="font-family:var(--font-heading);color:var(--color-accent-2-700);font-size:16px;">ii</span></td><td style="font-weight:700;">Dm</td><td>D – F – A</td><td><span class="tag tag-accent-2">Menor</span></td></tr>
+              <tr><td><span style="font-family:var(--font-heading);color:var(--color-accent-2-700);font-size:16px;">iii</span></td><td style="font-weight:700;">Em</td><td>E – G – B</td><td><span class="tag tag-accent-2">Menor</span></td></tr>
+              <tr><td><span style="font-family:var(--font-heading);color:var(--color-accent-700);font-size:16px;">IV</span></td><td style="font-weight:700;">F</td><td>F – A – C</td><td><span class="tag tag-accent">Mayor</span></td></tr>
+              <tr><td><span style="font-family:var(--font-heading);color:var(--color-accent-700);font-size:16px;">V</span></td><td style="font-weight:700;">G</td><td>G – B – D</td><td><span class="tag tag-accent">Mayor</span></td></tr>
+              <tr><td><span style="font-family:var(--font-heading);color:var(--color-accent-2-700);font-size:16px;">vi</span></td><td style="font-weight:700;">Am</td><td>A – C – E</td><td><span class="tag tag-accent-2">Menor</span></td></tr>
+              <tr><td><span style="font-family:var(--font-heading);color:var(--color-neutral-700);font-size:16px;">vii°</span></td><td style="font-weight:700;">Bdim</td><td>B – D – F</td><td><span class="tag tag-neutral">Disminuido</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Los números romanos indican el grado sobre el que se construye cada acorde. Las <strong>mayúsculas</strong> son tríadas mayores (I, IV, V); las <strong>minúsculas</strong>, tríadas menores (ii, iii, vi); y la minúscula con <strong>°</strong> es la tríada disminuida (vii°). La sucesión de cualidades es la misma en cualquier escala mayor:</p>
+        <div style="margin:18px 0;">{{ romanPattern }}</div>
+        <p>Este patrón se explica mediante las distancias internas de cada tríada:</p>
+        <div style="display:flex;flex-wrap:wrap;gap:14px;margin:18px 0;">{{ badgeMayor }}{{ badgeMenor }}{{ badgeDim }}</div>
+        <p>Los acordes diatónicos forman el material armónico básico de una tonalidad. Según el contexto, pueden aportar estabilidad, preparación, movimiento o tensión.</p>
+      </div>
+    </section>
+
+    <!-- SECTION 3 -->
+    <section style="margin-bottom:72px;">
+      <div style="display:flex;gap:18px;align-items:baseline;margin-bottom:8px;">
+        <span style="flex:none;width:46px;height:46px;border-radius:999px;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-size:22px;display:grid;place-items:center;">3</span>
+        <h2 style="font-size:34px;">La progresión I–V–vi–IV</h2>
+      </div>
+      <div style="padding-left:64px;">
+        <p>La secuencia <strong>I–V–vi–IV</strong> es una de las progresiones más utilizadas en distintos repertorios de música popular. En C mayor corresponde a <strong>C – G – Am – F</strong>. Su funcionamiento puede entenderse como un ciclo:</p>
+        <figure class="chap-scroll" style="overflow-x:auto;margin:24px 0;">{{ progNode }}</figure>
+        <p>El acorde V suele crear una fuerte expectativa de regreso a I. En esta progresión, sin embargo, V conduce primero a vi: el movimiento evita temporalmente la resolución más directa y permite que la secuencia continúe. Al cerrar el ciclo, IV regresa a I, restableciendo el centro tonal sin producir necesariamente una conclusión definitiva, lo que facilita la repetición de la progresión.</p>
+        <p class="text-muted" style="font-size:14px;">Estas funciones no son etiquetas rígidas. El efecto de cada acorde también depende del ritmo, la melodía, el registro, la duración y el estilo musical.</p>
+      </div>
+    </section>
+
+    <!-- SECTION 4 -->
+    <section style="margin-bottom:72px;">
+      <div style="display:flex;gap:18px;align-items:baseline;margin-bottom:8px;">
+        <span style="flex:none;width:46px;height:46px;border-radius:999px;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-size:22px;display:grid;place-items:center;">4</span>
+        <h2 style="font-size:34px;">Qué significa conducir las voces</h2>
+      </div>
+      <div style="padding-left:64px;">
+        <p>La <strong>conducción de voces</strong> consiste en seguir el recorrido individual de cada nota cuando pasamos de un acorde al siguiente.</p>
+        <p>Una <strong>voz</strong> es cada línea creada por una nota del primer acorde y su movimiento hacia una nota del acorde siguiente. No tiene que ser una voz cantada: en el piano, cada dedo puede representar temporalmente una de esas líneas. Una conducción básica y eficiente suele aplicar dos criterios:</p>
+        <div style="display:flex;flex-direction:column;gap:12px;margin:16px 0;">
+          <div class="card elev-sm" style="flex-direction:row;align-items:center;gap:16px;border-left:6px solid var(--color-accent-2);"><span style="flex:none;width:34px;height:34px;border-radius:999px;background:var(--color-accent-2);color:var(--color-bg);font-family:var(--font-heading);display:grid;place-items:center;">1</span><span><strong>Conservar las notas comunes</strong> cuando resulte conveniente.</span></div>
+          <div class="card elev-sm" style="flex-direction:row;align-items:center;gap:16px;border-left:6px solid var(--color-accent);"><span style="flex:none;width:34px;height:34px;border-radius:999px;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);display:grid;place-items:center;">2</span><span><strong>Mover las demás notas por distancias pequeñas</strong> hacia las notas del acorde siguiente.</span></div>
+        </div>
+        <p>Mantener una nota común es una estrategia, no una obligación. La pregunta central es:</p>
+        <blockquote style="margin:16px 0;padding:16px 22px;border-left:4px solid var(--color-accent);background:var(--color-accent-100);border-radius:0 16px 16px 0;font-family:var(--font-heading);font-size:19px;color:var(--color-accent-800);">¿Cómo puede llegar cada nota al acorde siguiente mediante un movimiento claro y controlado?</blockquote>
+      </div>
+    </section>
+
+    <!-- SECTION 5 -->
+    <section style="margin-bottom:72px;">
+      <div style="display:flex;gap:18px;align-items:baseline;margin-bottom:8px;">
+        <span style="flex:none;width:46px;height:46px;border-radius:999px;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-size:22px;display:grid;place-items:center;">5</span>
+        <h2 style="font-size:34px;">Primer enlace: de C a G/B</h2>
+      </div>
+      <div style="padding-left:64px;">
+        <p>Comenzamos con C mayor en estado fundamental (<strong>C – E – G</strong>) y queremos enlazarlo con G mayor (<strong>G – B – D</strong>). Ambos acordes comparten la nota <strong>G</strong>. Podemos conservar G y mover las otras dos voces hacia las notas más próximas del nuevo acorde:</p>
+        <figure class="chap-scroll" style="overflow-x:auto;margin:24px 0;">{{ firstLinkVL }}</figure>
+        <p>El acorde resultante, ordenado de grave a agudo, es <strong>B – D – G</strong>. Estas notas forman G mayor, pero B —la tercera del acorde— está en el bajo. Por tanto, G está en <strong>primera inversión</strong>:</p>
+        <figure style="margin:22px 0;">{{ firstLinkResult }}</figure>
+        <p>No hemos cambiado la identidad de G mayor. Solo hemos utilizado una inversión que permite alcanzarlo con movimientos más cortos.</p>
+      </div>
+    </section>
+
+    <!-- SECTION 6 -->
+    <section style="margin-bottom:72px;">
+      <div style="display:flex;gap:18px;align-items:baseline;margin-bottom:8px;">
+        <span style="flex:none;width:46px;height:46px;border-radius:999px;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-size:22px;display:grid;place-items:center;">6</span>
+        <h2 style="font-size:34px;">Conducción de la progresión completa</h2>
+      </div>
+      <div style="padding-left:64px;">
+        <p>Aplicamos el mismo criterio a toda la progresión <strong>I–V–vi–IV</strong>. Una posible conducción mantiene las tres voces dentro de una zona reducida del teclado. Sigue cada voz por separado a lo largo del ciclo:</p>
+        <figure class="chap-scroll" style="overflow-x:auto;margin:24px 0;">{{ fullVL }}</figure>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin:18px 0;">
+          <div class="card elev-sm"><div class="card-kicker">C → G/B</div><p class="card-body" style="opacity:1;">G permanece · E baja 1 tono · C baja 1 semitono</p></div>
+          <div class="card elev-sm"><div class="card-kicker">G/B → Am/C</div><p class="card-body" style="opacity:1;">G sube 1 tono · D sube 1 tono · B sube 1 semitono</p></div>
+          <div class="card elev-sm"><div class="card-kicker">Am/C → F/C</div><p class="card-body" style="opacity:1;">A permanece · E sube 1 semitono · C permanece</p></div>
+          <div class="card elev-sm"><div class="card-kicker">F/C → C</div><p class="card-body" style="opacity:1;">A baja 1 tono · F baja 1 semitono · C permanece</p></div>
+        </div>
+        <div class="card" style="background:var(--color-surface);">
+          <p style="margin:0;">Esta no es la única conducción correcta. Es una disposición especialmente útil para observar el movimiento de las voces y practicar inversiones dentro de una zona reducida del teclado.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7 -->
+    <section style="margin-bottom:72px;">
+      <div style="display:flex;gap:18px;align-items:baseline;margin-bottom:8px;">
+        <span style="flex:none;width:46px;height:46px;border-radius:999px;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-size:22px;display:grid;place-items:center;">7</span>
+        <h2 style="font-size:34px;">Método para identificar una inversión</h2>
+      </div>
+      <div style="padding-left:64px;">
+        <p>Cuando encuentres un acorde cuyas notas no aparecen en el orden habitual, sigue este procedimiento:</p>
+        <ol style="padding-left:22px;margin:0 0 var(--space-3);display:flex;flex-direction:column;gap:7px;">
+          <li>Ordena las notas de grave a agudo.</li>
+          <li>Reorganízalas mentalmente por terceras para identificar la tríada.</li>
+          <li>Encuentra la fundamental.</li>
+          <li>Observa qué nota está en el bajo.</li>
+          <li>Determina la inversión.</li>
+          <li>Escribe el símbolo con barra si corresponde.</li>
+        </ol>
+        <div class="card" style="background:var(--color-accent-2-100);">
+          <p style="margin:0;">Regla de control: <strong>fundamental en el bajo</strong> → estado fundamental · <strong>tercera en el bajo</strong> → primera inversión · <strong>quinta en el bajo</strong> → segunda inversión.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8 — RETO -->
+    <section style="margin-bottom:40px;">
+      <div style="display:flex;gap:18px;align-items:baseline;margin-bottom:8px;">
+        <span style="flex:none;width:46px;height:46px;border-radius:999px;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-size:22px;display:grid;place-items:center;">8</span>
+        <h2 style="font-size:34px;">Reto práctico: inversiones y conducción</h2>
+      </div>
+      <div style="padding-left:64px;">
+        <h4 style="margin-top:8px;">Parte 1 · Identifica la inversión</h4>
+        <p>Estás tocando las notas <strong>C – F – A</strong> en orden ascendente, con C como nota más grave. ¿Qué acorde forman, cuál es su fundamental, qué función cumple C, en qué inversión están y cómo se escribe con barra?</p>
+
+        <h4 style="margin-top:24px;">Parte 2 · Enlaza C con F</h4>
+        <p>Comienza con C mayor en estado fundamental (<strong>C – E – G</strong>) y llega a F mayor usando movimientos pequeños. ¿Qué nota permanece, cómo se mueven las otras dos, en qué orden queda el acorde final y cuál es su símbolo con barra?</p>
+
+        <p style="font-weight:600;margin-top:20px;">Completa antes de consultar la solución:</p>
+        {{ reto }}
+
+        <sc-if value="{{ revealed }}" hint-placeholder-val="{{ false }}">
+          <div style="animation:revealUp .4s ease;margin-top:36px;padding-top:8px;border-top:1px solid var(--color-divider);">
+            <h3 style="color:var(--color-accent-700);">Solución</h3>
+            <h4 style="margin-top:16px;">Parte 1 · C – F – A</h4>
+            <p>Reorganizadas por terceras desde su fundamental, las notas forman <strong>F – A – C</strong>. La fundamental es F; la nota más grave es C, su quinta. Cuando la quinta ocupa el bajo, la tríada está en <strong>segunda inversión</strong>: el símbolo es <strong>F/C</strong>.</p>
+            <figure style="margin:22px 0;">{{ retoSolP1 }}</figure>
+
+            <h4 style="margin-top:24px;">Parte 2 · De C a F/C</h4>
+            <p>La nota común es <strong>C</strong>. La conservamos y movemos las otras dos voces hacia las notas más próximas de F mayor:</p>
+            <figure class="chap-scroll" style="overflow-x:auto;margin:22px 0;">{{ retoSolVL }}</figure>
+            <p>El acorde final, de grave a agudo, es <strong>C – F – A</strong>. La fundamental es F, pero la nota más grave es C (su quinta), así que F mayor queda en <strong>segunda inversión</strong>, con símbolo <strong>F/C</strong>:</p>
+            <figure style="margin:22px 0;">{{ retoSolResult }}</figure>
+            <div class="card" style="background:var(--color-accent-100);">
+              <p style="margin:0;">Con este procedimiento has conectado la construcción de tríadas, las inversiones, el cifrado con barra y la conducción de voces. En el siguiente capítulo incorporaremos la mano izquierda mediante bajos y patrones rítmicos para aplicar estas progresiones a una interpretación más completa.</p>
+            </div>
+          </div>
+        </sc-if>
+      </div>
+    </section>
+
+
+  </article>
+</div>
+</x-dc>
+<div class="course-end">
+    <div class="hr" style="margin:48px 0 24px;"></div>
+    <div class="course-complete">
+      <button type="button" class="btn btn-secondary" data-course-complete="3" aria-pressed="false">Marcar como completado</button>
+      <span class="course-complete-status">Cuando termines, marca el capítulo para ver tu avance en el inicio.</span>
+    </div>
+    <nav class="course-pager" aria-label="Capítulos" style="margin-top:20px;">
+      <a class="btn btn-secondary" href="./Capitulo%202%20-%20La%20Arquitectura%20del%20Acorde.dc.html">Anterior</a>
+      <a class="btn btn-ghost" href="./index.html">Inicio</a>
+      <a class="btn btn-primary" href="./Capitulo%204%20-%20El%20Color%20y%20la%20Gravedad.dc.html">Siguiente · Capítulo 4</a>
+    </nav>
+    <footer style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;color:var(--color-neutral-600);font-size:13px;margin-top:24px;">
+      <span>El Código del Piano — Capítulo 3</span>
+    </footer>
+</div>
+<script src="./course.js"></script>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;resaltarComunes&quot;: {&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Diagramas&quot;}
+}">
+class Component extends DCLogic {
+  state = { answers:['','','','','','','','',''], status:['','','','','','','','',''], revealed:false };
+
+  get COL(){ return {
+    bg:'var(--color-bg)', surf:'var(--color-surface)', text:'var(--color-text)', div:'var(--color-divider)',
+    ac:'var(--color-accent)', ac2:'var(--color-accent-2)',
+    n100:'var(--color-neutral-100)', n200:'var(--color-neutral-200)', n300:'var(--color-neutral-300)', n600:'var(--color-neutral-600)', n700:'var(--color-neutral-700)', n900:'var(--color-neutral-900)',
+    a100:'var(--color-accent-100)', a200:'var(--color-accent-200)', a400:'var(--color-accent-400)', a500:'var(--color-accent-500)', a700:'var(--color-accent-700)', a800:'var(--color-accent-800)',
+    s100:'var(--color-accent-2-100)', s200:'var(--color-accent-2-200)', s400:'var(--color-accent-2-400)', s500:'var(--color-accent-2-500)', s700:'var(--color-accent-2-700)', s800:'var(--color-accent-2-800)'
+  }; }
+  roleCol(role){
+    const C=this.COL;
+    if(role==='fund') return {b:C.a700,f:C.a200,badge:C.ac};
+    if(role==='third') return {b:C.s700,f:C.s200,badge:C.ac2};
+    return {b:C.n700,f:C.n200,badge:C.n700};
+  }
+
+  // ===== FORMULA BADGE (mayor/menor/disminuida) =====
+  formulaBadge(kind){
+    const h=React.createElement, C=this.COL;
+    let a,b,col,tint,deep;
+    if(kind==='mayor'){a='4';b='3';col=C.ac;tint=C.a100;deep=C.a700;}
+    else if(kind==='menor'){a='3';b='4';col=C.ac2;tint=C.s100;deep=C.s700;}
+    else {a='3';b='3';col=C.n600;tint=C.n200;deep=C.n700;}
+    const pill=(t)=>h('span',{style:{width:38,height:38,borderRadius:999,background:col,color:C.bg,fontFamily:'var(--font-heading)',fontSize:19,display:'grid',placeItems:'center'}}, t);
+    return h('div',{style:{display:'inline-flex',flexDirection:'column',gap:8,padding:'14px 20px',borderRadius:22,background:tint,border:'1px solid '+col}},[
+      h('span',{key:'k',style:{fontFamily:'var(--font-heading)',fontSize:12,letterSpacing:'.04em',textTransform:'uppercase',color:deep}}, 'Tríada '+kind),
+      h('div',{key:'r',style:{display:'flex',alignItems:'center',gap:8}},[
+        pill(a), h('span',{key:'p',style:{fontFamily:'var(--font-heading)',fontSize:20,color:deep}},'+'), pill(b),
+        h('span',{key:'s',style:{fontFamily:'var(--font-heading)',fontSize:14,color:C.text,marginLeft:2}},'semitonos')
+      ])
+    ]);
+  }
+
+  // ===== INVERSION CARD (vertical stack, bass at bottom) =====
+  invCard(state, symbol, notes){ // notes grave->agudo [{name,role,f}]
+    const h=React.createElement, C=this.COL;
+    const bubbles = notes.map((nt,i)=>{
+      const rc=this.roleCol(nt.role);
+      const isBass = i===0;
+      return h('div',{key:i,style:{display:'flex',alignItems:'center',gap:10,justifyContent:'center'}},[
+        h('div',{key:'b',style:{width:60,height:60,borderRadius:999,display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',background:rc.f,border:(isBass?'3px solid '+C.n900:'2px solid '+rc.b),color:C.text,boxShadow:isBass?'0 0 0 3px '+C.bg+', 0 3px 8px rgba(0,0,0,.18)':'none'}},[
+          h('span',{key:'n',style:{fontFamily:'var(--font-heading)',fontSize:22,lineHeight:1}}, nt.name),
+          h('span',{key:'f',style:{fontSize:10,marginTop:2,color:rc.b}}, nt.f)
+        ]),
+        isBass?h('span',{key:'t',style:{fontSize:10,fontFamily:'var(--font-heading)',color:C.bg,background:C.n900,padding:'3px 8px',borderRadius:999}},'bajo'):h('span',{key:'sp',style:{width:38}})
+      ]);
+    });
+    return h('div',{className:'card elev-sm',style:{flex:'none',alignItems:'center',gap:12,padding:'18px 20px',minWidth:190}},[
+      h('span',{key:'k',className:'card-kicker',style:{textAlign:'center'}}, state),
+      h('div',{key:'sym',style:{fontFamily:'var(--font-heading)',fontSize:30,color:C.a700}}, symbol),
+      h('div',{key:'stack',style:{display:'flex',flexDirection:'column-reverse',gap:8,marginTop:4}}, bubbles)
+    ]);
+  }
+
+  // ===== DISPOSITION CONTRAST (horizontal rows, bass marked) =====
+  dispRow(notes){ // [{name,role}], first = grave
+    const h=React.createElement, C=this.COL;
+    const items=notes.map((nt,i)=>{
+      const rc=this.roleCol(nt.role); const isBass=i===0;
+      return h('div',{key:i,style:{display:'flex',flexDirection:'column',alignItems:'center',gap:5}},[
+        h('div',{style:{width:58,height:58,borderRadius:999,display:'grid',placeItems:'center',background:rc.f,border:(isBass?'3px solid '+C.n900:'2px solid '+rc.b),fontFamily:'var(--font-heading)',fontSize:22,color:C.text}}, nt.name),
+        isBass?h('span',{className:'tag',style:{background:C.n900,color:C.bg,fontSize:10}},'grave'):h('span',{style:{height:20}})
+      ]);
+    });
+    const row=[]; items.forEach((it,i)=>{ row.push(it); if(i<items.length-1) row.push(h('span',{key:'d'+i,style:{color:C.n300,fontFamily:'var(--font-heading)'}},'–')); });
+    return h('div',{style:{display:'flex',alignItems:'center',gap:10}}, row);
+  }
+  dispNode(){
+    const h=React.createElement, C=this.COL;
+    const one=[{name:'C',role:'fund'},{name:'E',role:'third'},{name:'G',role:'fifth'}];
+    const two=[{name:'C',role:'fund'},{name:'G',role:'fifth'},{name:'E',role:'third'}];
+    const block=(label,notes)=>h('div',{className:'card elev-sm',style:{flex:'1',minWidth:250,gap:10}},[
+      h('div',{key:'l',style:{display:'flex',gap:8,alignItems:'center'}},[
+        h('span',{key:'a',style:{fontFamily:'var(--font-heading)',fontSize:16}}, label),
+        h('span',{key:'t',className:'tag tag-accent'},'estado fundamental')
+      ]),
+      this.dispRow(notes)
+    ]);
+    return h('div',{style:{display:'flex',flexWrap:'wrap',gap:14}},[
+      block('C – E – G',one), block('C – G – E',two)
+    ]);
+  }
+
+  // ===== ROMAN NUMERAL PATTERN =====
+  romanPattern(){
+    const h=React.createElement, C=this.COL;
+    const data=[['I','ac'],['ii','ac2'],['iii','ac2'],['IV','ac'],['V','ac'],['vi','ac2'],['vii°','n']];
+    const col=(k)=> k==='ac'?C.ac : k==='ac2'?C.ac2 : C.n600;
+    const chips=data.map((d,i)=>h('div',{key:i,style:{display:'flex',flexDirection:'column',alignItems:'center',gap:4}},[
+      h('span',{style:{minWidth:52,padding:'8px 10px',borderRadius:14,background:col(d[1]),color:C.bg,fontFamily:'var(--font-heading)',fontSize:16,textAlign:'center'}}, d[0])
+    ]));
+    return h('div',{style:{display:'flex',gap:8,flexWrap:'wrap',alignItems:'center'}}, chips);
+  }
+
+  // ===== I-V-vi-IV PROGRESSION =====
+  progNode(){
+    const h=React.createElement, C=this.COL;
+    const data=[
+      {r:'I',s:'C',n:'C – E – G',fn:'Centro tonal',col:C.ac,tint:C.a100,deep:C.a800},
+      {r:'V',s:'G',n:'G – B – D',fn:'Tensión',col:C.ac,tint:C.a100,deep:C.a800},
+      {r:'vi',s:'Am',n:'A – C – E',fn:'Recepción',col:C.ac2,tint:C.s100,deep:C.s800},
+      {r:'IV',s:'F',n:'F – A – C',fn:'Contraste',col:C.ac2,tint:C.s100,deep:C.s800}
+    ];
+    const card=(d,i)=>h('div',{key:'c'+i,style:{flex:'none',width:150,display:'flex',flexDirection:'column',alignItems:'center',gap:8,padding:'16px 12px',borderRadius:20,background:d.tint,border:'1px solid '+d.col}},[
+      h('span',{key:'r',style:{fontFamily:'var(--font-heading)',fontSize:15,letterSpacing:'.05em',color:d.deep}}, d.r),
+      h('span',{key:'s',style:{fontFamily:'var(--font-heading)',fontSize:34,color:d.deep}}, d.s),
+      h('span',{key:'n',style:{fontSize:13,color:C.text}}, d.n),
+      h('span',{key:'f',style:{fontSize:12,fontFamily:'var(--font-heading)',color:d.deep,marginTop:2}}, d.fn)
+    ]);
+    const arrow=(i)=>h('span',{key:'a'+i,style:{flex:'none',color:C.n600,fontSize:24,alignSelf:'center'}},'→');
+    const row=[]; data.forEach((d,i)=>{ row.push(card(d,i)); if(i<data.length-1) row.push(arrow(i)); });
+    return h('div',{style:{minWidth:'max-content'}},[
+      h('div',{key:'row',style:{display:'flex',alignItems:'center',gap:12}}, row),
+      h('div',{key:'cycle',style:{display:'flex',alignItems:'center',gap:8,marginTop:14}},[
+        h('span',{style:{fontSize:18,color:C.a700}},'↩'),
+        h('span',{className:'tag tag-accent'},'IV vuelve a I — el ciclo se repite')
+      ])
+    ]);
+  }
+
+  // ===== VOICE-LEADING SCHEMATIC =====
+  movePill(m){
+    const h=React.createElement, C=this.COL;
+    const stay = m.k==='stay';
+    const glyph = stay?'':(m.k==='up'?'↑':'↓');
+    const txt = stay?'permanece':(glyph+' '+m.amt);
+    const col = stay?C.s500:C.a500, tint=stay?C.s100:C.a100, deep=stay?C.s700:C.a700;
+    return h(React.Fragment,null,[
+      h('div',{key:'l',style:{width:'100%',height:2,background:C.n300}}),
+      h('div',{key:'p',style:{marginTop:-13,padding:'4px 10px',borderRadius:999,background:tint,border:'1px solid '+col,color:deep,fontFamily:'var(--font-heading)',fontSize:12,whiteSpace:'nowrap'}}, txt)
+    ]);
+  }
+  voiceLeading(chords, moves){
+    const h=React.createElement, C=this.COL;
+    const cw=64, cc=104, lw=118, R=56;
+    const showCommon = this.props.resaltarComunes ?? true;
+    const header=h('div',{key:'h',style:{display:'flex',alignItems:'center',marginBottom:6}}, [
+      h('div',{key:'l',style:{width:lw,flex:'none'}}),
+      ...chords.flatMap((ch,i)=>{
+        const out=[h('div',{key:'c'+i,style:{width:cw,flex:'none',display:'flex',justifyContent:'center'}}, h('span',{className:'tag tag-neutral',style:{fontFamily:'var(--font-heading)',whiteSpace:'nowrap'}}, ch.label))];
+        if(i<chords.length-1) out.push(h('div',{key:'s'+i,style:{width:cc,flex:'none'}}));
+        return out;
+      })
+    ]);
+    const voices=[['sup','Voz superior'],['med','Voz intermedia'],['inf','Voz inferior']];
+    const voiceRow=([key,name],vi)=>{
+      const cells=chords.flatMap((ch,i)=>{
+        const common = showCommon && i>0 && moves[i-1][key].k==='stay';
+        const f=common?C.s200:C.surf, b=common?C.s700:C.div;
+        const out=[h('div',{key:'b'+i,style:{width:cw,flex:'none',display:'flex',justifyContent:'center'}},
+          h('div',{style:{width:R,height:R,borderRadius:999,display:'grid',placeItems:'center',background:f,border:'2px solid '+b,fontFamily:'var(--font-heading)',fontSize:20}}, ch[key]))];
+        if(i<chords.length-1) out.push(h('div',{key:'m'+i,style:{width:cc,flex:'none',display:'flex',flexDirection:'column',alignItems:'center'}}, this.movePill(moves[i][key])));
+        return out;
+      });
+      return h('div',{key:vi,style:{display:'flex',alignItems:'center',margin:'8px 0'}}, [
+        h('div',{key:'l',style:{width:lw,flex:'none',fontFamily:'var(--font-heading)',fontSize:14,color:C.n700}}, name),
+        ...cells
+      ]);
+    };
+    return h('div',{style:{minWidth:'max-content',paddingBottom:6}}, [header, ...voices.map(voiceRow)]);
+  }
+
+  // ===== INTERACTIVE RETO =====
+  setAns(i,v){ const a=this.state.answers.slice(); a[i]=v; this.setState({answers:a}); }
+  norm(s){ return String(s||'').trim().toLowerCase().replace(/\s+/g,'').replace('\u266f','#').replace('\u266d','b').replace('sostenido','#').replace('bemol','b'); }
+  get ACC(){ return [
+    ['fmayor','famayor','f','fa'],      // 0 acorde
+    ['f','fa'],                         // 1 fundamental
+    ['c','do'],                         // 2 bajo
+    ['segunda','2','2a','2da','segundainversion','segundainversión','segundainversion'], // 3 inversion
+    ['f/c'],                            // 4 simbolo
+    ['c','do'],                         // 5 C ->
+    ['f','fa'],                         // 6 E ->
+    ['a','la'],                         // 7 G ->
+    ['f/c']                             // 8 simbolo2
+  ]; }
+  check(){ const st=this.state.answers.map((a,i)=> this.ACC[i].includes(this.norm(a))?'ok':(a?'no':'')); this.setState({status:st}); }
+  reveal(){ this.setState({answers:['F mayor','F','C','Segunda inversión','F/C','C','F','A','F/C'],status:Array(9).fill('ok'),revealed:true}); }
+  reset(){ this.setState({answers:Array(9).fill(''),status:Array(9).fill(''),revealed:false}); }
+
+  field(idx,label,ph,w){
+    const h=React.createElement, C=this.COL; const st=this.state.status[idx];
+    const bd = st==='ok'?C.s500 : st==='no'?C.ac : C.div;
+    const bg = st==='ok'?C.s100 : st==='no'?C.a100 : C.surf;
+    return h('div',{key:idx,className:'field',style:{width:w||160}},[
+      h('label',{key:'l'}, label),
+      h('input',{key:'i',className:'input',value:this.state.answers[idx],placeholder:ph||'',onChange:e=>this.setAns(idx,e.target.value),style:{background:bg,borderColor:bd}})
+    ]);
+  }
+  retoBlock(){
+    const h=React.createElement, C=this.COL;
+    const p1=h('div',{key:'p1',style:{marginBottom:22}},[
+      h('div',{key:'t',style:{display:'flex',gap:10,alignItems:'center',marginBottom:12}},[
+        h('span',{className:'tag tag-accent'},'Parte 1'),
+        h('span',{style:{fontFamily:'var(--font-heading)',fontSize:17}},'C – F – A')
+      ]),
+      h('div',{key:'f',style:{display:'flex',flexWrap:'wrap',gap:14}},[
+        this.field(0,'Acorde','p. ej. F mayor'),
+        this.field(1,'Fundamental','',120),
+        this.field(2,'Bajo','',120),
+        this.field(3,'Inversión','1ª / 2ª',160),
+        this.field(4,'Símbolo con barra','p. ej. F/C',160)
+      ])
+    ]);
+    const p2=h('div',{key:'p2'},[
+      h('div',{key:'t',style:{display:'flex',gap:10,alignItems:'center',marginBottom:12}},[
+        h('span',{className:'tag tag-accent-2'},'Parte 2'),
+        h('span',{style:{fontFamily:'var(--font-heading)',fontSize:17}},'De C – E – G a F mayor')
+      ]),
+      h('div',{key:'f',style:{display:'flex',flexWrap:'wrap',gap:14}},[
+        this.field(5,'C se mueve a…','',130),
+        this.field(6,'E se mueve a…','',130),
+        this.field(7,'G se mueve a…','',130),
+        this.field(8,'Símbolo con barra','p. ej. F/C',160)
+      ])
+    ]);
+    const anyNo=this.state.status.includes('no');
+    const allOk=this.state.status.every(s=>s==='ok');
+    const msg = allOk?{t:'¡Correcto! Ambas partes resueltas: F mayor en segunda inversión (F/C).',c:C.s700}
+      : anyNo?{t:'Revisa las casillas marcadas. Recuerda reorganizar por terceras y conservar la nota común C.',c:C.a700}:null;
+    return h('div',{style:{margin:'16px 0 8px'}},[
+      h('div',{key:'card',className:'card',style:{background:C.surf,gap:8}},[p1,p2]),
+      h('div',{key:'btns',style:{display:'flex',gap:10,flexWrap:'wrap',marginTop:16}},[
+        h('button',{key:'c',className:'btn btn-secondary',onClick:()=>this.check()},'Comprobar respuestas'),
+        h('button',{key:'r',className:'btn btn-primary',onClick:()=>this.reveal()},'Revelar solución'),
+        h('button',{key:'x',className:'btn btn-ghost',onClick:()=>this.reset()},'Reiniciar')
+      ]),
+      msg?h('p',{key:'m',style:{marginTop:12,fontWeight:600,color:msg.c}}, msg.t):null
+    ]);
+  }
+
+  renderVals(){
+    return {
+      revealed: this.state.revealed,
+      badgeMayor: this.formulaBadge('mayor'),
+      badgeMenor: this.formulaBadge('menor'),
+      badgeDim: this.formulaBadge('disminuida'),
+      romanPattern: this.romanPattern(),
+      progNode: this.progNode(),
+      invStates: React.createElement('div',{style:{display:'flex',gap:16,minWidth:'max-content'}},[
+        this.invCard('Estado fundamental','C',[{name:'C',role:'fund',f:'1'},{name:'E',role:'third',f:'3'},{name:'G',role:'fifth',f:'5'}]),
+        this.invCard('Primera inversión','C/E',[{name:'E',role:'third',f:'3'},{name:'G',role:'fifth',f:'5'},{name:'C',role:'fund',f:'1'}]),
+        this.invCard('Segunda inversión','C/G',[{name:'G',role:'fifth',f:'5'},{name:'C',role:'fund',f:'1'},{name:'E',role:'third',f:'3'}])
+      ]),
+      dispNode: this.dispNode(),
+      firstLinkVL: this.voiceLeading(
+        [{label:'C',sup:'G',med:'E',inf:'C'},{label:'G/B',sup:'G',med:'D',inf:'B'}],
+        [{sup:{k:'stay'},med:{k:'down',amt:'1 tono'},inf:{k:'down',amt:'1 semitono'}}]
+      ),
+      firstLinkResult: this.invCard('Primera inversión','G/B',[{name:'B',role:'third',f:'3'},{name:'D',role:'fifth',f:'5'},{name:'G',role:'fund',f:'1'}]),
+      fullVL: this.voiceLeading(
+        [
+          {label:'I · C',sup:'G',med:'E',inf:'C'},
+          {label:'V · G/B',sup:'G',med:'D',inf:'B'},
+          {label:'vi · Am/C',sup:'A',med:'E',inf:'C'},
+          {label:'IV · F/C',sup:'A',med:'F',inf:'C'},
+          {label:'I · C',sup:'G',med:'E',inf:'C'}
+        ],
+        [
+          {sup:{k:'stay'},med:{k:'down',amt:'1 tono'},inf:{k:'down',amt:'1 semitono'}},
+          {sup:{k:'up',amt:'1 tono'},med:{k:'up',amt:'1 tono'},inf:{k:'up',amt:'1 semitono'}},
+          {sup:{k:'stay'},med:{k:'up',amt:'1 semitono'},inf:{k:'stay'}},
+          {sup:{k:'down',amt:'1 tono'},med:{k:'down',amt:'1 semitono'},inf:{k:'stay'}}
+        ]
+      ),
+      reto: this.retoBlock(),
+      retoSolP1: this.invCard('Segunda inversión','F/C',[{name:'C',role:'fifth',f:'5'},{name:'F',role:'fund',f:'1'},{name:'A',role:'third',f:'3'}]),
+      retoSolVL: this.voiceLeading(
+        [{label:'C',sup:'G',med:'E',inf:'C'},{label:'F/C',sup:'A',med:'F',inf:'C'}],
+        [{sup:{k:'up',amt:'1 tono'},med:{k:'up',amt:'1 semitono'},inf:{k:'stay'}}]
+      ),
+      retoSolResult: this.invCard('Segunda inversión','F/C',[{name:'C',role:'fifth',f:'5'},{name:'F',role:'fund',f:'1'},{name:'A',role:'third',f:'3'}])
+    };
+  }
+}
+</script>
+</body>
+</html>

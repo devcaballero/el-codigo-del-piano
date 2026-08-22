@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./vendor/react.production.min.js"></script>
+<script src="./vendor/react-dom.production.min.js"></script>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./_ds/organic-253c5260-2d65-466a-8a5e-f0e151004a6a/styles.css">
+<link rel="stylesheet" href="./course.css">
+</head>
+<body>
+  <nav class="nav" style="max-width:1000px;margin:0 auto;" aria-label="Curso">
+    <a class="nav-brand" href="./index.html">El piano, con lógica</a>
+    <span class="tag tag-neutral">Guía para adultos</span>
+    <span class="text-muted" style="font-size:13px;">Capítulo 2</span>
+    <span class="course-nav-links">
+      <a href="./Capitulo%201%20-%20El%20Mapa%20Invisible.dc.html">Anterior</a>
+      <a href="./index.html">Inicio</a>
+      <a href="./Capitulo%203%20-%20La%20Conexion%20Inteligente.dc.html">Siguiente</a>
+    </span>
+  </nav>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="./_ds/organic-253c5260-2d65-466a-8a5e-f0e151004a6a/styles.css">
+  <link rel="stylesheet" href="./course.css">
+  <script src="./_ds/organic-253c5260-2d65-466a-8a5e-f0e151004a6a/_ds_bundle.js"></script>
+  <style>
+    @keyframes revealUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+    .chap-scroll::-webkit-scrollbar { height: 8px; }
+    .chap-scroll::-webkit-scrollbar-thumb { background: var(--color-neutral-300); border-radius: 999px; }
+    a { color: var(--color-accent-700); }
+    a:hover { color: var(--color-accent); }
+  </style>
+</helmet>
+<div style="min-height:100vh;background:var(--color-bg);">
+
+
+
+  <article style="max-width:880px;margin:0 auto;padding:0 28px 120px;">
+
+    <!-- HERO -->
+    <header style="padding:48px 0 24px;">
+      <span class="tag tag-accent" style="margin-bottom:20px;">Capítulo 2</span>
+      <h1 style="font-size:60px;line-height:1.02;margin:16px 0 10px;max-width:14ch;">La Arquitectura del Acorde</h1>
+      <p style="font-size:22px;color:var(--color-accent-700);font-family:var(--font-heading);margin-bottom:28px;">Enarmonía, Cifrado y Tríadas</p>
+      <p style="font-size:18px;max-width:62ch;">En el capítulo anterior recorrimos el teclado horizontalmente y aprendimos a medir la distancia entre sus teclas mediante <strong>tonos</strong> y <strong>semitonos</strong>. Esa misma unidad de medida nos permitirá ahora construir acordes.</p>
+      <p style="font-size:18px;max-width:62ch;">Una melodía organiza notas a lo largo del tiempo. La armonía estudia cómo se relacionan cuando suenan juntas o se perciben como parte de una misma estructura. No se trata de memorizar posiciones aisladas: si conoces las distancias, puedes deducir las notas de un acorde desde cualquier punto del teclado.</p>
+    </header>
+
+    <div class="hr" style="margin:16px 0 44px;"></div>
+
+    <!-- SECTION 1 -->
+    <section style="margin-bottom:72px;">
+      <div style="display:flex;gap:18px;align-items:baseline;margin-bottom:8px;">
+        <span style="flex:none;width:46px;height:46px;border-radius:999px;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-size:22px;display:grid;place-items:center;">1</span>
+        <h2 style="font-size:34px;">Sostenidos, bemoles y enarmonía</h2>
+      </div>
+      <div style="padding-left:64px;">
+        <p>Antes de construir acordes, necesitamos comprender por qué una misma tecla puede recibir nombres diferentes.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:28px;margin:22px 0;">
+          <figure style="margin:0;"><figcaption style="margin:0 0 10px;font-size:13px;">Un <strong>sostenido (♯)</strong> eleva una nota un semitono:</figcaption>{{ semiUp }}</figure>
+          <figure style="margin:0;"><figcaption style="margin:0 0 10px;font-size:13px;">Un <strong>bemol (♭)</strong> desciende una nota un semitono:</figcaption>{{ semiDown }}</figure>
+        </div>
+        <p>La tecla situada entre C y D puede nombrarse de dos maneras: <strong>C♯</strong> significa "C elevado un semitono" y <strong>D♭</strong> significa "D descendido un semitono". En el piano, ambos nombres señalan la misma tecla.</p>
+        <p>Las cinco teclas negras de una octava admiten un doble nombre. El sostenido pertenece a la nota de su izquierda; el bemol, a la de su derecha:</p>
+        <figure class="chap-scroll" style="overflow-x:auto;margin:24px 0;">{{ enharmKb }}</figure>
+        <table class="table" style="margin:16px 0 var(--space-3);max-width:520px;">
+          <thead><tr><th>Tecla negra</th><th>Con sostenido</th><th>Con bemol</th></tr></thead>
+          <tbody>
+            <tr><td>Entre C y D</td><td style="color:var(--color-accent-700);font-weight:700;">C♯</td><td style="color:var(--color-accent-2-700);font-weight:700;">D♭</td></tr>
+            <tr><td>Entre D y E</td><td style="color:var(--color-accent-700);font-weight:700;">D♯</td><td style="color:var(--color-accent-2-700);font-weight:700;">E♭</td></tr>
+            <tr><td>Entre F y G</td><td style="color:var(--color-accent-700);font-weight:700;">F♯</td><td style="color:var(--color-accent-2-700);font-weight:700;">G♭</td></tr>
+            <tr><td>Entre G y A</td><td style="color:var(--color-accent-700);font-weight:700;">G♯</td><td style="color:var(--color-accent-2-700);font-weight:700;">A♭</td></tr>
+            <tr><td>Entre A y B</td><td style="color:var(--color-accent-700);font-weight:700;">A♯</td><td style="color:var(--color-accent-2-700);font-weight:700;">B♭</td></tr>
+          </tbody>
+        </table>
+        <p>Esta relación recibe el nombre de <strong>enarmonía</strong>: dos notas tienen nombres y funciones musicales diferentes, pero comparten la misma tecla y, en el sistema habitual del piano, producen el mismo sonido.</p>
+        <p>La enarmonía no se limita a las teclas negras. Un sostenido o un bemol modifica una nota, no un tipo específico de tecla. Por eso también existen estas equivalencias:</p>
+        <div style="margin:16px 0;">{{ enharmExtra }}</div>
+
+        <h3 style="margin-top:32px;">¿Cómo elegimos el nombre correcto?</h3>
+        <p>La elección no depende solamente de la dirección en la que nos movemos. Depende principalmente de la <strong>función</strong> de la nota dentro de una escala o un acorde.</p>
+        <p>Por ejemplo, en la tríada de G menor utilizaremos <strong>B♭</strong> y no <strong>A♯</strong>, aunque ambas denominaciones correspondan a la misma tecla. La nota intermedia es una tercera respecto de G y, por tanto, debe llevar alguna forma de la letra B.</p>
+        <div class="card" style="background:var(--color-accent-2-100);margin-top:8px;">
+          <p style="margin:0;">En el sistema teórico de <strong>temperamento igual</strong>, la octava se divide en doce pasos equivalentes. Esto permite que notas enarmónicas como C♯ y D♭ compartan una misma tecla en el piano.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2 -->
+    <section style="margin-bottom:72px;">
+      <div style="display:flex;gap:18px;align-items:baseline;margin-bottom:8px;">
+        <span style="flex:none;width:46px;height:46px;border-radius:999px;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-size:22px;display:grid;place-items:center;">2</span>
+        <h2 style="font-size:34px;">El cifrado anglosajón aplicado a los acordes</h2>
+      </div>
+      <div style="padding-left:64px;">
+        <p>En el Capítulo 1 aprendimos la correspondencia entre los nombres de las notas y las letras del <strong>cifrado anglosajón</strong>, también llamado cifrado americano:</p>
+        <table class="table" style="margin:16px 0 var(--space-3);">
+          <tbody>
+            <tr><th scope="row" style="text-transform:none;letter-spacing:0;font-size:13px;color:var(--color-text);">Nota</th><td>Do</td><td>Re</td><td>Mi</td><td>Fa</td><td>Sol</td><td>La</td><td>Si</td></tr>
+            <tr><th scope="row" style="text-transform:none;letter-spacing:0;font-size:13px;color:var(--color-text);">Cifrado</th><td style="color:var(--color-accent-700);font-weight:700;">C</td><td style="color:var(--color-accent-700);font-weight:700;">D</td><td style="color:var(--color-accent-700);font-weight:700;">E</td><td style="color:var(--color-accent-700);font-weight:700;">F</td><td style="color:var(--color-accent-700);font-weight:700;">G</td><td style="color:var(--color-accent-700);font-weight:700;">A</td><td style="color:var(--color-accent-700);font-weight:700;">B</td></tr>
+          </tbody>
+        </table>
+        <p>Este sistema es ampliamente utilizado en música popular, jazz, producción musical, software y materiales internacionales. Cuando una letra aparece sola como símbolo de acorde, representa normalmente una <strong>tríada mayor</strong>. Para indicar una tríada menor, se añade una <strong>m</strong> minúscula:</p>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;margin:18px 0;">{{ cifradoCards }}</div>
+        <p>Las alteraciones se escriben junto a la letra de la nota: <strong>C♯</strong> = Do sostenido mayor, <strong>C♯m</strong> = Do sostenido menor, <strong>B♭</strong> = Si bemol mayor, <strong>B♭m</strong> = Si bemol menor. Observa que la cualidad mayor no suele llevar una indicación adicional.</p>
+        <p>Durante esta etapa utilizaremos ambos nombres —<strong>Do mayor (C)</strong>, <strong>Sol menor (Gm)</strong>— para que puedas relacionar cada símbolo con su posición en el teclado.</p>
+      </div>
+    </section>
+
+    <!-- SECTION 3 -->
+    <section style="margin-bottom:72px;">
+      <div style="display:flex;gap:18px;align-items:baseline;margin-bottom:8px;">
+        <span style="flex:none;width:46px;height:46px;border-radius:999px;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-size:22px;display:grid;place-items:center;">3</span>
+        <h2 style="font-size:34px;">La estructura de una tríada</h2>
+      </div>
+      <div style="padding-left:64px;">
+        <p>Un <strong>acorde</strong> es una combinación de notas que se percibe como una unidad armónica. Sus notas pueden sonar simultáneamente o desplegarse de manera sucesiva, como ocurre en un arpegio.</p>
+        <p>En este capítulo trabajaremos con la <strong>tríada</strong>, una estructura formada por tres notas diferentes organizadas por intervalos de tercera. Una tríada en estado fundamental contiene:</p>
+        <div style="display:flex;flex-direction:column;gap:12px;margin:18px 0;">
+          <div class="card elev-sm" style="flex-direction:row;align-items:center;gap:16px;border-left:6px solid var(--color-accent);"><span style="flex:none;width:34px;height:34px;border-radius:999px;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);display:grid;place-items:center;">1</span><span><strong>Fundamental o raíz:</strong> da nombre al acorde.</span></div>
+          <div class="card elev-sm" style="flex-direction:row;align-items:center;gap:16px;border-left:6px solid var(--color-accent-2);"><span style="flex:none;width:34px;height:34px;border-radius:999px;background:var(--color-accent-2);color:var(--color-bg);font-family:var(--font-heading);display:grid;place-items:center;">3</span><span><strong>Tercera:</strong> determina si la tríada es mayor o menor.</span></div>
+          <div class="card elev-sm" style="flex-direction:row;align-items:center;gap:16px;border-left:6px solid var(--color-neutral-600);"><span style="flex:none;width:34px;height:34px;border-radius:999px;background:var(--color-neutral-600);color:var(--color-bg);font-family:var(--font-heading);display:grid;place-items:center;">5</span><span><strong>Quinta:</strong> completa su estructura básica.</span></div>
+        </div>
+        <div class="card" style="background:var(--color-surface);">
+          <p style="margin:0;">Los números <strong>1&nbsp;–&nbsp;3&nbsp;–&nbsp;5</strong> representan las <strong>posiciones interválicas</strong> de las notas respecto de la fundamental. No indican una cantidad de semitonos.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4 -->
+    <section style="margin-bottom:72px;">
+      <div style="display:flex;gap:18px;align-items:baseline;margin-bottom:8px;">
+        <span style="flex:none;width:46px;height:46px;border-radius:999px;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-size:22px;display:grid;place-items:center;">4</span>
+        <h2 style="font-size:34px;">Construcción de una tríada mayor</h2>
+      </div>
+      <div style="padding-left:64px;">
+        <p>Una tríada mayor se construye midiendo desde la fundamental: cuatro semitonos hasta la tercera mayor, y tres semitonos más hasta la quinta justa.</p>
+        <div style="margin:20px 0;">{{ badgeMayor }}</div>
+        <p>Si medimos todas las notas desde la fundamental, obtenemos: fundamental a <strong>0</strong> semitonos, tercera mayor a <strong>+4</strong>, quinta justa a <strong>+7</strong>.</p>
+
+        <h3 style="margin-top:32px;">Ejemplo: Do mayor (C)</h3>
+        <p>Comenzamos en C y contamos cada desplazamiento hacia la derecha. La tecla inicial funciona como <strong>punto cero</strong> y no se cuenta como el primer semitono.</p>
+        <figure class="chap-scroll" style="overflow-x:auto;margin:24px 0;">{{ rulerCmaj }}</figure>
+        <p class="text-muted" style="font-size:13px;margin-top:-8px;">El <strong>paso 0</strong> es la fundamental: es el punto de partida y no se cuenta. La cuenta de semitonos empieza en la siguiente tecla.</p>
+        <p>La tercera mayor de C es <strong>E</strong> (paso 4) y la quinta justa es <strong>G</strong> (paso 7). El resultado es la tríada de <strong>Do mayor (C)</strong>:</p>
+        <figure class="chap-scroll" style="overflow-x:auto;margin:22px 0;">{{ triadCmaj }}</figure>
+      </div>
+    </section>
+
+    <!-- SECTION 5 -->
+    <section style="margin-bottom:72px;">
+      <div style="display:flex;gap:18px;align-items:baseline;margin-bottom:8px;">
+        <span style="flex:none;width:46px;height:46px;border-radius:999px;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-size:22px;display:grid;place-items:center;">5</span>
+        <h2 style="font-size:34px;">Construcción de una tríada menor</h2>
+      </div>
+      <div style="padding-left:64px;">
+        <p>Una tríada menor invierte la distribución interna de la mayor: tres semitonos hasta la tercera menor, y cuatro semitonos más hasta la quinta justa.</p>
+        <div style="margin:20px 0;">{{ badgeMenor }}</div>
+        <p>Medida desde la fundamental: fundamental a <strong>0</strong>, tercera menor a <strong>+3</strong>, quinta justa a <strong>+7</strong>. La estructura se representa como <strong>1&nbsp;–&nbsp;b3&nbsp;–&nbsp;5</strong>. El símbolo <strong>b3</strong> indica que la tercera se encuentra un semitono por debajo de la tercera mayor.</p>
+
+        <h3 style="margin-top:32px;">De Do mayor a Do menor</h3>
+        <p>La tríada de C mayor contiene C – E – G. Para transformarla en C menor, bajamos un semitono <strong>solo la tercera</strong> del acorde. La fundamental y la quinta permanecen en el mismo lugar:</p>
+        <figure style="margin:22px 0;">{{ thirdMoveC }}</figure>
+        <p>Comparación cromática: observa que únicamente se mueve la nota central. En Do mayor la tercera está en el paso 4 (E); en Do menor baja al paso 3 (E♭).</p>
+        <div style="display:flex;flex-direction:column;gap:26px;margin:24px 0;">
+          <figure class="chap-scroll" style="overflow-x:auto;margin:0;"><figcaption style="margin:0 0 10px;font-family:var(--font-heading);font-size:18px;color:var(--color-accent-700);">Do mayor · C – E – G</figcaption>{{ rulerCmaj2 }}</figure>
+          <figure class="chap-scroll" style="overflow-x:auto;margin:0;"><figcaption style="margin:0 0 10px;font-family:var(--font-heading);font-size:18px;color:var(--color-accent-2-700);">Do menor · C – E♭ – G</figcaption>{{ rulerCmin }}</figure>
+        </div>
+        <div class="card" style="background:var(--color-surface);">
+          <p style="margin:0;">En ambos casos, la quinta se encuentra a <strong>siete semitonos</strong> de la fundamental. La única diferencia entre las dos tríadas está en la <strong>posición de la tercera</strong>.</p>
+        </div>
+        <p style="margin-top:18px;">En muchos contextos musicales occidentales, los acordes mayores suelen percibirse como más abiertos o luminosos, mientras que los menores pueden sonar más oscuros o introspectivos. Estas asociaciones no son reglas emocionales absolutas: la percepción también depende del registro, el ritmo, el tempo, la dinámica y el contexto armónico.</p>
+      </div>
+    </section>
+
+    <!-- SECTION 6 -->
+    <section style="margin-bottom:40px;">
+      <div style="display:flex;gap:18px;align-items:baseline;margin-bottom:8px;">
+        <span style="flex:none;width:46px;height:46px;border-radius:999px;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-size:22px;display:grid;place-items:center;">6</span>
+        <h2 style="font-size:34px;">Reto práctico: construye G y Gm</h2>
+      </div>
+      <div style="padding-left:64px;">
+        <p>Ahora aplicarás las dos fórmulas desde una nueva fundamental: <strong>Sol (G)</strong>.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:14px;margin:18px 0;">{{ badgeMayor2 }}{{ badgeMenor2 }}</div>
+
+        <h4 style="margin-top:8px;">Parte 1 · Sol mayor (G)</h4>
+        <ol style="padding-left:22px;margin:0 0 var(--space-3);display:flex;flex-direction:column;gap:6px;">
+          <li>Localiza G en el teclado.</li>
+          <li>Avanza cuatro semitonos para encontrar su tercera mayor.</li>
+          <li>Desde esa tercera, avanza tres semitonos para encontrar la quinta.</li>
+          <li>Comprueba que la quinta se encuentre a siete semitonos de G.</li>
+          <li>Escribe las tres notas del acorde.</li>
+        </ol>
+        <h4 style="margin-top:20px;">Parte 2 · Sol menor (Gm)</h4>
+        <ol style="padding-left:22px;margin:0 0 var(--space-4);display:flex;flex-direction:column;gap:6px;">
+          <li>Conserva la fundamental y la quinta de G mayor.</li>
+          <li>Baja un semitono la tercera del acorde.</li>
+          <li>Decide cuál es el nombre correcto para esa tecla: <strong>A♯</strong> o <strong>B♭</strong>.</li>
+          <li>Justifica tu elección mediante la estructura <strong>1 – b3 – 5</strong>.</li>
+        </ol>
+
+        <p style="font-weight:600;">Completa las dos tríadas antes de consultar la solución:</p>
+        {{ reto }}
+
+        <sc-if value="{{ revealed }}" hint-placeholder-val="{{ false }}">
+          <div style="animation:revealUp .4s ease;margin-top:36px;padding-top:8px;border-top:1px solid var(--color-divider);">
+            <h3 style="color:var(--color-accent-700);">Solución</h3>
+            <h4 style="margin-top:18px;">Sol mayor (G)</h4>
+            <p>Contamos cuatro semitonos desde G para la tercera mayor (<strong>B</strong>) y siete semitonos para la quinta justa (<strong>D</strong>):</p>
+            <figure class="chap-scroll" style="overflow-x:auto;margin:20px 0;">{{ rulerGmaj }}</figure>
+            <figure class="chap-scroll" style="overflow-x:auto;margin:20px 0;">{{ triadGmaj }}</figure>
+
+            <h4 style="margin-top:24px;">Sol menor (Gm)</h4>
+            <p>Para transformar G mayor en G menor, bajamos un semitono la tercera del acorde. La fundamental G y la quinta D permanecen en su lugar:</p>
+            <figure style="margin:20px 0;">{{ thirdMoveG }}</figure>
+            <figure class="chap-scroll" style="overflow-x:auto;margin:20px 0;">{{ rulerGmin }}</figure>
+            <figure class="chap-scroll" style="overflow-x:auto;margin:20px 0;">{{ triadGmin }}</figure>
+
+            <div class="card" style="background:var(--color-accent-100);">
+              <p style="margin:0 0 10px;">La tecla intermedia también puede llamarse A♯, pero <strong>B♭</strong> es la escritura correcta dentro de este acorde. La tríada se organiza por terceras y debe conservar la secuencia de letras: <strong>G – B – D</strong>. Al convertir la tercera mayor en tercera menor, modificamos B con un bemol: <strong>G – B♭ – D</strong>.</p>
+              <p style="margin:0;">Escribir <strong>G – A♯ – D</strong> produciría las mismas teclas en el piano, pero ocultaría la estructura interválica del acorde.</p>
+            </div>
+            <p style="margin-top:18px;">Has construido así dos tríadas desde una misma fundamental utilizando únicamente sus distancias. Esta relación constituye el patrón central del capítulo:</p>
+            <div style="margin:18px 0;">{{ patternBadge }}</div>
+          </div>
+        </sc-if>
+      </div>
+    </section>
+
+
+  </article>
+</div>
+</x-dc>
+<div class="course-end">
+    <div class="hr" style="margin:48px 0 24px;"></div>
+    <div class="course-complete">
+      <button type="button" class="btn btn-secondary" data-course-complete="2" aria-pressed="false">Marcar como completado</button>
+      <span class="course-complete-status">Cuando termines, marca el capítulo para ver tu avance en el inicio.</span>
+    </div>
+    <nav class="course-pager" aria-label="Capítulos" style="margin-top:20px;">
+      <a class="btn btn-secondary" href="./Capitulo%201%20-%20El%20Mapa%20Invisible.dc.html">Anterior</a>
+      <a class="btn btn-ghost" href="./index.html">Inicio</a>
+      <a class="btn btn-primary" href="./Capitulo%203%20-%20La%20Conexion%20Inteligente.dc.html">Siguiente · Capítulo 3</a>
+    </nav>
+    <footer style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;color:var(--color-neutral-600);font-size:13px;margin-top:24px;">
+      <span>El piano, con lógica — Capítulo 2</span>
+    </footer>
+</div>
+<script src="./course.js"></script>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;notacion&quot;: {&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Ambos&quot;,&quot;Cifrado&quot;,&quot;Solfa&quot;],&quot;default&quot;:&quot;Ambos&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Diagramas&quot;}
+}">
+class Component extends DCLogic {
+  state = { answers:['','','','',''], status:['','','','',''], revealed:false };
+
+  get WHITE(){ return ['C','D','E','F','G','A','B']; }
+  get NAMES(){ return {C:'Do',D:'Re',E:'Mi',F:'Fa',G:'Sol',A:'La',B:'Si'}; }
+  get SHARP(){ return {C:true,D:true,E:false,F:true,G:true,A:true,B:false}; }
+  get COL(){ return {
+    bg:'var(--color-bg)', surf:'var(--color-surface)', text:'var(--color-text)', div:'var(--color-divider)',
+    ac:'var(--color-accent)', ac2:'var(--color-accent-2)',
+    n100:'var(--color-neutral-100)', n200:'var(--color-neutral-200)', n300:'var(--color-neutral-300)', n600:'var(--color-neutral-600)', n700:'var(--color-neutral-700)', n900:'var(--color-neutral-900)',
+    a100:'var(--color-accent-100)', a200:'var(--color-accent-200)', a300:'var(--color-accent-300)', a400:'var(--color-accent-400)', a500:'var(--color-accent-500)', a700:'var(--color-accent-700)', a800:'var(--color-accent-800)',
+    s100:'var(--color-accent-2-100)', s200:'var(--color-accent-2-200)', s300:'var(--color-accent-2-300)', s400:'var(--color-accent-2-400)', s500:'var(--color-accent-2-500)', s700:'var(--color-accent-2-700)', s800:'var(--color-accent-2-800)'
+  }; }
+
+  mode(){ return this.props.notacion ?? 'Ambos'; }
+  label(L){
+    const nm=this.NAMES[L], m=this.mode();
+    if(m==='Cifrado') return {big:L};
+    if(m==='Solfa') return {big:nm};
+    return {big:L, small:nm};
+  }
+  wLabel(L, extra){
+    const h=React.createElement, C=this.COL, lab=this.label(L);
+    const kids=[ h('span',{key:'b',style:{fontFamily:'var(--font-heading)',fontSize:16,lineHeight:1,color:extra&&extra.big?extra.big:C.text}}, lab.big) ];
+    if(lab.small) kids.push(h('span',{key:'s',style:{fontSize:10,marginTop:3,color:'color-mix(in srgb,var(--color-text) 55%,transparent)'}}, lab.small));
+    return h('div',{style:{position:'absolute',bottom:8,left:0,right:0,display:'flex',flexDirection:'column',alignItems:'center',pointerEvents:'none'}}, kids);
+  }
+
+  roleCol(role){
+    const C=this.COL;
+    if(role==='fund') return {b:C.a700,f:C.a200,badge:C.ac,label:'Fund.'};
+    if(role==='third') return {b:C.s700,f:C.s200,badge:C.ac2};
+    return {b:C.n700,f:C.n200,badge:C.n700}; // fifth
+  }
+
+  // ===== INTERVAL FRAGMENT (arcs) — shared with Ch.1 =====
+  frag(whites, brackets, active){
+    const h=React.createElement, C=this.COL; active=active||[];
+    const whiteW=82, kbH=104, bw=whiteW*0.58;
+    const hasBig=brackets.some(b=>b.level===1);
+    const zone=hasBig?66:40;
+    const cen={}; const bkeys=[];
+    whites.forEach((L,i)=>{ cen[L]=i*whiteW+whiteW/2; });
+    for(let i=0;i<whites.length-1;i++){ if(this.SHARP[whites[i]]){ const t=whites[i]+'\u266f'; cen[t]=(i+1)*whiteW; bkeys.push({t,x:(i+1)*whiteW}); } }
+    const totalW=whites.length*whiteW;
+    const wEls=whites.map((L,i)=>{
+      const on=active.includes(L);
+      return h('div',{key:'w'+i,style:{position:'absolute',top:zone,left:i*whiteW,width:whiteW-3,height:kbH,background:on?C.a200:'#fffdf8',border:'1px solid '+(on?C.a500:C.div),borderTop:'none',borderRadius:'0 0 8px 8px'}}, this.wLabel(L, on?{big:C.a800}:null));
+    });
+    const bEls=bkeys.map((b,i)=>{
+      const on=active.includes(b.t);
+      return h('div',{key:'bk'+i,style:{position:'absolute',top:zone,left:b.x-bw/2,width:bw,height:kbH*0.6,background:on?C.a400:C.n900,borderRadius:'0 0 6px 6px',display:'flex',alignItems:'flex-end',justifyContent:'center',paddingBottom:5,color:on?C.n900:'#fff',fontSize:9,fontFamily:'var(--font-heading)',zIndex:2}}, b.t);
+    });
+    const arcs=[], labels=[];
+    brackets.forEach((br,i)=>{
+      const x1=cen[br.from], x2=cen[br.to], mid=(x1+x2)/2;
+      const col = br.level===1?C.s700:C.a700;
+      const yB = br.level===1? zone-24 : zone-2;
+      const yT = br.level===1? zone-58 : zone-26;
+      arcs.push(h('path',{key:'a'+i,d:`M ${x1} ${yB} Q ${mid} ${yT} ${x2} ${yB}`,fill:'none',stroke:col,strokeWidth:2,strokeLinecap:'round'}));
+      labels.push(h('text',{key:'t'+i,x:mid,y:yT-4,textAnchor:'middle',fontSize:11,fontFamily:'var(--font-body)',fontWeight:700,fill:col}, br.label));
+    });
+    const svg=h('svg',{width:totalW,height:zone,style:{position:'absolute',top:0,left:0,overflow:'visible'}}, [...arcs,...labels]);
+    return h('div',{style:{position:'relative',width:totalW,height:zone+kbH}}, [svg,...wEls,...bEls]);
+  }
+
+  // ===== ENHARMONIC KEYBOARD =====
+  enharmKb(){
+    const h=React.createElement, C=this.COL;
+    const whiteW=54, kbH=184, bw=whiteW*0.62, topC=true;
+    const sharps={C:'C\u266f',D:'D\u266f',F:'F\u266f',G:'G\u266f',A:'A\u266f'};
+    const flats={C:'D\u266d',D:'E\u266d',F:'G\u266d',G:'A\u266d',A:'B\u266d'};
+    const whites=[]; const blacks=[]; let wi=0;
+    this.WHITE.forEach(L=>{ whites.push({L,x:wi*whiteW}); if(this.SHARP[L]) blacks.push({L,x:(wi+1)*whiteW}); wi++; });
+    if(topC){ whites.push({L:'C',x:wi*whiteW}); wi++; }
+    const totalW=wi*whiteW;
+    const wEls=whites.map((w,i)=>h('div',{key:'w'+i,style:{position:'absolute',top:0,left:w.x,width:whiteW-3,height:kbH,background:'#fffdf8',border:'1px solid '+C.div,borderTop:'none',borderRadius:'0 0 8px 8px'}}, this.wLabel(w.L)));
+    const bEls=blacks.map((b,i)=>h('div',{key:'b'+i,style:{position:'absolute',top:0,left:b.x-bw/2,width:bw,height:kbH*0.62,background:C.n900,borderRadius:'0 0 7px 7px',display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'flex-end',paddingBottom:8,gap:2,zIndex:2}},[
+      h('span',{key:'s',style:{fontSize:11,fontFamily:'var(--font-heading)',color:C.a300}}, sharps[b.L]),
+      h('span',{key:'d',style:{width:14,height:1,background:'rgba(255,255,255,.25)'}}),
+      h('span',{key:'f',style:{fontSize:11,fontFamily:'var(--font-heading)',color:C.s300}}, flats[b.L])
+    ]));
+    return h('div',{style:{position:'relative',width:totalW,height:kbH}}, [...wEls,...bEls]);
+  }
+
+  // ===== NUMBERED SEMITONE RULER =====
+  ruler(cells, arcs){
+    const h=React.createElement, C=this.COL;
+    const w=60, gap=6, pitch=w+gap, arcZone=(arcs&&arcs.length)?54:14;
+    const totalW=cells.length*pitch-gap;
+    const cols=cells.map((cell,i)=>{
+      const rc=cell.chord?this.roleCol(cell.chord.role):null;
+      const badge = cell.chord ? h('div',{style:{minWidth:34,height:24,padding:'0 8px',borderRadius:999,background:rc.badge,color:C.bg,fontFamily:'var(--font-heading)',fontSize:12,display:'grid',placeItems:'center',whiteSpace:'nowrap'}}, cell.chord.label) : h('div',{style:{height:24}});
+      const key = h('div',{style:{width:w,height:66,borderRadius:12,display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',gap:2,
+        background: cell.chord?rc.f:(cell.sharp?C.n900:C.surf),
+        border: cell.chord?('3px solid '+rc.b):('1px solid '+C.div),
+        color: (cell.sharp&&!cell.chord)?'#fff':C.text}},[
+        h('span',{key:'n',style:{fontFamily:'var(--font-heading)',fontSize:cell.name.length>2?13:18,lineHeight:1,textAlign:'center'}}, cell.name)
+      ]);
+      const isZero=i===0;
+      const num = h('div',{style:{display:'flex',flexDirection:'column',alignItems:'center',gap:3}},[
+        h('div',{key:'c',style:{width:24,height:24,borderRadius:999,display:'grid',placeItems:'center',fontFamily:'var(--font-heading)',fontSize:13,
+          background:isZero?C.ac:C.n200, color:isZero?C.bg:C.n700}}, i),
+        isZero?h('span',{key:'z',style:{fontSize:9,color:C.a700,fontWeight:700,textAlign:'center',lineHeight:1.1,width:66}},'punto de partida'):null
+      ]);
+      return h('div',{key:i,style:{width:w,display:'flex',flexDirection:'column',alignItems:'center',gap:8}}, [badge,key,num]);
+    });
+    let svg=null;
+    if(arcs&&arcs.length){
+      const paths=[],labs=[];
+      arcs.forEach((a,i)=>{
+        const x1=a.from*pitch+w/2, x2=a.to*pitch+w/2, mid=(x1+x2)/2;
+        const yB=arcZone-4, yT=8;
+        paths.push(h('path',{key:'p'+i,d:`M ${x1} ${yB} Q ${mid} ${yT} ${x2} ${yB}`,fill:'none',stroke:C.a700,strokeWidth:2,strokeLinecap:'round'}));
+        labs.push(h('text',{key:'t'+i,x:mid,y:yT+2,textAnchor:'middle',fontSize:11,fontFamily:'var(--font-body)',fontWeight:700,fill:C.a700}, a.label));
+      });
+      svg=h('svg',{width:totalW,height:arcZone,style:{position:'absolute',top:0,left:0,overflow:'visible'}},[...paths,...labs]);
+    }
+    return h('div',{style:{position:'relative',width:totalW,minWidth:'max-content',paddingTop:arcs&&arcs.length?arcZone-8:0,paddingBottom:18}}, [svg, h('div',{key:'row',style:{display:'flex',gap:gap}}, cols)]);
+  }
+
+  chordRuler(root){
+    // root: {base letters chromatic sequence, chord map}
+    return this.ruler(root.cells, root.arcs);
+  }
+
+  // ===== TRIAD RESULT STRIP (3 bubbles + interval sums) =====
+  triadStrip(notes, gaps){
+    const h=React.createElement, C=this.COL;
+    const bubble=(nt,i)=>{
+      const rc=this.roleCol(nt.role);
+      return h('div',{key:'b'+i,style:{flex:'none',display:'flex',flexDirection:'column',alignItems:'center',gap:8}},[
+        h('div',{key:'c',style:{width:76,height:76,borderRadius:999,display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',background:rc.f,border:'3px solid '+rc.b,color:C.text}},[
+          h('span',{key:'g',style:{fontFamily:'var(--font-heading)',fontSize:nt.name.length>2?20:26,lineHeight:1}}, nt.name)
+        ]),
+        h('span',{key:'f',style:{fontFamily:'var(--font-heading)',fontSize:16,color:rc.b}}, nt.func)
+      ]);
+    };
+    const conn=(g,i)=>h('div',{key:'g'+i,style:{flex:'none',width:96,display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'flex-start',paddingTop:26}},[
+      h('div',{key:'l',style:{width:'100%',height:2,background:C.n300,position:'relative',top:6}}),
+      h('div',{key:'p',style:{marginTop:0,padding:'4px 12px',borderRadius:999,fontFamily:'var(--font-heading)',fontSize:13,color:C.bg,background:C.ac,zIndex:1,position:'relative',whiteSpace:'nowrap'}}, g)
+    ]);
+    const row=[]; notes.forEach((nt,i)=>{ row.push(bubble(nt,i)); if(i<gaps.length) row.push(conn(gaps[i],i)); });
+    return h('div',{style:{display:'flex',alignItems:'flex-start',minWidth:'max-content',paddingBottom:4}}, row);
+  }
+
+  // ===== FORMULA BADGE =====
+  formulaBadge(kind){
+    const h=React.createElement, C=this.COL;
+    const mayor = kind==='mayor';
+    const a = mayor?'4':'3', b = mayor?'3':'4';
+    const col = mayor?C.ac:C.ac2, tint=mayor?C.a100:C.s100, deep=mayor?C.a700:C.s700;
+    const pill=(t)=>h('span',{style:{width:40,height:40,borderRadius:999,background:col,color:C.bg,fontFamily:'var(--font-heading)',fontSize:20,display:'grid',placeItems:'center'}}, t);
+    return h('div',{style:{display:'inline-flex',flexDirection:'column',gap:8,padding:'16px 22px',borderRadius:22,background:tint,border:'1px solid '+col}},[
+      h('span',{key:'k',style:{fontFamily:'var(--font-heading)',fontSize:13,letterSpacing:'.04em',textTransform:'uppercase',color:deep}}, 'Tríada '+kind),
+      h('div',{key:'r',style:{display:'flex',alignItems:'center',gap:10}},[
+        pill(a), h('span',{key:'p',style:{fontFamily:'var(--font-heading)',fontSize:22,color:deep}},'+'), pill(b),
+        h('span',{key:'s',style:{fontFamily:'var(--font-heading)',fontSize:16,color:C.text,marginLeft:4}},'semitonos')
+      ])
+    ]);
+  }
+
+  patternBadgeEl(){
+    const h=React.createElement, C=this.COL;
+    const row=(label,seq,col)=>h('div',{style:{display:'flex',alignItems:'center',gap:12}},[
+      h('span',{key:'l',style:{width:64,fontFamily:'var(--font-heading)',color:col}}, label),
+      ...seq.map((s,i)=>h('span',{key:i,style:{width:40,height:40,borderRadius:999,background:i===1?col:C.surf,color:i===1?C.bg:C.text,border:'2px solid '+col,fontFamily:'var(--font-heading)',fontSize:16,display:'grid',placeItems:'center'}}, s))
+    ]);
+    return h('div',{style:{display:'inline-flex',flexDirection:'column',gap:12,padding:'18px 24px',borderRadius:22,background:C.surf}},[
+      row('Mayor',['1','3','5'],C.ac),
+      row('Menor',['1','b3','5'],C.ac2)
+    ]);
+  }
+
+  // ===== NOTE CHIPS =====
+  chips(list){
+    const h=React.createElement, C=this.COL;
+    const items=list.map((L,i)=>h('div',{key:i,style:{flex:'none',padding:'8px 12px',borderRadius:14,background:C.surf,border:'1px solid '+C.div,fontFamily:'var(--font-heading)',fontSize:16}}, L));
+    return h('div',{style:{display:'flex',alignItems:'center',gap:10,flexWrap:'wrap'}}, items);
+  }
+  eqChips(){
+    const h=React.createElement, C=this.COL;
+    const eqs=[['B\u266f','C'],['C\u266d','B'],['E\u266f','F'],['F\u266d','E']];
+    return h('div',{style:{display:'flex',gap:12,flexWrap:'wrap'}}, eqs.map((e,i)=>h('div',{key:i,style:{display:'flex',alignItems:'center',gap:8,padding:'8px 14px',borderRadius:999,background:C.surf,border:'1px solid '+C.div}},[
+      h('span',{key:'a',style:{fontFamily:'var(--font-heading)',fontSize:16}}, e[0]),
+      h('span',{key:'e',style:{color:C.a700,fontWeight:700}}, '='),
+      h('span',{key:'b',style:{fontFamily:'var(--font-heading)',fontSize:16}}, e[1])
+    ])));
+  }
+  cifradoEls(){
+    const h=React.createElement, C=this.COL;
+    const data=[['C','Do mayor'],['Cm','Do menor'],['D','Re mayor'],['Dm','Re menor'],['G','Sol mayor'],['Gm','Sol menor']];
+    return data.map((d,i)=>{
+      const minor=/m$/.test(d[0]);
+      return h('div',{key:i,className:'card elev-sm',style:{flex:'none',flexDirection:'row',alignItems:'center',gap:12,padding:'10px 16px',minWidth:150}},[
+        h('span',{key:'s',style:{fontFamily:'var(--font-heading)',fontSize:22,color:minor?C.s700:C.a700}}, d[0]),
+        h('span',{key:'n',style:{fontSize:13,color:C.text}}, d[1])
+      ]);
+    });
+  }
+
+  // ===== INTERACTIVE CHALLENGE =====
+  setAns(i,v){ const a=this.state.answers.slice(); a[i]=v; this.setState({answers:a}); }
+  norm(s){ return String(s||'').trim().toLowerCase().replace(/\s+/g,'').replace('\u266f','#').replace('\u266d','b').replace('sostenido','#').replace('bemol','b'); }
+  check(){
+    const acc=[['b','si'],['d','re'],['bb','sib'],['d','re']];
+    const st=this.state.answers.map((a,i)=> i===4?'' : (acc[i].includes(this.norm(a))?'ok':(a?'no':'')));
+    this.setState({status:st});
+  }
+  reveal(){ this.setState({answers:['B','D','B\u266d','D',''],status:['ok','ok','ok','ok',''],revealed:true}); }
+  reset(){ this.setState({answers:['','','','',''],status:['','','','',''],revealed:false}); }
+
+  retoBlock(){
+    const h=React.createElement, C=this.COL;
+    const fixed=(name,role,func)=>{ const rc=this.roleCol(role); return h('div',{style:{flex:'none',display:'flex',flexDirection:'column',alignItems:'center',gap:6}},[
+      h('div',{style:{width:70,height:70,borderRadius:999,display:'grid',placeItems:'center',background:rc.f,border:'3px solid '+rc.b,fontFamily:'var(--font-heading)',fontSize:24,color:C.text}}, name),
+      h('span',{style:{fontFamily:'var(--font-heading)',fontSize:15,color:rc.b}}, func)
+    ]); };
+    const inp=(idx,func,role)=>{ const rc=this.roleCol(role); const st=this.state.status[idx];
+      const bd = st==='ok'?C.s500 : st==='no'?C.ac : rc.b;
+      const bg = st==='ok'?C.s100 : st==='no'?C.a100 : C.surf;
+      return h('div',{style:{flex:'none',display:'flex',flexDirection:'column',alignItems:'center',gap:6}},[
+        h('input',{value:this.state.answers[idx],onChange:e=>this.setAns(idx,e.target.value),'aria-label':func,style:{width:70,height:70,borderRadius:999,textAlign:'center',fontFamily:'var(--font-heading)',fontSize:22,color:C.text,background:bg,border:'3px solid '+bd,outline:'none'}}),
+        h('span',{style:{fontFamily:'var(--font-heading)',fontSize:15,color:rc.b}}, func)
+      ]); };
+    const dash=()=>h('span',{style:{color:C.n300,fontFamily:'var(--font-heading)',fontSize:26,alignSelf:'flex-start',paddingTop:22}},'–');
+    const rowMaj = h('div',{style:{display:'flex',alignItems:'flex-start',gap:12}},[
+      h('span',{key:'lb',className:'tag tag-accent',style:{alignSelf:'center'}},'G mayor'),
+      fixed('G','fund','1'), dash(), inp(0,'3','third'), dash(), inp(1,'5','fifth')
+    ]);
+    const rowMin = h('div',{style:{display:'flex',alignItems:'flex-start',gap:12}},[
+      h('span',{key:'lb',className:'tag tag-accent-2',style:{alignSelf:'center'}},'G menor'),
+      fixed('G','fund','1'), dash(), inp(2,'b3','third'), dash(), inp(3,'5','fifth')
+    ]);
+    const anyNo=this.state.status.includes('no');
+    const allOk=[0,1,2,3].every(i=>this.state.status[i]==='ok');
+    const msg = allOk?{t:'¡Correcto! Has construido ambas tríadas. La tercera es la única nota que cambia.',c:C.s700}
+      : anyNo?{t:'Revisa las casillas marcadas. Recuerda contar desde el paso 0 y usar B♭ (no A♯) para la tercera menor.',c:C.a700}:null;
+    return h('div',{style:{margin:'18px 0 8px'}},[
+      h('div',{key:'grid',className:'chap-scroll',style:{display:'flex',flexDirection:'column',gap:22,overflowX:'auto',padding:'10px 2px 16px',minWidth:'max-content'}},[rowMaj,rowMin]),
+      h('p',{key:'hint',className:'text-muted',style:{fontSize:12,margin:'2px 0 12px'}}, 'Escribe cada nota en cifrado (B, D…) o solfa (Si, Re…). Para la tercera menor usa el bemol: B♭ o Sib.'),
+      h('div',{key:'btns',style:{display:'flex',gap:10,flexWrap:'wrap'}},[
+        h('button',{key:'c',className:'btn btn-secondary',onClick:()=>this.check()},'Comprobar respuestas'),
+        h('button',{key:'r',className:'btn btn-primary',onClick:()=>this.reveal()},'Revelar solución'),
+        h('button',{key:'x',className:'btn btn-ghost',onClick:()=>this.reset()},'Reiniciar')
+      ]),
+      msg?h('p',{key:'m',style:{marginTop:12,fontWeight:600,color:msg.c}}, msg.t):null
+    ]);
+  }
+
+  // chromatic cell sets for rulers
+  cCells(kind){ // C major / minor
+    const base=['C','C\u266f','D','D\u266f','E','F','F\u266f','G'];
+    const cells=base.map(n=>({name:n,sharp:n.length>1}));
+    cells[0].chord={role:'fund',label:'1'};
+    cells[7].chord={role:'fifth',label:'5'};
+    if(kind==='maj'){ cells[4].chord={role:'third',label:'3'}; }
+    else { cells[3]={name:'E\u266d',sharp:true,chord:{role:'third',label:'b3'}}; }
+    return cells;
+  }
+  gCells(kind){
+    const base=['G','G\u266f','A','A\u266f/B\u266d','B','C','C\u266f/D\u266d','D'];
+    const cells=base.map(n=>({name:n,sharp:/[\u266f]/.test(n)}));
+    cells[0].chord={role:'fund',label:'1'};
+    cells[7].chord={role:'fifth',label:'5'};
+    if(kind==='maj'){ cells[4].chord={role:'third',label:'3'}; }
+    else { cells[3]={name:'B\u266d',sharp:true,chord:{role:'third',label:'b3'}}; }
+    return cells;
+  }
+
+  renderVals(){
+    const arcs=[{from:0,to:4,label:'+4 semitonos'},{from:4,to:7,label:'+3 semitonos'}];
+    return {
+      revealed: this.state.revealed,
+      semiUp: this.frag(['C','D'], [{from:'C',to:'C\u266f',label:'+1 semitono',level:0}], ['C','C\u266f']),
+      semiDown: this.frag(['C','D'], [{from:'D',to:'C\u266f',label:'\u22121 semitono',level:0}], ['D','C\u266f']),
+      enharmKb: this.enharmKb(),
+      enharmExtra: this.eqChips(),
+      cifradoCards: this.cifradoEls(),
+      badgeMayor: this.formulaBadge('mayor'),
+      badgeMenor: this.formulaBadge('menor'),
+      badgeMayor2: this.formulaBadge('mayor'),
+      badgeMenor2: this.formulaBadge('menor'),
+      patternBadge: this.patternBadgeEl(),
+      rulerCmaj: this.ruler(this.cCells('maj'), arcs),
+      rulerCmaj2: this.ruler(this.cCells('maj'), null),
+      rulerCmin: this.ruler(this.cCells('min'), null),
+      rulerGmaj: this.ruler(this.gCells('maj'), arcs),
+      rulerGmin: this.ruler(this.gCells('min'), null),
+      triadCmaj: this.triadStrip([{name:'C',role:'fund',func:'1'},{name:'E',role:'third',func:'3'},{name:'G',role:'fifth',func:'5'}], ['4 sem.','3 sem.']),
+      triadGmaj: this.triadStrip([{name:'G',role:'fund',func:'1'},{name:'B',role:'third',func:'3'},{name:'D',role:'fifth',func:'5'}], ['4 sem.','3 sem.']),
+      triadGmin: this.triadStrip([{name:'G',role:'fund',func:'1'},{name:'B\u266d',role:'third',func:'b3'},{name:'D',role:'fifth',func:'5'}], ['3 sem.','4 sem.']),
+      thirdMoveC: this.frag(['D','E'], [{from:'E',to:'D\u266f',label:'\u22121 semitono (E \u2192 E\u266d)',level:0}], ['E','D\u266f']),
+      thirdMoveG: this.frag(['A','B'], [{from:'B',to:'A\u266f',label:'\u22121 semitono (B \u2192 B\u266d)',level:0}], ['B','A\u266f']),
+      reto: this.retoBlock()
+    };
+  }
+}
+</script>
+</body>
+</html>

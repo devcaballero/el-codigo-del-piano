@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./vendor/react.production.min.js"></script>
+<script src="./vendor/react-dom.production.min.js"></script>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./_ds/organic-253c5260-2d65-466a-8a5e-f0e151004a6a/styles.css">
+<link rel="stylesheet" href="./course.css">
+</head>
+<body>
+  <nav class="nav" style="max-width:1000px;margin:0 auto;" aria-label="Curso">
+    <a class="nav-brand" href="./index.html">El piano, con lógica</a>
+    <span class="tag tag-neutral">Guía para adultos</span>
+    <span class="text-muted" style="font-size:13px;">Capítulo 1</span>
+    <span class="course-nav-links">
+      <a href="./index.html">Inicio</a>
+      <a href="./Capitulo%202%20-%20La%20Arquitectura%20del%20Acorde.dc.html">Siguiente</a>
+    </span>
+  </nav>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="./_ds/organic-253c5260-2d65-466a-8a5e-f0e151004a6a/styles.css">
+  <link rel="stylesheet" href="./course.css">
+  <script src="./_ds/organic-253c5260-2d65-466a-8a5e-f0e151004a6a/_ds_bundle.js"></script>
+  <style>
+    @keyframes revealUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+    .chap-scroll::-webkit-scrollbar { height: 8px; }
+    .chap-scroll::-webkit-scrollbar-thumb { background: var(--color-neutral-300); border-radius: 999px; }
+    a { color: var(--color-accent-700); }
+    a:hover { color: var(--color-accent); }
+  </style>
+</helmet>
+<div style="min-height:100vh;background:var(--color-bg);">
+
+
+
+  <article style="max-width:880px;margin:0 auto;padding:0 28px 120px;">
+
+    <!-- HERO -->
+    <header style="padding:48px 0 24px;">
+      <span class="tag tag-accent" style="margin-bottom:20px;">Capítulo 1</span>
+      <h1 style="font-size:64px;line-height:1.02;margin:16px 0 10px;max-width:12ch;">El Mapa Invisible</h1>
+      <p style="font-size:22px;color:var(--color-accent-700);font-family:var(--font-heading);margin-bottom:28px;">Geografía, Distancias y la Fórmula Mayor</p>
+      <p style="font-size:18px;max-width:60ch;">Bienvenido a tu primer recorrido por el piano. Aprender un instrumento requiere práctica, pero esa práctica se vuelve mucho más eficaz cuando comprendes la lógica que hay detrás de cada movimiento.</p>
+      <p style="font-size:18px;max-width:60ch;">Como adulto, cuentas con una ventaja importante: puedes reconocer patrones, comparar estructuras y relacionar conceptos nuevos con conocimientos anteriores. En esta guía no te limitarás a memorizar posiciones. Aprenderás a deducirlas.</p>
+    </header>
+
+    <div class="hr" style="margin:16px 0 44px;"></div>
+
+    <!-- SECTION 1 -->
+    <section style="margin-bottom:72px;">
+      <div style="display:flex;gap:18px;align-items:baseline;margin-bottom:8px;">
+        <span style="flex:none;width:46px;height:46px;border-radius:999px;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-size:22px;display:grid;place-items:center;">1</span>
+        <h2 style="font-size:34px;">El teclado como mapa visual</h2>
+      </div>
+      <div style="padding-left:64px;">
+        <p>El teclado ofrece una representación especialmente clara de la altura musical, es decir, de la diferencia entre sonidos graves y agudos.</p>
+        <p>Las notas se ordenan de izquierda a derecha:</p>
+        <ul style="list-style:none;padding:0;margin:0 0 var(--space-3);display:flex;flex-direction:column;gap:10px;">
+          <li style="display:flex;gap:12px;align-items:flex-start;"><span style="flex:none;color:var(--color-accent);font-family:var(--font-heading);">→</span><span>Al moverte hacia la derecha, los sonidos se vuelven más <strong>agudos</strong>.</span></li>
+          <li style="display:flex;gap:12px;align-items:flex-start;"><span style="flex:none;color:var(--color-accent-2-700);font-family:var(--font-heading);">←</span><span>Al moverte hacia la izquierda, los sonidos se vuelven más <strong>graves</strong>.</span></li>
+          <li style="display:flex;gap:12px;align-items:flex-start;"><span style="flex:none;color:var(--color-neutral-600);font-family:var(--font-heading);">◆</span><span>Cada tecla ocupa una posición fija dentro de una secuencia que se repite a lo largo del instrumento.</span></li>
+        </ul>
+        <p>Esta disposición permite observar las distancias entre las notas antes incluso de tocarlas. Por eso el piano es una herramienta especialmente útil para comprender escalas, intervalos y acordes, incluso si más adelante deseas aplicar esos conocimientos a otro instrumento.</p>
+      </div>
+    </section>
+
+    <!-- SECTION 2 -->
+    <section style="margin-bottom:72px;">
+      <div style="display:flex;gap:18px;align-items:baseline;margin-bottom:8px;">
+        <span style="flex:none;width:46px;height:46px;border-radius:999px;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-size:22px;display:grid;place-items:center;">2</span>
+        <h2 style="font-size:34px;">Geografía del teclado: el patrón de las teclas negras</h2>
+      </div>
+      <div style="padding-left:64px;">
+        <p>A primera vista, las teclas blancas pueden parecer una sucesión uniforme. Las teclas negras, en cambio, forman un patrón fácil de reconocer: aparecen alternadamente en <strong>grupos de dos</strong> y <strong>grupos de tres</strong>.</p>
+        <figure class="chap-scroll" style="overflow-x:auto;padding:8px 0 4px;margin:24px 0;">{{ geoKb }}</figure>
+        <p>Este patrón se repite en todo el teclado y funciona como una brújula visual:</p>
+        <div style="display:flex;flex-wrap:wrap;gap:14px;margin:16px 0 var(--space-3);">
+          <div class="card elev-sm" style="flex:1;min-width:260px;border-left:6px solid var(--color-accent);">
+            <div class="card-title"><span style="color:var(--color-accent);">Do (C)</span></div>
+            <p class="card-body" style="opacity:1;">se encuentra inmediatamente a la izquierda de cada grupo de <strong>dos</strong> teclas negras.</p>
+          </div>
+          <div class="card elev-sm" style="flex:1;min-width:260px;border-left:6px solid var(--color-accent-2);">
+            <div class="card-title"><span style="color:var(--color-accent-2-700);">Fa (F)</span></div>
+            <p class="card-body" style="opacity:1;">se encuentra inmediatamente a la izquierda de cada grupo de <strong>tres</strong> teclas negras.</p>
+          </div>
+        </div>
+        <p>Una vez localizadas estas dos referencias, puedes identificar las demás teclas blancas siguiendo el orden de las notas:</p>
+        <div style="margin:18px 0;">{{ chipsScale }}</div>
+        <p>Las letras forman parte del <strong>cifrado anglosajón</strong>, un sistema de nomenclatura ampliamente utilizado en música popular, jazz, producción musical, software y materiales internacionales.</p>
+        <p>La correspondencia completa es:</p>
+        <table class="table" style="margin:16px 0 var(--space-3);">
+          <tbody>
+            <tr><th scope="row" style="text-transform:none;letter-spacing:0;font-size:13px;color:var(--color-text);">Nombre</th><td>Do</td><td>Re</td><td>Mi</td><td>Fa</td><td>Sol</td><td>La</td><td>Si</td></tr>
+            <tr><th scope="row" style="text-transform:none;letter-spacing:0;font-size:13px;color:var(--color-text);">Cifrado</th><td style="color:var(--color-accent-700);font-weight:700;">C</td><td style="color:var(--color-accent-700);font-weight:700;">D</td><td style="color:var(--color-accent-700);font-weight:700;">E</td><td style="color:var(--color-accent-700);font-weight:700;">F</td><td style="color:var(--color-accent-700);font-weight:700;">G</td><td style="color:var(--color-accent-700);font-weight:700;">A</td><td style="color:var(--color-accent-700);font-weight:700;">B</td></tr>
+          </tbody>
+        </table>
+        <p>Después de Si (B), la secuencia vuelve a comenzar en Do (C), pero en un registro más agudo. La distancia entre el primer C y el siguiente C recibe el nombre de <strong>octava</strong>.</p>
+        <div style="margin:18px 0;">{{ chipsOctave }}</div>
+      </div>
+    </section>
+
+    <!-- SECTION 3 -->
+    <section style="margin-bottom:72px;">
+      <div style="display:flex;gap:18px;align-items:baseline;margin-bottom:8px;">
+        <span style="flex:none;width:46px;height:46px;border-radius:999px;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-size:22px;display:grid;place-items:center;">3</span>
+        <h2 style="font-size:34px;">Las distancias básicas: semitono y tono</h2>
+      </div>
+      <div style="padding-left:64px;">
+        <p>En música, la distancia entre dos sonidos se denomina <strong>intervalo</strong>. Para comenzar a medir esas distancias en el teclado utilizaremos dos unidades fundamentales: el semitono y el tono.</p>
+
+        <h3 style="margin-top:32px;color:var(--color-accent-700);">El semitono</h3>
+        <p>En el teclado del piano y dentro del sistema occidental habitual de doce notas, el semitono es la distancia entre <strong>dos teclas consecutivas</strong>.</p>
+        <p>Las teclas pueden ser blancas o negras. Lo importante es que no exista ninguna otra tecla entre ellas.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:28px;margin:24px 0;">
+          <figure style="margin:0;"><figcaption style="margin:0 0 10px;font-size:13px;">Entre <strong>Mi (E)</strong> y <strong>Fa (F)</strong> no hay una tecla negra:</figcaption>{{ semiEF }}</figure>
+          <figure style="margin:0;"><figcaption style="margin:0 0 10px;font-size:13px;">También hay un semitono entre <strong>Do (C)</strong> y <strong>Do sostenido (C♯)</strong>:</figcaption>{{ semiCS }}</figure>
+        </div>
+        <p>Por tanto, dos teclas blancas consecutivas no siempre están separadas por la misma distancia. Para medir correctamente debes contar <strong>todas</strong> las teclas, tanto blancas como negras.</p>
+        <p>La secuencia completa de una octava, avanzando siempre por semitonos, es la siguiente:</p>
+        <figure class="chap-scroll" style="overflow-x:auto;margin:20px 0;">{{ chromatic }}</figure>
+        <p>Cada avance representa un semitono. Después de doce semitonos llegamos nuevamente a C, una octava por encima del punto de partida.</p>
+
+        <h3 style="margin-top:36px;color:var(--color-accent-2-700);">El tono</h3>
+        <p>Un tono equivale exactamente a <strong>dos semitonos</strong>. Para avanzar un tono en el teclado, recorres dos teclas consecutivas y llegas a la tercera posición.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:28px;margin:24px 0;">
+          <figure style="margin:0;"><figcaption style="margin:0 0 10px;font-size:13px;">De <strong>Do (C)</strong> a <strong>Re (D)</strong>:</figcaption>{{ toneCD }}</figure>
+          <figure style="margin:0;"><figcaption style="margin:0 0 10px;font-size:13px;">De <strong>Mi (E)</strong> a <strong>Fa sostenido (F♯)</strong> ocurre lo mismo:</figcaption>{{ toneEF }}</figure>
+        </div>
+        <div class="card" style="background:var(--color-accent-2-100);">
+          <p style="margin:0;">Este segundo ejemplo revela un principio importante: avanzar un tono no significa necesariamente pasar de una tecla blanca a la siguiente tecla blanca. <strong>La distancia siempre se determina contando semitonos.</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4 -->
+    <section style="margin-bottom:72px;">
+      <div style="display:flex;gap:18px;align-items:baseline;margin-bottom:8px;">
+        <span style="flex:none;width:46px;height:46px;border-radius:999px;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-size:22px;display:grid;place-items:center;">4</span>
+        <h2 style="font-size:34px;">La fórmula de la escala mayor</h2>
+      </div>
+      <div style="padding-left:64px;">
+        <p>Una escala es una sucesión ordenada de notas. Su identidad depende de la distribución de las distancias entre esas notas.</p>
+        <p>La escala mayor es una de las estructuras fundamentales de la música tonal occidental. Para construirla desde cualquier nota, se aplica la siguiente secuencia de tonos y semitonos:</p>
+        <div style="margin:22px 0;">{{ formula }}</div>
+        <p>La fórmula contiene <strong>siete desplazamientos</strong> que conectan <strong>ocho notas</strong>. La octava nota repite el nombre de la primera en un registro más agudo.</p>
+
+        <h3 style="margin-top:32px;">Caso de estudio: Do mayor</h3>
+        <p>Comencemos en Do (C) y apliquemos la fórmula paso a paso:</p>
+        <figure class="chap-scroll" style="overflow-x:auto;margin:22px 0;">{{ doMajor }}</figure>
+        <div class="card" style="background:var(--color-surface);">
+          <p style="margin:0;">El resultado es la escala de Do mayor. Utiliza <strong>solamente teclas blancas</strong> porque las distancias naturales entre esas notas coinciden exactamente con la fórmula <strong>T&nbsp;-&nbsp;T&nbsp;-&nbsp;S&nbsp;-&nbsp;T&nbsp;-&nbsp;T&nbsp;-&nbsp;T&nbsp;-&nbsp;S</strong>. No es una excepción arbitraria ni una secuencia que debas aceptar de memoria: es el resultado directo de aplicar la fórmula mayor desde Do.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5 -->
+    <section style="margin-bottom:40px;">
+      <div style="display:flex;gap:18px;align-items:baseline;margin-bottom:8px;">
+        <span style="flex:none;width:46px;height:46px;border-radius:999px;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-size:22px;display:grid;place-items:center;">5</span>
+        <h2 style="font-size:34px;">Reto práctico: deduce la escala de Sol mayor</h2>
+      </div>
+      <div style="padding-left:64px;">
+        <p>Ahora construirás la escala de Sol mayor <strong>sin memorizar previamente sus notas</strong>. Localiza Sol (G) y aplica la misma fórmula. Recuerda contar todas las teclas, blancas y negras.</p>
+        <div style="margin:18px 0;">{{ formulaMini }}</div>
+
+        <h4 style="margin-top:24px;">Hoja de ruta</h4>
+        <ol style="padding-left:22px;margin:0 0 var(--space-4);display:flex;flex-direction:column;gap:7px;">
+          <li>Comienza en <strong>G</strong>.</li>
+          <li>Avanza un tono. ¿A qué nota llegas?</li>
+          <li>Avanza otro tono. ¿A qué nota llegas?</li>
+          <li>Avanza un semitono. ¿A qué nota llegas?</li>
+          <li>Avanza un tono. ¿A qué nota llegas?</li>
+          <li>Avanza otro tono. ¿A qué nota llegas?</li>
+          <li>Avanza un tono más. Atención: la siguiente tecla blanca está a un solo semitono. ¿Qué tecla debes tocar para completar el tono?</li>
+          <li>Avanza un último semitono para regresar a G en el registro siguiente.</li>
+        </ol>
+
+        <p style="font-weight:600;">Completa el recorrido antes de consultar la solución:</p>
+        {{ reto }}
+
+        <sc-if value="{{ revealed }}" hint-placeholder-val="{{ false }}">
+          <div style="animation:revealUp .4s ease;margin-top:36px;padding-top:8px;border-top:1px solid var(--color-divider);">
+            <h3 style="color:var(--color-accent-700);">Solución</h3>
+            <p>El recorrido completo es:</p>
+            <figure class="chap-scroll" style="overflow-x:auto;margin:20px 0;">{{ gMajor }}</figure>
+            <p>Los primeros cinco pasos conducen a <strong>G – A – B – C – D – E</strong>. Al llegar a E, la fórmula exige avanzar un tono. Sin embargo, de E a F hay solamente un semitono, así que debes avanzar un semitono adicional hasta <strong>F♯</strong> para completar el tono. Desde F♯ avanzas un último semitono y llegas de nuevo a G.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:28px;margin:20px 0;">
+              <figure style="margin:0;"><figcaption style="margin:0 0 10px;font-size:13px;">De E a F: un solo semitono</figcaption>{{ efMini }}</figure>
+              <figure style="margin:0;"><figcaption style="margin:0 0 10px;font-size:13px;">Un semitono más hasta F♯ completa el tono</figcaption>{{ effMini }}</figure>
+              <figure style="margin:0;"><figcaption style="margin:0 0 10px;font-size:13px;">De F♯ a G: el semitono final</figcaption>{{ fgMini }}</figure>
+            </div>
+            <div class="card" style="background:var(--color-accent-100);">
+              <p style="margin:0 0 10px;">Aunque F♯ y G♭ corresponden a la misma tecla en el piano, dentro de esta escala utilizamos el nombre <strong>F♯</strong>. Una escala diatónica emplea una vez cada nombre de nota, en orden: G – A – B – C – D – E – <strong>F</strong> – G. El sostenido modifica esa F sin romper la secuencia de letras.</p>
+              <p style="margin:0;">Has deducido así la única alteración de la escala de Sol mayor: <strong>Fa sostenido</strong>. Cuando una pieza está escrita en la tonalidad de Sol mayor, ese Fa sostenido se indica al comienzo del pentagrama mediante la <strong>armadura de clave</strong>.</p>
+            </div>
+          </div>
+        </sc-if>
+      </div>
+    </section>
+
+
+  </article>
+</div>
+</x-dc>
+<div class="course-end">
+    <div class="hr" style="margin:48px 0 24px;"></div>
+    <div class="course-complete">
+      <button type="button" class="btn btn-secondary" data-course-complete="1" aria-pressed="false">Marcar como completado</button>
+      <span class="course-complete-status">Cuando termines, marca el capítulo para ver tu avance en el inicio.</span>
+    </div>
+    <nav class="course-pager" aria-label="Capítulos" style="margin-top:20px;">
+      <a class="btn btn-secondary" href="./index.html">Inicio</a>
+      <a class="btn btn-primary" href="./Capitulo%202%20-%20La%20Arquitectura%20del%20Acorde.dc.html">Siguiente · Capítulo 2</a>
+    </nav>
+    <footer style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;color:var(--color-neutral-600);font-size:13px;margin-top:24px;">
+      <span>El piano, con lógica — Capítulo 1</span>
+    </footer>
+</div>
+<script src="./course.js"></script>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;notacion&quot;: {&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Ambos&quot;,&quot;Cifrado&quot;,&quot;Solfa&quot;],&quot;default&quot;:&quot;Ambos&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Diagramas&quot;},
+  &quot;colorearGrupos&quot;: {&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Diagramas&quot;}
+}">
+class Component extends DCLogic {
+  state = { answers:['','','','','',''], status:['','','','','',''], revealed:false };
+
+  get WHITE(){ return ['C','D','E','F','G','A','B']; }
+  get NAMES(){ return {C:'Do',D:'Re',E:'Mi',F:'Fa',G:'Sol',A:'La',B:'Si'}; }
+  get SHARP(){ return {C:true,D:true,E:false,F:true,G:true,A:true,B:false}; }
+  get COL(){ return {
+    bg:'var(--color-bg)', surf:'var(--color-surface)', text:'var(--color-text)', div:'var(--color-divider)',
+    ac:'var(--color-accent)', ac2:'var(--color-accent-2)',
+    n100:'var(--color-neutral-100)', n200:'var(--color-neutral-200)', n300:'var(--color-neutral-300)', n600:'var(--color-neutral-600)', n900:'var(--color-neutral-900)',
+    a100:'var(--color-accent-100)', a200:'var(--color-accent-200)', a300:'var(--color-accent-300)', a400:'var(--color-accent-400)', a500:'var(--color-accent-500)', a700:'var(--color-accent-700)', a800:'var(--color-accent-800)',
+    s100:'var(--color-accent-2-100)', s200:'var(--color-accent-2-200)', s400:'var(--color-accent-2-400)', s500:'var(--color-accent-2-500)', s700:'var(--color-accent-2-700)', s800:'var(--color-accent-2-800)'
+  }; }
+
+  mode(){ return this.props.notacion ?? 'Ambos'; }
+  label(L){
+    const nm=this.NAMES[L], m=this.mode();
+    if(m==='Cifrado') return {big:L};
+    if(m==='Solfa') return {big:nm};
+    return {big:L, small:nm};
+  }
+
+  // ---- white-key label block ----
+  wLabel(L, extra){
+    const h=React.createElement, C=this.COL, lab=this.label(L);
+    const kids=[ h('span',{key:'b',style:{fontFamily:'var(--font-heading)',fontSize:16,lineHeight:1,color:extra&&extra.big?extra.big:C.text}}, lab.big + (extra&&extra.sup?extra.sup:'')) ];
+    if(lab.small) kids.push(h('span',{key:'s',style:{fontSize:10,marginTop:3,color:'color-mix(in srgb,var(--color-text) 55%,transparent)'}}, lab.small));
+    return h('div',{style:{position:'absolute',bottom:8,left:0,right:0,display:'flex',flexDirection:'column',alignItems:'center',pointerEvents:'none'}}, kids);
+  }
+
+  // ============ GEOGRAPHY KEYBOARD ============
+  kb(){
+    const h=React.createElement, C=this.COL;
+    const octaves=2, plusTopC=true, whiteW=46, kbH=176, bw=whiteW*0.6;
+    const tint = this.props.colorearGrupos ?? true;
+    const markers = {C:{t:'Do',c:C.ac}, F:{t:'Fa',c:C.ac2}};
+    const brZone = tint?34:0, mkZone=24, top=brZone+mkZone;
+    const whites=[], blacks=[]; let wi=0;
+    for(let o=0;o<octaves;o++){
+      this.WHITE.forEach(L=>{
+        whites.push({L,o,x:wi*whiteW});
+        if(this.SHARP[L]) blacks.push({L:L+'\u266f',base:L,o,x:(wi+1)*whiteW,group:(L==='C'||L==='D')?2:3});
+        wi++;
+      });
+    }
+    if(plusTopC){ whites.push({L:'C',o:octaves,x:wi*whiteW}); wi++; }
+    const totalW=wi*whiteW;
+
+    const wEls = whites.map((w,i)=>{
+      const mk = markers[w.L];
+      const el = h('div',{key:'w'+i,style:{position:'absolute',top,left:w.x,width:whiteW-3,height:kbH,background:'#fffdf8',border:'1px solid '+C.div,borderTop:'none',borderRadius:'0 0 8px 8px',boxShadow:'inset 0 -3px 6px rgba(0,0,0,.04)'}}, this.wLabel(w.L));
+      const kids=[el];
+      if(mk) kids.push(h('div',{key:'m'+i,style:{position:'absolute',left:w.x+(whiteW-3)/2,top:brZone,transform:'translateX(-50%)',fontSize:10.5,fontFamily:'var(--font-heading)',color:C.bg,background:mk.c,padding:'2px 8px',borderRadius:999,whiteSpace:'nowrap'}}, mk.t));
+      return kids;
+    });
+    const bEls = blacks.map((b,i)=>{
+      const gc = b.group===2?C.a500:C.s500;
+      return h('div',{key:'b'+i,style:{position:'absolute',top,left:b.x-bw/2,width:bw,height:kbH*0.62,background:C.n900,borderRadius:'0 0 6px 6px',boxShadow: tint?('inset 0 -7px 0 '+gc):'none',display:'flex',alignItems:'flex-end',justifyContent:'center',paddingBottom:6,color:'#fff',fontSize:9,fontFamily:'var(--font-heading)',zIndex:2}}, b.L);
+    });
+
+    // group brackets over first octave
+    let brEls=[];
+    if(tint){
+      [[2,C.ac,'Grupo de 2'],[3,C.ac2,'Grupo de 3']].forEach(([g,col,txt],gi)=>{
+        const mem=blacks.filter(b=>b.o===0&&b.group===g);
+        const L=Math.min(...mem.map(m=>m.x-bw/2)), R=Math.max(...mem.map(m=>m.x+bw/2));
+        brEls.push(h('div',{key:'gl'+gi,style:{position:'absolute',top:6,left:L,width:R-L,height:2,background:col,borderRadius:2}}));
+        brEls.push(h('div',{key:'gt'+gi,style:{position:'absolute',top:-4,left:(L+R)/2,transform:'translateX(-50%)',fontSize:9,letterSpacing:'.06em',textTransform:'uppercase',color:col,background:C.bg,padding:'0 6px',fontWeight:700,whiteSpace:'nowrap'}}, txt));
+      });
+    }
+    return h('div',{style:{position:'relative',width:totalW,height:top+kbH+2}}, [...brEls,...wEls.flat(),...bEls]);
+  }
+
+  // ============ INTERVAL FRAGMENT (arcs) ============
+  frag(whites, brackets, active){
+    const h=React.createElement, C=this.COL;
+    active=active||[];
+    const whiteW=82, kbH=104, bw=whiteW*0.58;
+    const hasBig=brackets.some(b=>b.level===1);
+    const zone=hasBig?66:40;
+    const cen={}; const bkeys=[];
+    whites.forEach((L,i)=>{ cen[L]=i*whiteW+whiteW/2; });
+    for(let i=0;i<whites.length-1;i++){ if(this.SHARP[whites[i]]){ const t=whites[i]+'\u266f'; cen[t]=(i+1)*whiteW; bkeys.push({t,base:whites[i],x:(i+1)*whiteW}); } }
+    const totalW=whites.length*whiteW;
+
+    const wEls=whites.map((L,i)=>{
+      const on=active.includes(L);
+      return h('div',{key:'w'+i,style:{position:'absolute',top:zone,left:i*whiteW,width:whiteW-3,height:kbH,background:on?C.a200:'#fffdf8',border:'1px solid '+(on?C.a500:C.div),borderTop:'none',borderRadius:'0 0 8px 8px'}}, this.wLabel(L, on?{big:C.a800}:null));
+    });
+    const bEls=bkeys.map((b,i)=>{
+      const on=active.includes(b.t);
+      return h('div',{key:'bk'+i,style:{position:'absolute',top:zone,left:b.x-bw/2,width:bw,height:kbH*0.6,background:on?C.a400:C.n900,borderRadius:'0 0 6px 6px',display:'flex',alignItems:'flex-end',justifyContent:'center',paddingBottom:5,color:on?C.n900:'#fff',fontSize:9,fontFamily:'var(--font-heading)',zIndex:2}}, b.t);
+    });
+    // arcs
+    const arcs=[], labels=[];
+    brackets.forEach((br,i)=>{
+      const x1=cen[br.from], x2=cen[br.to], mid=(x1+x2)/2;
+      const col = br.level===1?C.s700:C.a700;
+      const yB = br.level===1? zone-24 : zone-2;
+      const yT = br.level===1? zone-58 : zone-26;
+      arcs.push(h('path',{key:'a'+i,d:`M ${x1} ${yB} Q ${mid} ${yT} ${x2} ${yB}`,fill:'none',stroke:col,strokeWidth:2,strokeLinecap:'round'}));
+      labels.push(h('text',{key:'t'+i,x:mid,y:yT-4,textAnchor:'middle',fontSize:11,fontFamily:'var(--font-body)',fontWeight:700,fill:col}, br.label));
+    });
+    const svg=h('svg',{width:totalW,height:zone,style:{position:'absolute',top:0,left:0,overflow:'visible'}}, [...arcs,...labels]);
+    return h('div',{style:{position:'relative',width:totalW,height:zone+kbH}}, [svg,...wEls,...bEls]);
+  }
+
+  // ============ CHROMATIC STRIP ============
+  chromaticStrip(){
+    const h=React.createElement, C=this.COL;
+    const seq=['C','C\u266f','D','D\u266f','E','F','F\u266f','G','G\u266f','A','A\u266f','B','C'];
+    const cells=[];
+    seq.forEach((n,i)=>{
+      const sharp=n.length>1;
+      cells.push(h('div',{key:'n'+i,style:{flex:'none',width:36,height:44,borderRadius:10,background:sharp?C.n900:C.n100,color:sharp?'#fff':C.text,border:'1px solid '+(sharp?C.n900:C.div),display:'grid',placeItems:'center',fontFamily:'var(--font-heading)',fontSize:13}}, n));
+      if(i<seq.length-1) cells.push(h('div',{key:'g'+i,style:{flex:'none',width:26,display:'flex',flexDirection:'column',alignItems:'center',color:C.a700}},[
+        h('div',{key:'l',style:{fontSize:10,fontWeight:700}}, i+1),
+        h('div',{key:'d',style:{width:16,height:2,background:C.a500,borderRadius:2,marginTop:4}})
+      ]));
+    });
+    return h('div',{style:{display:'flex',alignItems:'center',minWidth:'max-content'}}, cells);
+  }
+
+  // ============ SCALE STRIP ============
+  scaleStrip(notes, intervals, opts){
+    const h=React.createElement, C=this.COL; opts=opts||{};
+    const bubble=(nt,i)=>{
+      const on = nt.sharp;
+      const lab=this.label(nt.L);
+      const big = lab.big + (nt.sharp?'\u266f':'');
+      return h('div',{key:'b'+i,style:{flex:'none',display:'flex',flexDirection:'column',alignItems:'center',gap:6}},[
+        h('div',{key:'c',style:{width:66,height:66,borderRadius:999,display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',background:on?C.a400:C.surf,border:'2px solid '+(on?C.a700:C.div),color:on?C.n900:C.text}},[
+          h('span',{key:'g',style:{fontFamily:'var(--font-heading)',fontSize:22,lineHeight:1}}, big),
+          lab.small?h('span',{key:'s',style:{fontSize:10,marginTop:2,opacity:.7}}, lab.small+(nt.sharp?'\u266f':'')):null
+        ]),
+        on?h('span',{key:'t',className:'tag tag-accent',style:{fontSize:9}}, 'alteración'):h('span',{key:'sp',style:{height:14}})
+      ]);
+    };
+    const conn=(iv,i)=>{
+      const isT = iv==='T';
+      return h('div',{key:'iv'+i,style:{flex:'none',width:56,display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'flex-start',paddingTop:18}},[
+        h('div',{key:'l',style:{width:'100%',height:2,background:C.n300,position:'relative',top:6}}),
+        h('div',{key:'p',style:{marginTop:0,width:26,height:26,borderRadius:999,display:'grid',placeItems:'center',fontFamily:'var(--font-heading)',fontSize:13,color:C.bg,background:isT?C.ac2:C.ac,zIndex:1,position:'relative'}}, iv)
+      ]);
+    };
+    const row=[];
+    notes.forEach((nt,i)=>{ row.push(bubble(nt,i)); if(i<intervals.length) row.push(conn(intervals[i],i)); });
+    return h('div',{style:{display:'flex',alignItems:'flex-start',minWidth:'max-content',paddingBottom:4}}, row);
+  }
+
+  // ============ FORMULA DISPLAY ============
+  formulaBlock(mini){
+    const h=React.createElement, C=this.COL;
+    const seq=['T','T','S','T','T','T','S'];
+    const long=['Tono','Tono','Semitono','Tono','Tono','Tono','Semitono'];
+    const items=seq.map((s,i)=>{
+      const isT=s==='T';
+      return h('div',{key:i,style:{display:'flex',flexDirection:'column',alignItems:'center',gap:mini?0:6}},[
+        h('div',{key:'p',style:{width:mini?36:48,height:mini?36:48,borderRadius:999,display:'grid',placeItems:'center',fontFamily:'var(--font-heading)',fontSize:mini?16:22,color:C.bg,background:isT?C.ac2:C.ac}}, s),
+        mini?null:h('span',{key:'l',style:{fontSize:11,color:isT?C.s700:C.a700}}, long[i])
+      ]);
+    });
+    const withDash=[];
+    items.forEach((it,i)=>{ withDash.push(it); if(i<items.length-1) withDash.push(h('span',{key:'d'+i,style:{color:C.n300,fontSize:mini?14:18,alignSelf:mini?'center':'flex-start',marginTop:mini?0:14}},'–')); });
+    return h('div',{style:{display:'flex',alignItems:'center',gap:mini?8:12,flexWrap:'wrap'}}, withDash);
+  }
+
+  // ============ NOTE CHIPS ============
+  chips(list){
+    const h=React.createElement, C=this.COL;
+    const items=list.map((L,i)=>{
+      const sharp=/\u266f/.test(L); const base=L.replace('\u266f','');
+      const lab=this.label(base); const big=lab.big+(sharp?'\u266f':'');
+      return h('div',{key:i,style:{flex:'none',minWidth:44,padding:'8px 10px',borderRadius:14,background:sharp?C.a400:C.surf,border:'1px solid '+(sharp?C.a700:C.div),display:'flex',flexDirection:'column',alignItems:'center'}},[
+        h('span',{key:'b',style:{fontFamily:'var(--font-heading)',fontSize:16,lineHeight:1}}, big),
+        lab.small?h('span',{key:'s',style:{fontSize:9,marginTop:2,opacity:.6}}, lab.small):null
+      ]);
+    });
+    const row=[]; items.forEach((it,i)=>{ row.push(it); if(i<items.length-1) row.push(h('span',{key:'s'+i,style:{color:C.n300}},'·')); });
+    return h('div',{style:{display:'flex',alignItems:'center',gap:8,flexWrap:'wrap'}}, row);
+  }
+
+  // ============ INTERACTIVE CHALLENGE ============
+  setAns(i,v){ const a=this.state.answers.slice(); a[i]=v; this.setState({answers:a}); }
+  norm(s){ return String(s||'').trim().toLowerCase().replace(/\s+/g,'').replace('\u266f','#').replace('sostenido','#'); }
+  check(){
+    const acc=[['a','la'],['b','si'],['c','do'],['d','re'],['e','mi'],['f#','fa#']];
+    const st=this.state.answers.map((a,i)=> acc[i].includes(this.norm(a))?'ok':(a?'no':''));
+    this.setState({status:st});
+  }
+  reveal(){ this.setState({answers:['A','B','C','D','E','F\u266f'],status:['ok','ok','ok','ok','ok','ok'],revealed:true}); }
+  reset(){ this.setState({answers:['','','','','',''],status:['','','','','',''],revealed:false}); }
+
+  retoBlock(){
+    const h=React.createElement, C=this.COL;
+    const notes=['G',null,null,null,null,null,null,'G'];
+    const ivs=['T','T','S','T','T','T','S'];
+    const fixed=(L,i)=>h('div',{key:'f'+i,style:{flex:'none',width:64,height:64,borderRadius:999,display:'grid',placeItems:'center',background:C.a400,border:'2px solid '+C.a700,fontFamily:'var(--font-heading)',fontSize:22,color:C.n900}}, this.label(L).big);
+    const input=(idx)=>{
+      const st=this.state.status[idx];
+      const bd = st==='ok'?C.s500 : st==='no'?C.ac : C.div;
+      const bg = st==='ok'?C.s100 : st==='no'?C.a100 : C.surf;
+      return h('input',{key:'i'+idx,value:this.state.answers[idx],onChange:e=>this.setAns(idx,e.target.value),'aria-label':'Nota '+(idx+2),style:{flex:'none',width:64,height:64,borderRadius:999,textAlign:'center',fontFamily:'var(--font-heading)',fontSize:20,color:C.text,background:bg,border:'2px solid '+bd,outline:'none'}});
+    };
+    const conn=(iv,i)=>h('div',{key:'c'+i,style:{flex:'none',width:38,display:'flex',flexDirection:'column',alignItems:'center'}},[
+      h('div',{key:'p',style:{width:26,height:26,borderRadius:999,display:'grid',placeItems:'center',fontFamily:'var(--font-heading)',fontSize:12,color:C.bg,background:iv==='T'?C.ac2:C.ac}}, iv)
+    ]);
+    const row=[]; let inCount=0;
+    notes.forEach((n,i)=>{
+      if(n) row.push(fixed(n,i)); else row.push(input(inCount++));
+      if(i<ivs.length) row.push(conn(ivs[i],i));
+    });
+    const anyNo=this.state.status.includes('no');
+    const allOk=this.state.status.every(s=>s==='ok') && this.state.status.some(s=>s);
+    const msg = allOk ? {t:'¡Correcto! Has deducido la escala completa.',c:C.s700}
+              : anyNo ? {t:'Algunas casillas aún no coinciden. Revisa dónde la fórmula pide un tono sobre una tecla blanca.',c:C.a700}
+              : null;
+    return h('div',{style:{margin:'18px 0 8px'}},[
+      h('div',{key:'strip',className:'chap-scroll',style:{display:'flex',alignItems:'center',gap:6,overflowX:'auto',padding:'8px 2px 14px',minWidth:'max-content'}}, row),
+      h('p',{key:'hint',className:'text-muted',style:{fontSize:12,margin:'2px 0 12px'}}, 'Escribe cada nota en cifrado (A, B, C…) o en solfa (La, Si, Do…). Para el sostenido puedes escribir F# o Fa#.'),
+      h('div',{key:'btns',style:{display:'flex',gap:10,flexWrap:'wrap',alignItems:'center'}},[
+        h('button',{key:'chk',className:'btn btn-secondary',onClick:()=>this.check()},'Comprobar respuestas'),
+        h('button',{key:'rev',className:'btn btn-primary',onClick:()=>this.reveal()},'Revelar solución'),
+        h('button',{key:'rst',className:'btn btn-ghost',onClick:()=>this.reset()},'Reiniciar')
+      ]),
+      msg?h('p',{key:'msg',style:{marginTop:12,fontWeight:600,color:msg.c}}, msg.t):null
+    ]);
+  }
+
+  renderVals(){
+    return {
+      revealed: this.state.revealed,
+      geoKb: this.kb(),
+      chipsScale: this.chips(['C','D','E','F','G','A','B']),
+      chipsOctave: this.chips(['C','D','E','F','G','A','B','C']),
+      chromatic: this.chromaticStrip(),
+      semiEF: this.frag(['E','F'], [{from:'E',to:'F',label:'1 semitono',level:0}], ['E','F']),
+      semiCS: this.frag(['C','D'], [{from:'C',to:'C\u266f',label:'1 semitono',level:0}], ['C','C\u266f']),
+      toneCD: this.frag(['C','D'], [
+        {from:'C',to:'C\u266f',label:'sem.',level:0},
+        {from:'C\u266f',to:'D',label:'sem.',level:0},
+        {from:'C',to:'D',label:'1 tono',level:1}
+      ], ['C','C\u266f','D']),
+      toneEF: this.frag(['E','F','G'], [
+        {from:'E',to:'F',label:'sem.',level:0},
+        {from:'F',to:'F\u266f',label:'sem.',level:0},
+        {from:'E',to:'F\u266f',label:'1 tono',level:1}
+      ], ['E','F','F\u266f']),
+      efMini: this.frag(['E','F'], [{from:'E',to:'F',label:'semitono',level:0}], ['E','F']),
+      effMini: this.frag(['E','F','G'], [
+        {from:'E',to:'F',label:'sem.',level:0},
+        {from:'F',to:'F\u266f',label:'sem.',level:0},
+        {from:'E',to:'F\u266f',label:'1 tono',level:1}
+      ], ['E','F','F\u266f']),
+      fgMini: this.frag(['F','G'], [{from:'F\u266f',to:'G',label:'semitono',level:0}], ['F\u266f','G']),
+      formula: this.formulaBlock(false),
+      formulaMini: this.formulaBlock(true),
+      doMajor: this.scaleStrip(
+        [{L:'C'},{L:'D'},{L:'E'},{L:'F'},{L:'G'},{L:'A'},{L:'B'},{L:'C'}],
+        ['T','T','S','T','T','T','S']),
+      gMajor: this.scaleStrip(
+        [{L:'G'},{L:'A'},{L:'B'},{L:'C'},{L:'D'},{L:'E'},{L:'F',sharp:true},{L:'G'}],
+        ['T','T','S','T','T','T','S']),
+      reto: this.retoBlock()
+    };
+  }
+}
+</script>
+</body>
+</html>

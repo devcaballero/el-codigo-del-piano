@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./vendor/react.production.min.js"></script>
+<script src="./vendor/react-dom.production.min.js"></script>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./_ds/organic-253c5260-2d65-466a-8a5e-f0e151004a6a/styles.css">
+<link rel="stylesheet" href="./course.css">
+</head>
+<body>
+  <nav class="nav" style="max-width:1000px;margin:0 auto;" aria-label="Curso">
+    <a class="nav-brand" href="./index.html">El Código del Piano</a>
+    <span class="tag tag-neutral">Teoría visual desde cero</span>
+    <span class="text-muted" style="font-size:13px;">Capítulo 7</span>
+    <span class="course-nav-links">
+      <a href="./Capitulo%206%20-%20El%20Laberinto%20de%20la%20Tonalidad%20Menor.dc.html">Anterior</a>
+      <a href="./index.html">Inicio</a>
+      <a href="./Capitulo%208%20-%20La%20Libertad%20Creativa.dc.html">Siguiente</a>
+    </span>
+  </nav>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="./_ds/organic-253c5260-2d65-466a-8a5e-f0e151004a6a/styles.css">
+  <link rel="stylesheet" href="./course.css">
+  <script src="./_ds/organic-253c5260-2d65-466a-8a5e-f0e151004a6a/_ds_bundle.js"></script>
+  <style>
+    @keyframes revealUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+    .chap-scroll::-webkit-scrollbar { height: 8px; }
+    .chap-scroll::-webkit-scrollbar-thumb { background: var(--color-neutral-300); border-radius: 999px; }
+    a { color: var(--color-accent-700); }
+    a:hover { color: var(--color-accent); }
+  </style>
+</helmet>
+<div style="min-height:100vh;background:var(--color-bg);">
+
+
+
+  <article style="max-width:880px;margin:0 auto;padding:0 28px 120px;">
+
+    <header style="padding:48px 0 24px;">
+      <span class="tag tag-accent" style="margin-bottom:20px;">Capítulo 7</span>
+      <h1 style="font-size:56px;line-height:1.03;margin:16px 0 10px;max-width:16ch;">La Expansión del Color</h1>
+      <p style="font-size:22px;color:var(--color-accent-700);font-family:var(--font-heading);margin-bottom:28px;">Novenas, Acordes Suspendidos y Voicings a Dos Manos</p>
+      <p style="font-size:18px;max-width:62ch;">En los capítulos anteriores aprendiste a construir acordes de séptima, identificar sus notas guía y conectarlos mediante movimientos pequeños. Ahora ampliaremos esas estructuras con <strong>novenas</strong> y <strong>acordes suspendidos</strong>, y distribuiremos sus notas entre las dos manos.</p>
+      <p style="font-size:18px;max-width:62ch;">El objetivo no es añadir notas indiscriminadamente. Cada extensión debe cumplir una función y ocupar un registro que permita escucharla con claridad: distinguir una extensión de una sustitución, separar el bajo de las notas de color y conducir cada voz por un recorrido económico.</p>
+    </header>
+
+    <div class="hr" style="margin:16px 0 44px;"></div>
+
+    <!-- 1 -->
+    <section style="margin-bottom:64px;">
+      <div style="display:flex;gap:18px;align-items:baseline;margin-bottom:8px;">
+        <span style="flex:none;width:46px;height:46px;border-radius:999px;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-size:22px;display:grid;place-items:center;">1</span>
+        <h2 style="font-size:34px;">La novena como intervalo compuesto</h2>
+      </div>
+      <div style="padding-left:64px;">
+        <p>Si continuamos <strong>apilando terceras</strong> por encima de la séptima, llegamos a la <strong>novena</strong>: una cuarta capa sobre la arquitectura ya conocida de fundamental, tercera, quinta y séptima.</p>
+        <figure style="margin:24px 0;">{{ stack9 }}</figure>
+        <p>Una novena es una segunda situada una octava por encima; por eso es un <strong>intervalo compuesto</strong>. El conteo de grados continúa después de la octava, así que la misma letra reaparece con otro nombre:</p>
+        <figure class="chap-scroll" style="overflow-x:auto;margin:24px 0;">{{ compound9 }}</figure>
+        <p>Una novena mayor mide <strong>12 + 2 = 14 semitonos</strong>. Cuando el cifrado indica solo <strong>9</strong>, se sobreentiende una novena mayor, salvo que aparezca <strong>♭9</strong> o <strong>♯9</strong>.</p>
+      </div>
+    </section>
+
+    <!-- 2 -->
+    <section style="margin-bottom:64px;">
+      <div style="display:flex;gap:18px;align-items:baseline;margin-bottom:8px;">
+        <span style="flex:none;width:46px;height:46px;border-radius:999px;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-size:22px;display:grid;place-items:center;">2</span>
+        <h2 style="font-size:34px;">Las cuatro especies con novena</h2>
+      </div>
+      <div style="padding-left:64px;">
+        <p>Un acorde <strong>add9</strong> añade la novena a una tríada <strong>sin</strong> incorporar séptima. Los símbolos <strong>Maj9</strong>, <strong>m9</strong> y <strong>9</strong> sí incluyen una séptima. Cada tarjeta muestra qué componentes contiene:</p>
+        <div style="display:flex;flex-wrap:wrap;gap:16px;margin:22px 0;">{{ ninthCards }}</div>
+        <div class="card" style="background:var(--color-surface);"><p style="margin:0;">La diferencia esencial entre <strong>Cadd9</strong> (C – E – G – D) y <strong>C9</strong> (C – E – G – B♭ – D) es la <strong>séptima menor B♭</strong>. add9 se queda en la tríada más la novena; 9 es un acorde de séptima dominante extendido.</p></div>
+      </div>
+    </section>
+
+    <!-- 3 -->
+    <section style="margin-bottom:64px;">
+      <div style="display:flex;gap:18px;align-items:baseline;margin-bottom:8px;">
+        <span style="flex:none;width:46px;height:46px;border-radius:999px;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-size:22px;display:grid;place-items:center;">3</span>
+        <h2 style="font-size:34px;">add9 y sus2 no son lo mismo</h2>
+      </div>
+      <div style="padding-left:64px;">
+        <p>Ambos símbolos pueden contener C, D y G, pero representan estructuras distintas. La pregunta de control es una sola: <strong>¿la tercera sigue presente?</strong></p>
+        <figure style="margin:24px 0;">{{ add9Sus2 }}</figure>
+        <p>En <strong>Cadd9</strong> la novena se añade y la tercera E permanece. En <strong>Csus2</strong> la segunda D <strong>sustituye</strong> a la tercera, por lo que el acorde no contiene E.</p>
+      </div>
+    </section>
+
+    <!-- 4 -->
+    <section style="margin-bottom:64px;">
+      <div style="display:flex;gap:18px;align-items:baseline;margin-bottom:8px;">
+        <span style="flex:none;width:46px;height:46px;border-radius:999px;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-size:22px;display:grid;place-items:center;">4</span>
+        <h2 style="font-size:34px;">Acordes suspendidos y su resolución</h2>
+      </div>
+      <div style="padding-left:64px;">
+        <p>Un acorde <strong>suspendido</strong> sustituye la tercera por una segunda (<strong>sus2</strong>) o una cuarta (<strong>sus4</strong>). Al desaparecer la tercera, el acorde no define por sí solo una cualidad mayor o menor:</p>
+        <div style="display:flex;flex-wrap:wrap;gap:16px;margin:22px 0;">{{ susCompare }}</div>
+        <p>Una resolución habitual hace descender la nota suspendida hacia la tercera. La misma lógica de <strong>movimiento por semitono</strong> de los capítulos de dominantes aparece aquí:</p>
+        <div style="display:flex;flex-direction:column;gap:18px;margin:22px 0;">
+          <figure class="chap-scroll" style="overflow-x:auto;margin:0;"><figcaption style="margin:0 0 8px;font-size:13px;"><strong>Csus4 → C</strong> · la 4ª (F) baja a la 3ª (E)</figcaption>{{ susRes1 }}</figure>
+          <figure class="chap-scroll" style="overflow-x:auto;margin:0;"><figcaption style="margin:0 0 8px;font-size:13px;"><strong>G7sus4 → G7</strong> · la 4ª (C) baja a la 3ª (B)</figcaption>{{ susRes2 }}</figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 -->
+    <section style="margin-bottom:64px;">
+      <div style="display:flex;gap:18px;align-items:baseline;margin-bottom:8px;">
+        <span style="flex:none;width:46px;height:46px;border-radius:999px;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-size:22px;display:grid;place-items:center;">5</span>
+        <h2 style="font-size:34px;">Distribución entre las dos manos</h2>
+      </div>
+      <div style="padding-left:64px;">
+        <p>Al tocar acordes extendidos no hace falta concentrar todas las notas en una sola zona. Podemos repartir las funciones: la <strong>mano izquierda (MI)</strong> lleva el bajo y la <strong>mano derecha (MD)</strong> las notas guía y la extensión. Usaremos numeración científica, donde <strong>C4 = Do central</strong>:</p>
+        <figure class="chap-scroll" style="overflow-x:auto;margin:24px 0;">{{ handKB }}</figure>
+        <p>Un <strong>shell voicing</strong> contiene lo esencial —fundamental + tercera + séptima— y suele omitir la quinta para dejar espacio a las notas guía y la extensión. Al añadir la novena, la mano derecha pasa de <strong>3ª + 7ª</strong> a <strong>3ª + 7ª + 9ª</strong>. La quinta (G2) puede añadirse en la mano izquierda solo si la textura permanece clara.</p>
+        <div class="card" style="background:var(--color-surface);"><p style="margin:0;">Orientación de registro: fundamental hacia <strong>C2–C3</strong>; terceras, séptimas y extensiones en el registro medio; evita intervalos cerrados en el extremo grave. Ningún voicing debe producir tensión física: reordena, omite una nota no esencial o arpegia si una posición resulta demasiado amplia.</p></div>
+      </div>
+    </section>
+
+    <!-- 6 -->
+    <section style="margin-bottom:64px;">
+      <div style="display:flex;gap:18px;align-items:baseline;margin-bottom:8px;">
+        <span style="flex:none;width:46px;height:46px;border-radius:999px;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-size:22px;display:grid;place-items:center;">6</span>
+        <h2 style="font-size:34px;">Conducción de la progresión extendida</h2>
+      </div>
+      <div style="padding-left:64px;">
+        <p>Aplicamos la distribución a <strong>Dm9 → G7sus4 → G7 → Cmaj9</strong> (ii9 – V7sus4 – V7 – Imaj9). La mano derecha lleva tres voces; la izquierda, la línea de bajo, en un carril separado:</p>
+        <figure class="chap-scroll" style="overflow-x:auto;margin:24px 0;">{{ progVL }}</figure>
+        <div class="card" style="background:var(--color-accent-2-100);"><p style="margin:0;">La cuarta suspendida resuelve <strong>C → B</strong> dentro de G7sus4 → G7. Al llegar a Cmaj9, <strong>B</strong> cambia de función (3ª de G7 → 7ª mayor de Cmaj9) y <strong>D</strong> también (5ª de G7 → 9ª de Cmaj9): misma tecla, distinta función. Es una conducción posible, no la única; su ventaja es que deja ver qué voces permanecen y cuáles se desplazan.</p></div>
+      </div>
+    </section>
+
+    <!-- 7 -->
+    <section style="margin-bottom:64px;">
+      <div style="display:flex;gap:18px;align-items:baseline;margin-bottom:8px;">
+        <span style="flex:none;width:46px;height:46px;border-radius:999px;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-size:22px;display:grid;place-items:center;">7</span>
+        <h2 style="font-size:34px;">Método de práctica</h2>
+      </div>
+      <div style="padding-left:64px;">
+        <p>Construye la progresión por capas. Practica cada paso despacio antes de unir el siguiente:</p>
+        <figure style="margin:24px 0 0;">{{ practiceSteps }}</figure>
+      </div>
+    </section>
+
+    <!-- 8 RETO -->
+    <section style="margin-bottom:40px;">
+      <div style="display:flex;gap:18px;align-items:baseline;margin-bottom:8px;">
+        <span style="flex:none;width:46px;height:46px;border-radius:999px;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-size:22px;display:grid;place-items:center;">8</span>
+        <h2 style="font-size:34px;">Reto práctico</h2>
+      </div>
+      <div style="padding-left:64px;">
+        <p>Tres desafíos que combinan extensión, sustitución y distribución. Cada uno se desbloquea al resolver el anterior.</p>
+        {{ reto }}
+
+        <sc-if value="{{ revealed }}" hint-placeholder-val="{{ false }}">
+          <div style="animation:revealUp .4s ease;margin-top:36px;padding-top:8px;border-top:1px solid var(--color-divider);">
+            <h3 style="color:var(--color-accent-700);">Solución</h3>
+            <p><strong>Desafío 1.</strong> Fórmula 1 – 3 – 5 – 7 – 9 desde F: <strong>Fmaj9 = F – A – C – E – G</strong>. Distribución con la quinta (C) omitida en la mano derecha:</p>
+            <figure class="chap-scroll" style="overflow-x:auto;margin:18px 0;">{{ fmaj9KB }}</figure>
+            <p style="margin-top:14px;"><strong>Desafío 2.</strong> Cadd9 = C – E – G – D · Csus2 = C – D – G. <strong>Cadd9</strong> conserva la tercera E y contiene la novena añadida; <strong>Csus2</strong> sustituye la tercera por D y no define por sí solo mayor o menor.</p>
+            <p style="margin-top:14px;"><strong>Desafío 3.</strong> En Asus4 (A – D – E), D es la cuarta. Para resolver hacia A mayor, <strong>D baja un semitono a C♯</strong>; A y E permanecen. El resultado es <strong>A – C♯ – E = A mayor</strong>.</p>
+            <figure class="chap-scroll" style="overflow-x:auto;margin:18px 0;">{{ asus4Res }}</figure>
+            <div class="card" style="background:var(--color-accent-100);">
+              <p style="margin:0;">Has conectado tres niveles de construcción: la <strong>extensión</strong> (add9 y acordes con novena), la <strong>sustitución</strong> (sus2 y sus4) y la <strong>distribución</strong> (bajo en la mano izquierda, notas guía y extensiones en la derecha). El siguiente paso es trasladar estas disposiciones a otras tonalidades y combinarlas con patrones rítmicos de acompañamiento.</p>
+            </div>
+          </div>
+        </sc-if>
+      </div>
+    </section>
+
+
+  </article>
+</div>
+</x-dc>
+<div class="course-end">
+    <div class="hr" style="margin:48px 0 24px;"></div>
+    <div class="course-complete">
+      <button type="button" class="btn btn-secondary" data-course-complete="7" aria-pressed="false">Marcar como completado</button>
+      <span class="course-complete-status">Cuando termines, marca el capítulo para ver tu avance en el inicio.</span>
+    </div>
+    <nav class="course-pager" aria-label="Capítulos" style="margin-top:20px;">
+      <a class="btn btn-secondary" href="./Capitulo%206%20-%20El%20Laberinto%20de%20la%20Tonalidad%20Menor.dc.html">Anterior</a>
+      <a class="btn btn-ghost" href="./index.html">Inicio</a>
+      <a class="btn btn-primary" href="./Capitulo%208%20-%20La%20Libertad%20Creativa.dc.html">Siguiente · Capítulo 8</a>
+    </nav>
+    <footer style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;color:var(--color-neutral-600);font-size:13px;margin-top:24px;">
+      <span>El Código del Piano — Capítulo 7</span>
+    </footer>
+</div>
+<script src="./course.js"></script>
+<script type="text/x-dc" data-dc-script data-props="{}">
+class Component extends DCLogic {
+  state = { ans:Array(8).fill(''), status:Array(8).fill(''), level:1, revealed:false };
+
+  get COL(){ return {
+    bg:'var(--color-bg)', surf:'var(--color-surface)', text:'var(--color-text)', div:'var(--color-divider)',
+    ac:'var(--color-accent)', ac2:'var(--color-accent-2)',
+    n100:'var(--color-neutral-100)', n200:'var(--color-neutral-200)', n300:'var(--color-neutral-300)', n600:'var(--color-neutral-600)', n700:'var(--color-neutral-700)', n900:'var(--color-neutral-900)',
+    a100:'var(--color-accent-100)', a200:'var(--color-accent-200)', a400:'var(--color-accent-400)', a500:'var(--color-accent-500)', a700:'var(--color-accent-700)', a800:'var(--color-accent-800)',
+    s100:'var(--color-accent-2-100)', s200:'var(--color-accent-2-200)', s400:'var(--color-accent-2-400)', s500:'var(--color-accent-2-500)', s700:'var(--color-accent-2-700)', s800:'var(--color-accent-2-800)'
+  }; }
+  tc(kind){ const C=this.COL;
+    if(kind==='maj') return {b:C.a700,f:C.a200,badge:C.ac,deep:C.a800,tint:C.a100};
+    if(kind==='min') return {b:C.s700,f:C.s200,badge:C.ac2,deep:C.s800,tint:C.s100};
+    return {b:C.n700,f:C.n200,badge:C.n700,deep:C.n900,tint:C.n200}; // dom
+  }
+  roleCol(role){ const C=this.COL;
+    if(role==='fund') return {b:C.a700,f:C.a200,deep:C.a700};
+    if(role==='third') return {b:C.n700,f:C.n200,deep:C.n700};
+    if(role==='fifth') return {b:C.n300,f:C.surf,deep:C.n600};
+    if(role==='seventh') return {b:C.a700,f:C.a100,deep:C.a700};
+    return {b:C.s700,f:C.s200,deep:C.s700}; // ninth
+  }
+
+  stack9(){
+    const h=React.createElement, C=this.COL;
+    const rows=[
+      {name:'C',func:'1',role:'fund',lbl:'fundamental'},
+      {name:'E',func:'3',role:'third',lbl:'tercera'},
+      {name:'G',func:'5',role:'fifth',lbl:'quinta'},
+      {name:'B',func:'7',role:'seventh',lbl:'séptima'},
+      {name:'D',func:'9',role:'ninth',lbl:'novena',added:true}
+    ];
+    const bubbles=rows.map((nt,i)=>{ const rc=this.roleCol(nt.role);
+      return h('div',{key:i,style:{display:'flex',alignItems:'center',gap:12}},[
+        h('div',{style:{width:60,height:60,borderRadius:999,display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',background:rc.f,border:(nt.added?'2px dashed '+rc.b:'2px solid '+rc.b),color:C.text}},[
+          h('span',{key:'n',style:{fontFamily:'var(--font-heading)',fontSize:22,lineHeight:1}}, nt.name),
+          h('span',{key:'f',style:{fontSize:11,marginTop:1,color:rc.deep}}, nt.func)
+        ]),
+        h('span',{key:'l',style:{fontFamily:'var(--font-heading)',fontSize:14,color:rc.deep}}, nt.lbl),
+        nt.added?h('span',{key:'t',className:'tag tag-accent-2',style:{fontSize:10}},'+ 3ª sobre la 7ª'):null
+      ]);
+    });
+    return h('div',{style:{display:'inline-flex',flexDirection:'column-reverse',gap:8,padding:'20px 24px',borderRadius:22,background:C.surf,border:'1px solid '+C.div}}, bubbles);
+  }
+
+  compound9(){
+    const h=React.createElement, C=this.COL;
+    const items=[['C','1'],['D','2'],['E','3'],['F','4'],['G','5'],['A','6'],['B','7'],['C','8'],['D','9']];
+    const W=64;
+    const bubs=items.map((it,i)=>{ const hot=i===1||i===8;
+      return h('div',{key:i,style:{width:W,flex:'none',display:'flex',flexDirection:'column',alignItems:'center',gap:6}},[
+        h('div',{style:{width:56,height:56,borderRadius:999,display:'grid',placeItems:'center',background:hot?C.s200:C.surf,border:'2px solid '+(hot?C.s700:C.div),fontFamily:'var(--font-heading)',fontSize:22}}, it[0]),
+        h('span',{style:{fontSize:12,color:hot?C.s700:C.n600,fontWeight:hot?700:400}}, 'grado '+it[1])
+      ]);
+    });
+    const arcY=34, x1=1*W+W/2, x2=8*W+W/2, mid=(x1+x2)/2, totalW=items.length*W;
+    const svg=h('svg',{width:totalW,height:arcY,style:{position:'absolute',top:0,left:0,overflow:'visible'}},[
+      h('path',{key:'p',d:'M '+x1+' '+(arcY-4)+' Q '+mid+' 4 '+x2+' '+(arcY-4),fill:'none',stroke:C.s700,strokeWidth:2,strokeLinecap:'round'}),
+      h('text',{key:'t',x:mid,y:6,textAnchor:'middle',fontSize:11,fontFamily:'var(--font-body)',fontWeight:700,fill:C.s700},'2ª + octava = 9ª · 14 semitonos')
+    ]);
+    return h('div',{style:{position:'relative',minWidth:'max-content',paddingTop:arcY-6}},[svg, h('div',{key:'r',style:{display:'flex'}}, bubs)]);
+  }
+
+  ninthCards(){
+    const h=React.createElement, C=this.COL;
+    const data=[
+      {k:'maj',name:'add9',formula:'1 – 3 – 5 – 9',ex:'C – E – G – D',tri:'M',sev:null,nin:true},
+      {k:'maj',name:'maj9',formula:'1 – 3 – 5 – 7 – 9',ex:'C – E – G – B – D',tri:'M',sev:'M',nin:true},
+      {k:'min',name:'m9',formula:'1 – ♭3 – 5 – ♭7 – 9',ex:'C – E♭ – G – B♭ – D',tri:'m',sev:'m',nin:true},
+      {k:'dom',name:'9',formula:'1 – 3 – 5 – ♭7 – 9',ex:'C – E – G – B♭ – D',tri:'M',sev:'m',nin:true}
+    ];
+    const chip=(on,txt,col)=>h('div',{style:{flex:1,textAlign:'center',padding:'6px 4px',borderRadius:12,fontSize:11,fontFamily:'var(--font-heading)',
+      background:on?col.tint:C.n100, color:on?col.deep:C.n600, border:'1px solid '+(on?col.b:C.div)}}, txt);
+    return data.map((d,i)=>{ const t=this.tc(d.k);
+      return h('div',{key:i,style:{flex:'1',minWidth:200,display:'flex',flexDirection:'column',gap:10,padding:'18px 20px',borderRadius:22,background:t.tint,border:'2px solid '+t.b}},[
+        h('span',{key:'n',style:{fontFamily:'var(--font-heading)',fontSize:26,color:t.deep}}, 'C'+d.name),
+        h('div',{key:'f',style:{fontFamily:'var(--font-heading)',fontSize:14,color:t.deep}}, d.formula),
+        h('div',{key:'c',style:{display:'flex',gap:6}},[
+          chip(true, d.tri==='M'?'tríada M':'tríada m', this.tc(d.tri==='M'?'maj':'min')),
+          chip(!!d.sev, d.sev?('7ª '+d.sev):'sin 7ª', this.tc(d.sev==='M'?'maj':'dom')),
+          chip(d.nin,'9ª', this.tc('min'))
+        ]),
+        h('div',{key:'e',style:{marginTop:2,padding:'8px 12px',borderRadius:14,background:C.bg,fontFamily:'var(--font-heading)',fontSize:14,textAlign:'center'}}, d.ex)
+      ]);
+    });
+  }
+
+  parsePitch(s){ return {L:s.replace(/[0-9#]/g,''), acc:s.indexOf('#')>=0, oct:+(s.match(/\d/)||[4])[0]}; }
+  piano(whites, marks, opts){
+    const h=React.createElement, C=this.COL; opts=opts||{}; marks=marks||{};
+    const WW=38, WH=152, BW=22, BH=96, y0=6, keyBot=y0+WH, labelY=keyBot+6, brY=labelY+30;
+    const SHARP={C:1,D:1,F:1,G:1,A:1};
+    const totalW=whites.length*WW;
+    const wx={}; whites.forEach((w,i)=>{ wx[w]=i*WW; });
+    const blacks=[];
+    for(let i=0;i<whites.length-1;i++){ const p=this.parsePitch(whites[i]); if(SHARP[p.L]){ blacks.push({name:p.L+'#'+p.oct, x:(i+1)*WW}); } }
+    const handFill=(hand)=>hand==='L'?{f:C.s200,b:C.s700}:{f:C.a200,b:C.a700};
+    const cxOf=(name)=>{ if(wx[name]!==undefined) return wx[name]+WW/2; const b=blacks.find(k=>k.name===name); return b?b.x:0; };
+    const badge=(m)=>h('div',{style:{width:24,height:24,borderRadius:999,display:'grid',placeItems:'center',fontFamily:'var(--font-heading)',fontSize:12,
+      background:m.hand==='L'?C.s700:C.a700,color:C.bg}}, m.f);
+    const wEls=whites.map((w,i)=>{ const m=marks[w]; const hf=m?handFill(m.hand):null; const dashed=m&&m.opt;
+      return h('div',{key:'w'+i,style:{position:'absolute',left:i*WW,top:y0,width:WW-3,height:WH,background:m?hf.f:'#fffdf8',border:'1px solid '+(m?hf.b:C.n300),borderTop:'none',borderRadius:'0 0 7px 7px',borderStyle:dashed?'dashed':'solid',display:'flex',alignItems:'flex-end',justifyContent:'center',paddingBottom:8,zIndex:1}},
+        m?badge(m):null);
+    });
+    const bEls=blacks.map((b,i)=>{ const m=marks[b.name]; const hf=m?handFill(m.hand):null;
+      return h('div',{key:'b'+i,style:{position:'absolute',left:b.x-BW/2,top:y0,width:BW,height:BH,background:m?hf.b:C.n900,borderRadius:'0 0 5px 5px',display:'flex',alignItems:'flex-end',justifyContent:'center',paddingBottom:5,zIndex:3}},
+        m?h('div',{style:{width:20,height:20,borderRadius:999,display:'grid',placeItems:'center',fontFamily:'var(--font-heading)',fontSize:11,background:C.bg,color:m.hand==='L'?C.s700:C.a700}}, m.f):null);
+    });
+    const labels=whites.map((w,i)=>{ const p=this.parsePitch(w); const isC=p.L==='C';
+      return h('div',{key:'l'+i,style:{position:'absolute',left:i*WW,top:labelY,width:WW-3,textAlign:'center',fontFamily:'var(--font-heading)',fontSize:isC?12:11,color:isC?C.a700:C.n600,fontWeight:isC?700:400}}, isC?w:p.L);
+    });
+    let brackets=[];
+    if(opts.brackets!==false){
+      ['L','R'].forEach((hand,hi)=>{ const xs=Object.keys(marks).filter(k=>marks[k].hand===hand).map(cxOf); if(!xs.length) return;
+        const x1=Math.min.apply(null,xs)-14, x2=Math.max.apply(null,xs)+14, col=hand==='L'?C.s700:C.a700;
+        brackets.push(h('div',{key:'br'+hi,style:{position:'absolute',left:x1,top:brY,width:x2-x1,height:0,borderTop:'2px solid '+col}}));
+        brackets.push(h('div',{key:'brc1'+hi,style:{position:'absolute',left:x1,top:brY,width:2,height:6,background:col}}));
+        brackets.push(h('div',{key:'brc2'+hi,style:{position:'absolute',left:x2-2,top:brY,width:2,height:6,background:col}}));
+        brackets.push(h('div',{key:'brl'+hi,style:{position:'absolute',left:x1,top:brY+7,width:x2-x1,textAlign:'center',fontFamily:'var(--font-heading)',fontSize:12,color:col}}, hand==='L'?'MI · mano izquierda':'MD · mano derecha'));
+      });
+    }
+    const height=(opts.brackets!==false?brY+30:labelY+22);
+    return h('div',{style:{position:'relative',width:totalW,height,minWidth:'max-content'}}, [...wEls,...bEls,...labels,...brackets]);
+  }
+
+  add9Sus2(){
+    const h=React.createElement, C=this.COL;
+    const oct=['C4','D4','E4','F4','G4'];
+    const opt=(title, marks, ans, ansCol)=>h('div',{style:{display:'flex',flexDirection:'column',alignItems:'center',gap:10}},[
+      h('span',{key:'t',className:'tag '+ansCol,style:{fontFamily:'var(--font-heading)'}}, title),
+      this.piano(oct, marks, {brackets:false}),
+      h('span',{key:'a',style:{fontSize:13,color:C.n700}}, ans)
+    ]);
+    const q=h('div',{style:{display:'flex',flexDirection:'column',alignItems:'center',gap:10,padding:'14px 20px',borderRadius:20,background:C.a100,border:'2px solid var(--color-accent)',alignSelf:'center'}},[
+      h('span',{key:'q',style:{fontFamily:'var(--font-heading)',fontSize:17,color:C.a800,textAlign:'center',maxWidth:180}},'¿La tercera E sigue presente?'),
+      h('div',{key:'b',style:{display:'flex',flexDirection:'column',gap:6}},[
+        h('span',{style:{fontSize:13}},'Sí → add9'),
+        h('span',{style:{fontSize:13}},'No → sus2')
+      ])
+    ]);
+    return h('div',{style:{display:'flex',flexWrap:'wrap',gap:24,alignItems:'flex-start',justifyContent:'center'}},[
+      opt('Cadd9 · conserva la 3ª', {'C4':{f:'1',hand:'R'},'E4':{f:'3',hand:'R'},'G4':{f:'5',hand:'R'},'D4':{f:'9',hand:'R'}}, 'C – E – G – D · contiene E','tag-accent'),
+      q,
+      opt('Csus2 · sustituye la 3ª', {'C4':{f:'1',hand:'R'},'D4':{f:'2',hand:'R'},'G4':{f:'5',hand:'R'}}, 'C – D – G · no contiene E','tag-neutral')
+    ]);
+  }
+
+  susCompare(){
+    const h=React.createElement, C=this.COL;
+    const data=[
+      {name:'C mayor',notes:[['C','1'],['E','3'],['G','5']],rep:-1,tag:'tag-accent'},
+      {name:'Csus2',notes:[['C','1'],['D','2'],['G','5']],rep:1,tag:'tag-neutral'},
+      {name:'Csus4',notes:[['C','1'],['F','4'],['G','5']],rep:1,tag:'tag-neutral'}
+    ];
+    return data.map((d,i)=>h('div',{key:i,style:{flex:'1',minWidth:180,display:'flex',flexDirection:'column',gap:12,padding:'18px 20px',borderRadius:22,background:C.surf,border:'1px solid '+C.div}},[
+      h('span',{key:'t',className:'tag '+d.tag,style:{fontFamily:'var(--font-heading)',alignSelf:'flex-start'}}, d.name),
+      h('div',{key:'n',style:{display:'flex',gap:8}}, d.notes.map((nt,j)=>{ const rep=j===d.rep;
+        return h('div',{key:j,style:{display:'flex',flexDirection:'column',alignItems:'center',gap:4}},[
+          h('div',{style:{width:52,height:52,borderRadius:999,display:'grid',placeItems:'center',background:rep?C.a200:C.n100,border:'2px solid '+(rep?C.a700:C.div),fontFamily:'var(--font-heading)',fontSize:19}}, nt[0]),
+          h('span',{style:{fontSize:11,color:rep?C.a700:C.n600,fontWeight:rep?700:400}}, nt[1])
+        ]);
+      })),
+      h('span',{key:'c',style:{fontSize:12,color:C.n600}}, d.rep<0?'tríada de referencia':'la '+d.notes[d.rep][1]+'ª ocupa el lugar de la 3ª')
+    ]));
+  }
+
+  movePill(k,amt){
+    const h=React.createElement, C=this.COL;
+    if(k==='stay') return h('div',{style:{display:'flex',flexDirection:'column',alignItems:'center',width:'100%'}},[
+      h('div',{key:'l',style:{width:'100%',height:2,background:C.n300}}),
+      h('div',{key:'p',style:{marginTop:-12,padding:'3px 9px',borderRadius:999,background:C.n200,border:'1px solid '+C.n300,color:C.n700,fontFamily:'var(--font-heading)',fontSize:11,whiteSpace:'nowrap'}},'se mantiene')
+    ]);
+    const glyph=k==='up'?'↑':'↓';
+    return h('div',{style:{display:'flex',flexDirection:'column',alignItems:'center',width:'100%'}},[
+      h('div',{key:'l',style:{width:'100%',height:2,background:C.n300}}),
+      h('div',{key:'p',style:{marginTop:-13,padding:'4px 10px',borderRadius:999,background:C.a100,border:'1px solid '+C.a500,color:C.a700,fontFamily:'var(--font-heading)',fontSize:12,whiteSpace:'nowrap'}}, glyph+' '+amt)
+    ]);
+  }
+  resolution(labelA, labelB, rows){
+    const h=React.createElement, C=this.COL;
+    const cw=64, cc=118, lw=104;
+    const header=h('div',{key:'h',style:{display:'flex',alignItems:'center',marginBottom:8}},[
+      h('div',{style:{width:lw,flex:'none'}}),
+      h('div',{style:{width:cw,flex:'none',display:'flex',justifyContent:'center'}}, h('span',{className:'tag tag-neutral',style:{fontFamily:'var(--font-heading)'}}, labelA)),
+      h('div',{style:{width:cc,flex:'none'}}),
+      h('div',{style:{width:cw,flex:'none',display:'flex',justifyContent:'center'}}, h('span',{className:'tag tag-neutral',style:{fontFamily:'var(--font-heading)'}}, labelB))
+    ]);
+    const bubble=(n,hot)=>h('div',{style:{width:56,height:56,borderRadius:999,display:'grid',placeItems:'center',background:hot?C.a200:C.surf,border:'2px solid '+(hot?C.a700:C.div),fontFamily:'var(--font-heading)',fontSize:20}}, n);
+    const rowEl=(r,i)=>h('div',{key:i,style:{display:'flex',alignItems:'center',margin:'8px 0'}},[
+      h('div',{style:{width:lw,flex:'none',fontSize:12,color:r.hot?C.a700:C.n600,fontFamily:'var(--font-heading)'}}, r.tag||''),
+      h('div',{style:{width:cw,flex:'none',display:'flex',justifyContent:'center'}}, bubble(r.from,r.hot)),
+      h('div',{style:{width:cc,flex:'none'}}, this.movePill(r.k,r.amt)),
+      h('div',{style:{width:cw,flex:'none',display:'flex',justifyContent:'center'}}, bubble(r.to,r.hot))
+    ]);
+    return h('div',{style:{minWidth:'max-content',paddingBottom:6}}, [header, ...rows.map(rowEl)]);
+  }
+
+  mvVL(m){
+    const h=React.createElement, C=this.COL; const stay=m.k==='stay';
+    const txt = stay?'se mantiene' : ((m.k==='up'?'↑ ':'↓ ')+m.amt);
+    const bass=m.bass; const col=stay?C.n300:(bass?C.s500:C.a500), tint=stay?C.n200:(bass?C.s100:C.a100), deep=stay?C.n700:(bass?C.s700:C.a700);
+    return h('div',{style:{display:'flex',flexDirection:'column',alignItems:'center',width:'100%'}},[
+      h('div',{key:'l',style:{width:'100%',height:2,background:C.n300}}),
+      h('div',{key:'p',style:{marginTop:-12,padding:'3px 9px',borderRadius:999,background:tint,border:'1px solid '+col,color:deep,fontFamily:'var(--font-heading)',fontSize:11,whiteSpace:'nowrap'}}, txt)
+    ]);
+  }
+  progVL(){
+    const h=React.createElement, C=this.COL;
+    const chordLabels=['Dm9 · ii9','G7sus4','G7','Cmaj9 · Imaj9'];
+    const voices=[
+      {name:'MD · voz 3',notes:['E4','D4','D4','D4'],funcs:['9','5','5','9'],moves:[{k:'down',amt:'1 tono'},{k:'stay'},{k:'stay'}]},
+      {name:'MD · voz 2',notes:['C4','C4','B3','B3'],funcs:['♭7','4','3','7'],moves:[{k:'stay'},{k:'down',amt:'½'},{k:'stay'}]},
+      {name:'MD · voz 1',notes:['F3','F3','F3','E3'],funcs:['♭3','♭7','♭7','3'],moves:[{k:'stay'},{k:'stay'},{k:'down',amt:'½'}]},
+      {name:'MI · bajo',notes:['D2','G2','G2','C2'],funcs:['1','1','1','1'],bass:true,moves:[{k:'up',amt:'4ª',bass:true},{k:'stay'},{k:'down',amt:'5ª',bass:true}]}
+    ];
+    const cw=64, cc=104, lw=104, R=52;
+    const header=h('div',{key:'h',style:{display:'flex',alignItems:'center',marginBottom:6}},[
+      h('div',{style:{width:lw,flex:'none'}}),
+      ...chordLabels.flatMap((lb,i)=>{ const out=[h('div',{key:'c'+i,style:{width:cw,flex:'none',display:'flex',justifyContent:'center'}}, h('span',{className:'tag tag-neutral',style:{fontFamily:'var(--font-heading)',whiteSpace:'nowrap',fontSize:11}}, lb))]; if(i<chordLabels.length-1) out.push(h('div',{key:'s'+i,style:{width:cc,flex:'none'}})); return out; })
+    ]);
+    const vRow=(v,vi)=>{
+      const cells=v.notes.flatMap((nt,i)=>{
+        const f=v.bass?C.s200:C.surf, b=v.bass?C.s700:C.div;
+        const out=[h('div',{key:'b'+i,style:{width:cw,flex:'none',display:'flex',flexDirection:'column',alignItems:'center',gap:3}},[
+          h('div',{style:{width:R,height:R,borderRadius:999,display:'grid',placeItems:'center',background:f,border:'2px solid '+b,fontFamily:'var(--font-heading)',fontSize:16}}, nt),
+          h('span',{style:{fontSize:10,color:v.bass?C.s700:C.n600}}, v.funcs[i])
+        ])];
+        if(i<v.notes.length-1) out.push(h('div',{key:'m'+i,style:{width:cc,flex:'none'}}, this.mvVL(v.moves[i])));
+        return out;
+      });
+      return h('div',{key:vi,style:{display:'flex',alignItems:'center',margin:'6px 0'}},[
+        h('div',{style:{width:lw,flex:'none',fontFamily:'var(--font-heading)',fontSize:13,color:v.bass?C.s700:C.n700}}, v.name),
+        ...cells
+      ]);
+    };
+    const rows=[header];
+    voices.forEach((v,vi)=>{ if(v.bass) rows.push(h('div',{key:'dv',style:{height:1,background:C.div,margin:'8px 0 6px',marginLeft:lw}})); rows.push(vRow(v,vi)); });
+    return h('div',{style:{minWidth:'max-content',paddingBottom:6}}, rows);
+  }
+
+  practiceSteps(){
+    const h=React.createElement, C=this.COL;
+    const chip=(t,tone)=>h('span',{style:{padding:'5px 11px',borderRadius:999,background:tone==='L'?C.s100:tone==='R'?C.a100:C.n100,border:'1px solid '+(tone==='L'?C.s400:tone==='R'?C.a400:C.div),fontFamily:'var(--font-heading)',fontSize:13}}, t);
+    const steps=[
+      {t:'Mano izquierda',d:'Toca solo los bajos con pulsación estable, sin pedal.',rows:[['D2','G2','G2','C2'].map(x=>chip(x,'L'))]},
+      {t:'Mano derecha',d:'Practica despacio las cuatro posiciones y observa cada movimiento.',rows:[['F3–C4–E4','F3–C4–D4','F3–B3–D4','E3–B3–D4'].map(x=>chip(x,'R'))]},
+      {t:'Une las manos',d:'Combina bajo y voicing manteniendo el tempo lento.',rows:[[chip('MI: D2 → G2 → G2 → C2','L')],[chip('MD: F3-C4-E4 → … → E3-B3-D4','R')]]},
+      {t:'Añade pedal',d:'Cuando los cambios estén controlados, cambia el pedal con cada armonía. Debe conectar, no ocultar.',rows:[['Dm9','G7sus4','G7','Cmaj9'].map(x=>chip(x,'N'))]}
+    ];
+    return h('div',{style:{display:'flex',flexDirection:'column',gap:14}}, steps.map((s,i)=>
+      h('div',{key:i,className:'card',style:{background:C.surf,gap:8}},[
+        h('div',{key:'h',style:{display:'flex',gap:12,alignItems:'center'}},[
+          h('span',{style:{flex:'none',width:34,height:34,borderRadius:999,background:C.ac,color:C.bg,fontFamily:'var(--font-heading)',fontSize:16,display:'grid',placeItems:'center'}}, i+1),
+          h('span',{style:{fontFamily:'var(--font-heading)',fontSize:18}}, s.t)
+        ]),
+        h('p',{key:'d',style:{margin:'0 0 4px',fontSize:14,color:C.n700}}, s.d),
+        ...s.rows.map((r,ri)=>h('div',{key:'r'+ri,style:{display:'flex',flexWrap:'wrap',gap:8}}, r))
+      ])
+    ));
+  }
+
+  get ACC(){ return [
+    ['a','la'], ['c','do'], ['e','mi'], ['g','sol'],
+    ['cadd9','add9'], ['csus2','sus2'],
+    ['c#','do#','db','reb'], ['a','la','amayor','lamayor','amaj']
+  ]; }
+  get PARTS(){ return [[0,1,2,3],[4,5],[6,7]]; }
+  setAns(i,v){ const a=this.state.ans.slice(); a[i]=v; this.setState({ans:a}); }
+  norm(s){ return String(s||'').trim().toLowerCase().replace(/[♯]/g,'#').replace(/[♭]/g,'b').replace('sostenido','#').replace('bemol','b').replace(/[\s\-–,]/g,''); }
+  checkPart(p){
+    const idx=this.PARTS[p], st=this.state.status.slice(); let ok=true;
+    idx.forEach(i=>{ const good=this.ACC[i].includes(this.norm(this.state.ans[i])); st[i]=good?'ok':(this.state.ans[i]?'no':''); if(!good) ok=false; });
+    this.setState({status:st, level: ok? Math.max(this.state.level,p+2) : this.state.level});
+  }
+  reveal(){ this.setState({ans:['A','C','E','G','Cadd9','Csus2','C♯','A mayor'],status:Array(8).fill('ok'),level:4,revealed:true}); }
+  reset(){ this.setState({ans:Array(8).fill(''),status:Array(8).fill(''),level:1,revealed:false}); }
+  field(idx,label,ph,w){
+    const h=React.createElement, C=this.COL, st=this.state.status[idx];
+    const bd=st==='ok'?C.s500:st==='no'?C.ac:C.div, bg=st==='ok'?C.s100:st==='no'?C.a100:C.surf;
+    return h('div',{key:idx,className:'field',style:{width:w||150}},[
+      h('label',{key:'l'}, label),
+      h('input',{key:'i',className:'input',value:this.state.ans[idx],placeholder:ph||'',onChange:e=>this.setAns(idx,e.target.value),style:{background:bg,borderColor:bd}})
+    ]);
+  }
+  partBlock(p, tag, tagCls, title, fields){
+    const h=React.createElement, C=this.COL;
+    const locked=this.state.level<p+1, idx=this.PARTS[p], done=idx.every(i=>this.state.status[i]==='ok');
+    const body=locked
+      ? h('div',{style:{display:'flex',alignItems:'center',gap:10,color:C.n600,padding:'8px 0'}},[h('span',{style:{fontSize:18}},'🔒'),h('span',{},'Resuelve el desafío anterior para desbloquear.')])
+      : h('div',{},[
+          h('div',{key:'f',style:{display:'flex',flexWrap:'wrap',gap:14}}, fields),
+          h('button',{key:'b',className:'btn btn-secondary',style:{marginTop:14},onClick:()=>this.checkPart(p)}, 'Comprobar desafío '+(p+1)),
+          done?h('span',{key:'ok',style:{marginLeft:12,color:C.s700,fontWeight:600}},'✓ Correcto'):null
+        ]);
+    return h('div',{key:p,className:'card',style:{background:locked?C.n100:C.surf,gap:10,opacity:locked?.7:1}},[
+      h('div',{key:'t',style:{display:'flex',gap:10,alignItems:'center'}},[h('span',{className:'tag '+tagCls}, tag),h('span',{style:{fontFamily:'var(--font-heading)',fontSize:17}}, title)]),
+      body
+    ]);
+  }
+  retoBlock(){
+    const h=React.createElement, C=this.COL;
+    const parts=[
+      this.partBlock(0,'Desafío 1','tag-accent','Construye Fmaj9  ·  1 – 3 – 5 – 7 – 9',[
+        this.field(0,'Tercera mayor','',120), this.field(1,'Quinta justa','',120), this.field(2,'Séptima mayor','',130), this.field(3,'Novena mayor','',120)
+      ]),
+      this.partBlock(1,'Desafío 2','tag-accent','Distingue Cadd9 y Csus2',[
+        this.field(4,'¿Cuál conserva la 3ª (E)?','',200), this.field(5,'¿Cuál sustituye la 3ª por D?','',200)
+      ]),
+      this.partBlock(2,'Desafío 3','tag-accent-2','Resuelve Asus4 → A mayor',[
+        this.field(6,'La 4ª (D) resuelve a…','',160), this.field(7,'Acorde resultante','p. ej. A mayor',170)
+      ])
+    ];
+    const allOk=this.state.status.every(s=>s==='ok');
+    return h('div',{style:{margin:'16px 0 8px'}},[
+      h('div',{key:'p',style:{display:'flex',flexDirection:'column',gap:14}}, parts),
+      h('div',{key:'b',style:{display:'flex',gap:10,flexWrap:'wrap',marginTop:16}},[
+        h('button',{key:'r',className:'btn btn-primary',onClick:()=>this.reveal()},'Revelar solución completa'),
+        h('button',{key:'x',className:'btn btn-ghost',onClick:()=>this.reset()},'Reiniciar')
+      ]),
+      allOk?h('p',{key:'m',style:{marginTop:12,fontWeight:600,color:C.s700}},'¡Correcto! Fmaj9 = F–A–C–E–G · Cadd9 conserva la 3ª · Asus4 → A mayor.'):null
+    ]);
+  }
+
+  renderVals(){
+    const handMarks={'C2':{f:'1',hand:'L'},'G2':{f:'5',hand:'L',opt:true},'E3':{f:'3',hand:'R'},'B3':{f:'7',hand:'R'},'D4':{f:'9',hand:'R'}};
+    const handWhites=['C2','D2','E2','F2','G2','A2','B2','C3','D3','E3','F3','G3','A3','B3','C4','D4'];
+    const fmajMarks={'F2':{f:'1',hand:'L'},'C3':{f:'5',hand:'L',opt:true},'A3':{f:'3',hand:'R'},'E4':{f:'7',hand:'R'},'G4':{f:'9',hand:'R'}};
+    const fmajWhites=['F2','G2','A2','B2','C3','D3','E3','F3','G3','A3','B3','C4','D4','E4','F4','G4'];
+    return {
+      revealed: this.state.revealed,
+      stack9: this.stack9(),
+      compound9: this.compound9(),
+      ninthCards: this.ninthCards(),
+      add9Sus2: this.add9Sus2(),
+      susCompare: this.susCompare(),
+      susRes1: this.resolution('Csus4','C mayor',[
+        {from:'F',to:'E',k:'down',amt:'½',hot:true,tag:'4ª → 3ª'},
+        {from:'C',to:'C',k:'stay',tag:'1'},
+        {from:'G',to:'G',k:'stay',tag:'5'}
+      ]),
+      susRes2: this.resolution('G7sus4','G7',[
+        {from:'C',to:'B',k:'down',amt:'½',hot:true,tag:'4ª → 3ª'},
+        {from:'G',to:'G',k:'stay',tag:'1'},
+        {from:'D',to:'D',k:'stay',tag:'5'},
+        {from:'F',to:'F',k:'stay',tag:'♭7'}
+      ]),
+      handKB: this.piano(handWhites, handMarks),
+      progVL: this.progVL(),
+      practiceSteps: this.practiceSteps(),
+      reto: this.retoBlock(),
+      fmaj9KB: this.piano(fmajWhites, fmajMarks),
+      asus4Res: this.resolution('Asus4','A mayor',[
+        {from:'D',to:'C♯',k:'down',amt:'½',hot:true,tag:'4ª → 3ª'},
+        {from:'A',to:'A',k:'stay',tag:'1'},
+        {from:'E',to:'E',k:'stay',tag:'5'}
+      ])
+    };
+  }
+}
+</script>
+</body>
+</html>

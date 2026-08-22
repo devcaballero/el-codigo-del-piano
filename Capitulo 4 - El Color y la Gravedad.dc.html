@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./vendor/react.production.min.js"></script>
+<script src="./vendor/react-dom.production.min.js"></script>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./_ds/organic-253c5260-2d65-466a-8a5e-f0e151004a6a/styles.css">
+<link rel="stylesheet" href="./course.css">
+</head>
+<body>
+  <nav class="nav" style="max-width:1000px;margin:0 auto;" aria-label="Curso">
+    <a class="nav-brand" href="./index.html">El Código del Piano</a>
+    <span class="tag tag-neutral">Teoría visual desde cero</span>
+    <span class="text-muted" style="font-size:13px;">Capítulo 4</span>
+    <span class="course-nav-links">
+      <a href="./Capitulo%203%20-%20La%20Conexion%20Inteligente.dc.html">Anterior</a>
+      <a href="./index.html">Inicio</a>
+      <a href="./Capitulo%205%20-%20La%20Geometria%20de%20la%20Resolucion.dc.html">Siguiente</a>
+    </span>
+  </nav>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="./_ds/organic-253c5260-2d65-466a-8a5e-f0e151004a6a/styles.css">
+  <link rel="stylesheet" href="./course.css">
+  <script src="./_ds/organic-253c5260-2d65-466a-8a5e-f0e151004a6a/_ds_bundle.js"></script>
+  <style>
+    @keyframes revealUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+    .chap-scroll::-webkit-scrollbar { height: 8px; }
+    .chap-scroll::-webkit-scrollbar-thumb { background: var(--color-neutral-300); border-radius: 999px; }
+    a { color: var(--color-accent-700); }
+    a:hover { color: var(--color-accent); }
+  </style>
+</helmet>
+<div style="min-height:100vh;background:var(--color-bg);">
+
+
+
+  <article style="max-width:880px;margin:0 auto;padding:0 28px 120px;">
+
+    <header style="padding:48px 0 24px;">
+      <span class="tag tag-accent" style="margin-bottom:20px;">Capítulo 4</span>
+      <h1 style="font-size:56px;line-height:1.03;margin:16px 0 10px;max-width:15ch;">El Color y la Gravedad</h1>
+      <p style="font-size:22px;color:var(--color-accent-700);font-family:var(--font-heading);margin-bottom:28px;">Relativas Menores, Acordes de Séptima y Función Dominante</p>
+      <p style="font-size:18px;max-width:62ch;">En los capítulos anteriores aprendiste a construir escalas, formar tríadas y conectar acordes mediante inversiones y conducción de voces. Ahora ampliaremos ese vocabulario en dos direcciones.</p>
+      <p style="font-size:18px;max-width:62ch;">Primero, descubriremos que cada escala mayor comparte sus notas y su armadura con una <strong>escala menor relativa</strong>. Después añadiremos una tercera sobre las tríadas para construir <strong>acordes de séptima</strong>, estructuras de cuatro notas capaces de aportar nuevos grados de color, estabilidad y tensión.</p>
+      <p style="font-size:18px;max-width:62ch;">El objetivo sigue siendo el mismo: comprender las relaciones antes de memorizar las posiciones.</p>
+    </header>
+
+    <div class="hr" style="margin:16px 0 44px;"></div>
+
+    <!-- 1 -->
+    <section style="margin-bottom:72px;">
+      <div style="display:flex;gap:18px;align-items:baseline;margin-bottom:8px;">
+        <span style="flex:none;width:46px;height:46px;border-radius:999px;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-size:22px;display:grid;place-items:center;">1</span>
+        <h2 style="font-size:34px;">La escala menor relativa</h2>
+      </div>
+      <div style="padding-left:64px;">
+        <p>Cada escala mayor tiene una <strong>relativa menor natural</strong>. Ambas utilizan la misma colección de notas y comparten la misma armadura, pero establecen centros tonales diferentes. La relativa menor comienza en el <strong>sexto grado</strong> de la escala mayor.</p>
+        <p>En C mayor, el sexto grado es <strong>A</strong>. Por tanto, la relativa menor de C mayor es <strong>A menor</strong>. Las dos escalas usan exactamente las mismas notas; lo que cambia es alrededor de qué tónica se organizan:</p>
+        <figure class="chap-scroll" style="overflow-x:auto;margin:24px 0;">{{ relCA }}</figure>
+        <p>En <strong>C mayor</strong>, C funciona como centro tonal y principal punto de reposo. En <strong>A menor</strong>, A asume esa función. El punto de partida no basta por sí solo para establecer una tonalidad: también influyen la armonía, las notas acentuadas y los puntos de reposo de las frases.</p>
+
+        <h3 style="margin-top:32px;">La fórmula de la escala menor natural</h3>
+        <p>Si medimos las distancias de A menor natural, obtenemos la fórmula <strong>T–S–T–T–S–T–T</strong>, con semitonos entre los grados 2-3 y 5-6. Comparada con la escala mayor:</p>
+        <div style="display:flex;flex-wrap:wrap;gap:18px;margin:22px 0;">{{ scaleMajBadge }}{{ scaleMinBadge }}</div>
+        <p>En muchos contextos occidentales, el modo menor suele percibirse como más oscuro o introspectivo que el mayor. No es una regla emocional absoluta: el efecto también depende del ritmo, el registro, la articulación y la armonía.</p>
+        <div class="card" style="background:var(--color-surface);">
+          <p style="margin:0 0 8px;"><strong>Una precisión.</strong> La escala menor natural comparte exactamente las notas de su relativa mayor. La música tonal también usa variantes que modifican algunos grados:</p>
+          <div style="display:flex;flex-direction:column;gap:6px;font-size:14px;">
+            <div><span class="tag tag-neutral" style="margin-right:8px;">natural</span>A – B – C – D – E – F – G – A</div>
+            <div><span class="tag tag-accent" style="margin-right:8px;">armónica</span>A – B – C – D – E – F – <strong>G♯</strong> – A</div>
+            <div><span class="tag tag-accent" style="margin-right:8px;">melódica</span>A – B – C – D – E – <strong>F♯</strong> – <strong>G♯</strong> – A</div>
+          </div>
+          <p style="margin:10px 0 0;font-size:14px;" class="text-muted">Estas variantes se estudiarán más adelante. Por ahora trabajaremos con la escala menor natural.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2 -->
+    <section style="margin-bottom:72px;">
+      <div style="display:flex;gap:18px;align-items:baseline;margin-bottom:8px;">
+        <span style="flex:none;width:46px;height:46px;border-radius:999px;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-size:22px;display:grid;place-items:center;">2</span>
+        <h2 style="font-size:34px;">Cómo encontrar una relativa menor</h2>
+      </div>
+      <div style="padding-left:64px;">
+        <p>El método principal consiste en localizar el <strong>sexto grado</strong> de la escala mayor. En G mayor (G – A – B – C – D – E – F♯), el sexto grado es <strong>E</strong>, así que su relativa menor es <strong>E menor</strong>:</p>
+        <figure class="chap-scroll" style="overflow-x:auto;margin:24px 0;">{{ relGE }}</figure>
+        <p>También puedes comprobar la relación contando <strong>tres semitonos hacia abajo</strong> desde la tónica mayor: G → F♯ → F → E. El método del sexto grado es el más útil porque conecta directamente con la estructura diatónica del capítulo anterior.</p>
+      </div>
+    </section>
+
+    <!-- 3 -->
+    <section style="margin-bottom:72px;">
+      <div style="display:flex;gap:18px;align-items:baseline;margin-bottom:8px;">
+        <span style="flex:none;width:46px;height:46px;border-radius:999px;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-size:22px;display:grid;place-items:center;">3</span>
+        <h2 style="font-size:34px;">De la tríada al acorde de séptima</h2>
+      </div>
+      <div style="padding-left:64px;">
+        <p>Una tríada se construye apilando dos intervalos de tercera (1 – 3 – 5). Si añadimos <strong>una tercera más</strong> por encima de la quinta, obtenemos un <strong>acorde de séptima</strong>: una estructura de cuatro notas diferentes, <strong>1 – 3 – 5 – 7</strong>.</p>
+        <figure class="chap-scroll" style="overflow-x:auto;margin:24px 0;">{{ triadTo7 }}</figure>
+        <p>La nueva nota se llama <strong>séptima</strong> porque forma algún tipo de intervalo de séptima respecto de la fundamental. Por ejemplo, C – E – G es la tríada de C mayor, y C – E – G – B es un acorde de C con séptima mayor.</p>
+        <p>No todos los acordes de séptima tienen la misma estructura. Su identidad depende de dos elementos: la <strong>cualidad de la tríada</strong> (mayor, menor o disminuida) y el <strong>tipo de séptima</strong> añadido. En este capítulo estudiaremos tres de las especies más utilizadas: <strong>Maj7</strong>, <strong>m7</strong> y <strong>7</strong>.</p>
+      </div>
+    </section>
+
+    <!-- 4,5,6 combined intros with rulers -->
+    <section style="margin-bottom:72px;">
+      <div style="display:flex;gap:18px;align-items:baseline;margin-bottom:8px;">
+        <span style="flex:none;width:46px;height:46px;border-radius:999px;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-size:22px;display:grid;place-items:center;">4</span>
+        <h2 style="font-size:34px;">Las tres especies de séptima</h2>
+      </div>
+      <div style="padding-left:64px;">
+        <p><strong>Maj7</strong> combina una tríada mayor con una séptima mayor (1 – 3 – 5 – 7). <strong>m7</strong> combina una tríada menor con una séptima menor (1 – ♭3 – 5 – ♭7). El acorde de <strong>séptima dominante (7)</strong> combina una tríada mayor con una séptima menor (1 – 3 – 5 – ♭7). Cada especie mantiene un color propio a lo largo del capítulo:</p>
+
+        <h3 style="margin-top:28px;color:var(--color-accent-700);">Cmaj7 · mayor con séptima mayor</h3>
+        <p>Distancias entre notas consecutivas: <strong>4 + 3 + 4</strong> semitonos. La séptima mayor cae un semitono antes de la octava (B → C).</p>
+        <figure class="chap-scroll" style="overflow-x:auto;margin:18px 0;">{{ rulerMaj7 }}</figure>
+
+        <h3 style="margin-top:28px;color:var(--color-accent-2-700);">Cm7 · menor con séptima menor</h3>
+        <p>Distancias entre notas consecutivas: <strong>3 + 4 + 3</strong> semitonos. La séptima menor cae un tono antes de la octava (B♭ → C).</p>
+        <figure class="chap-scroll" style="overflow-x:auto;margin:18px 0;">{{ rulerM7 }}</figure>
+
+        <h3 style="margin-top:28px;color:var(--color-neutral-700);">C7 · séptima dominante</h3>
+        <p>Distancias entre notas consecutivas: <strong>4 + 3 + 3</strong> semitonos. El símbolo <strong>7</strong> sin otra indicación representa una tríada mayor con séptima menor.</p>
+        <figure class="chap-scroll" style="overflow-x:auto;margin:18px 0;">{{ ruler7 }}</figure>
+      </div>
+    </section>
+
+    <!-- 7 comparison -->
+    <section style="margin-bottom:72px;">
+      <div style="display:flex;gap:18px;align-items:baseline;margin-bottom:8px;">
+        <span style="flex:none;width:46px;height:46px;border-radius:999px;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-size:22px;display:grid;place-items:center;">5</span>
+        <h2 style="font-size:34px;">Comparación de las tres especies</h2>
+      </div>
+      <div style="padding-left:64px;">
+        <p>Las tres fórmulas pueden compararse directamente. Cada tétrada se transforma en otra modificando <strong>una sola nota</strong>:</p>
+        <div style="display:flex;flex-wrap:wrap;gap:16px;margin:22px 0;">{{ speciesCards }}</div>
+        <div style="display:flex;flex-direction:column;gap:14px;margin:20px 0;">
+          <figure style="margin:0;"><figcaption style="margin:0 0 8px;font-size:13px;">De <strong>Cmaj7</strong> a <strong>C7</strong>: baja la 7ª un semitono (B → B♭)</figcaption>{{ transf1 }}</figure>
+          <figure style="margin:0;"><figcaption style="margin:0 0 8px;font-size:13px;">De <strong>C7</strong> a <strong>Cm7</strong>: baja la 3ª un semitono (E → E♭)</figcaption>{{ transf2 }}</figure>
+        </div>
+        <div class="card" style="background:var(--color-surface);"><p style="margin:0;">Esta comparación permite comprender las fórmulas como variaciones de una misma arquitectura, no como estructuras aisladas que deban memorizarse por separado.</p></div>
+      </div>
+    </section>
+
+    <!-- 8 function -->
+    <section style="margin-bottom:72px;">
+      <div style="display:flex;gap:18px;align-items:baseline;margin-bottom:8px;">
+        <span style="flex:none;width:46px;height:46px;border-radius:999px;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-size:22px;display:grid;place-items:center;">6</span>
+        <h2 style="font-size:34px;">Tipo de acorde y función armónica</h2>
+      </div>
+      <div style="padding-left:64px;">
+        <p>La expresión <strong>séptima dominante</strong> describe una estructura (1 – 3 – 5 – ♭7). Sin embargo, la <strong>función dominante</strong> depende del contexto tonal. Dentro de C mayor, G es el quinto grado, así que <strong>G7</strong> funciona como <strong>V7</strong> y conduce habitualmente hacia C. En cambio, <strong>F7</strong> tiene la misma estructura pero funciona como dominante de B♭, no de F.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:14px;margin:18px 0;">
+          <div class="card elev-sm" style="flex:1;min-width:240px;border-left:6px solid var(--color-accent);"><div class="card-title">En C mayor</div><p class="card-body" style="opacity:1;">Quinto grado: <strong>G</strong> → V7 = <strong>G – B – D – F</strong> → resuelve <strong>G7 → C</strong></p></div>
+          <div class="card elev-sm" style="flex:1;min-width:240px;border-left:6px solid var(--color-accent-2);"><div class="card-title">En F mayor</div><p class="card-body" style="opacity:1;">Quinto grado: <strong>C</strong> → V7 = <strong>C – E – G – B♭</strong> → resuelve <strong>C7 → F</strong></p></div>
+        </div>
+        <p>Para encontrar el V7 de una tonalidad mayor: localiza su quinto grado, construye sobre él una tríada mayor y añade la séptima menor.</p>
+      </div>
+    </section>
+
+    <!-- 9 tritono -->
+    <section style="margin-bottom:72px;">
+      <div style="display:flex;gap:18px;align-items:baseline;margin-bottom:8px;">
+        <span style="flex:none;width:46px;height:46px;border-radius:999px;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-size:22px;display:grid;place-items:center;">7</span>
+        <h2 style="font-size:34px;">El tritono del acorde V7</h2>
+      </div>
+      <div style="padding-left:64px;">
+        <p>El acorde V7 contiene un intervalo especialmente importante entre su <strong>tercera</strong> y su <strong>séptima</strong>. En G7 (G – B – D – F), ese intervalo es <strong>B – F</strong>: seis semitonos, equivalentes a tres tonos completos. Recibe el nombre de <strong>tritono</strong>.</p>
+        <figure class="chap-scroll" style="overflow-x:auto;margin:24px 0;">{{ tritono }}</figure>
+        <p>Escrito de B a F es una <strong>quinta disminuida</strong>; escrito de F a B, una <strong>cuarta aumentada</strong>. Ambos contienen seis semitonos. Dentro de la armonía tonal, el tritono de V7 crea una tensión característica que favorece la resolución hacia la tónica.</p>
+      </div>
+    </section>
+
+    <!-- 10 resolucion -->
+    <section style="margin-bottom:72px;">
+      <div style="display:flex;gap:18px;align-items:baseline;margin-bottom:8px;">
+        <span style="flex:none;width:46px;height:46px;border-radius:999px;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-size:22px;display:grid;place-items:center;">8</span>
+        <h2 style="font-size:34px;">Resolución de V7 hacia I</h2>
+      </div>
+      <div style="padding-left:64px;">
+        <p>En C mayor, las dos notas del tritono de G7 realizan movimientos de semitono hacia el acorde de C: la tensión <strong>B – F</strong> se transforma en la tercera mayor <strong>C – E</strong>.</p>
+        <figure class="chap-scroll" style="overflow-x:auto;margin:24px 0;">{{ resGC }}</figure>
+        <p><strong>B</strong> es el séptimo grado de C mayor y se llama <strong>sensible</strong> porque está un semitono por debajo de la tónica: tiende a subir a C. <strong>F</strong> es la séptima de G7 y suele descender a E. Estas resoluciones son tendencias características de la armonía tonal, no leyes obligatorias para todos los estilos.</p>
+      </div>
+    </section>
+
+    <!-- 11 F mayor -->
+    <section style="margin-bottom:72px;">
+      <div style="display:flex;gap:18px;align-items:baseline;margin-bottom:8px;">
+        <span style="flex:none;width:46px;height:46px;border-radius:999px;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-size:22px;display:grid;place-items:center;">9</span>
+        <h2 style="font-size:34px;">Aplicación en F mayor</h2>
+      </div>
+      <div style="padding-left:64px;">
+        <p>La escala de F mayor contiene un bemol: F – G – A – B♭ – C – D – E – F. Su sexto grado es <strong>D</strong>, así que su relativa menor es <strong>D menor</strong>. Sobre el primer grado, la séptima diatónica forma <strong>Fmaj7</strong> = F – A – C – E. Su quinto grado es <strong>C</strong>, y sobre él se construye el V7:</p>
+        <figure class="chap-scroll" style="overflow-x:auto;margin:22px 0;">{{ resCF }}</figure>
+        <p>El tritono de C7 aparece entre <strong>E</strong> y <strong>B♭</strong>. Su resolución característica hacia F es E → F (sube un semitono) y B♭ → A (baja un semitono). El movimiento completo es <strong>C7 → F</strong>, es decir <strong>V7 → I</strong>.</p>
+      </div>
+    </section>
+
+    <!-- 12 RETO -->
+    <section style="margin-bottom:40px;">
+      <div style="display:flex;gap:18px;align-items:baseline;margin-bottom:8px;">
+        <span style="flex:none;width:46px;height:46px;border-radius:999px;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-size:22px;display:grid;place-items:center;">10</span>
+        <h2 style="font-size:34px;">Reto práctico</h2>
+      </div>
+      <div style="padding-left:64px;">
+        <p>Trabajaremos dentro de la tonalidad de <strong>F mayor</strong> (F – G – A – B♭ – C – D – E – F). Las cuatro partes se construyen unas sobre otras: cada una se desbloquea al resolver la anterior.</p>
+        {{ reto }}
+
+        <sc-if value="{{ revealed }}" hint-placeholder-val="{{ false }}">
+          <div style="animation:revealUp .4s ease;margin-top:36px;padding-top:8px;border-top:1px solid var(--color-divider);">
+            <h3 style="color:var(--color-accent-700);">Solución</h3>
+            <p><strong>Parte 1.</strong> El sexto grado de F mayor es <strong>D</strong>; su relativa menor es <strong>D menor</strong>, con escala natural D – E – F – G – A – B♭ – C – D. F mayor y D menor comparten la misma armadura: un B♭.</p>
+            <p style="margin-top:16px;"><strong>Parte 2.</strong> Aplicando la fórmula Maj7 (1 – 3 – 5 – 7) desde F: <strong>Fmaj7 = F – A – C – E</strong>.</p>
+            <figure class="chap-scroll" style="overflow-x:auto;margin:18px 0;">{{ rulerFmaj7 }}</figure>
+            <p style="margin-top:16px;"><strong>Parte 3.</strong> El quinto grado de F mayor es <strong>C</strong>. Aplicando la fórmula de séptima dominante: <strong>C7 = C – E – G – B♭</strong>. El tritono se forma entre <strong>E</strong> y <strong>B♭</strong>.</p>
+            <figure class="chap-scroll" style="overflow-x:auto;margin:18px 0;">{{ rulerC7 }}</figure>
+            <p style="margin-top:16px;"><strong>Parte 4.</strong> Las notas del tritono resuelven por semitono: E → F y B♭ → A. Por tanto <strong>C7 → F</strong> (V7 → I).</p>
+            <figure class="chap-scroll" style="overflow-x:auto;margin:18px 0;">{{ resCF2 }}</figure>
+            <div class="card" style="background:var(--color-accent-100);">
+              <p style="margin:0;">Has conectado cuatro conceptos dentro de una misma tonalidad: F mayor ↔ D menor natural, Fmaj7 = F–A–C–E, C7 = C–E–G–B♭ y la resolución C7 → F. En el siguiente capítulo aplicaremos estas estructuras a progresiones con séptimas, bajos e inversiones, observando cómo cada voz contribuye al movimiento armónico.</p>
+            </div>
+          </div>
+        </sc-if>
+      </div>
+    </section>
+
+
+  </article>
+</div>
+</x-dc>
+<div class="course-end">
+    <div class="hr" style="margin:48px 0 24px;"></div>
+    <div class="course-complete">
+      <button type="button" class="btn btn-secondary" data-course-complete="4" aria-pressed="false">Marcar como completado</button>
+      <span class="course-complete-status">Cuando termines, marca el capítulo para ver tu avance en el inicio.</span>
+    </div>
+    <nav class="course-pager" aria-label="Capítulos" style="margin-top:20px;">
+      <a class="btn btn-secondary" href="./Capitulo%203%20-%20La%20Conexion%20Inteligente.dc.html">Anterior</a>
+      <a class="btn btn-ghost" href="./index.html">Inicio</a>
+      <a class="btn btn-primary" href="./Capitulo%205%20-%20La%20Geometria%20de%20la%20Resolucion.dc.html">Siguiente · Capítulo 5</a>
+    </nav>
+    <footer style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;color:var(--color-neutral-600);font-size:13px;margin-top:24px;">
+      <span>El Código del Piano — Capítulo 4</span>
+    </footer>
+</div>
+<script src="./course.js"></script>
+<script type="text/x-dc" data-dc-script data-props="{}">
+class Component extends DCLogic {
+  state = { ans:Array(14).fill(''), status:Array(14).fill(''), level:1, revealed:false };
+
+  get COL(){ return {
+    bg:'var(--color-bg)', surf:'var(--color-surface)', text:'var(--color-text)', div:'var(--color-divider)',
+    ac:'var(--color-accent)', ac2:'var(--color-accent-2)',
+    n100:'var(--color-neutral-100)', n200:'var(--color-neutral-200)', n300:'var(--color-neutral-300)', n600:'var(--color-neutral-600)', n700:'var(--color-neutral-700)', n900:'var(--color-neutral-900)',
+    a100:'var(--color-accent-100)', a200:'var(--color-accent-200)', a400:'var(--color-accent-400)', a500:'var(--color-accent-500)', a700:'var(--color-accent-700)', a800:'var(--color-accent-800)',
+    s100:'var(--color-accent-2-100)', s200:'var(--color-accent-2-200)', s400:'var(--color-accent-2-400)', s500:'var(--color-accent-2-500)', s700:'var(--color-accent-2-700)', s800:'var(--color-accent-2-800)'
+  }; }
+  // chord-species colours, consistent across the chapter
+  tc(kind){ const C=this.COL;
+    if(kind==='maj7') return {b:C.a700,f:C.a200,badge:C.ac,deep:C.a800,tint:C.a100};
+    if(kind==='m7')   return {b:C.s700,f:C.s200,badge:C.ac2,deep:C.s800,tint:C.s100};
+    return {b:C.n700,f:C.n200,badge:C.n700,deep:C.n700,tint:C.n200}; // dom 7
+  }
+  roleCol(role){ const C=this.COL;
+    if(role==='fund') return {b:C.a700,f:C.a200};
+    if(role==='third') return {b:C.s700,f:C.s200};
+    if(role==='seventh') return {b:C.a700,f:C.a100};
+    return {b:C.n700,f:C.n200}; // fifth
+  }
+
+  // ===== RELATIVE-MINOR STRIP (shared notes, two tonics) =====
+  relStrip(notes, majTonic, minTonic){
+    const h=React.createElement, C=this.COL;
+    const bub=(n,i)=>{
+      const isMaj=n.name===majTonic, isMin=n.name===minTonic;
+      const b = isMaj?C.a700:isMin?C.s700:C.div;
+      const f = isMaj?C.a200:isMin?C.s200:C.surf;
+      return h('div',{key:i,style:{flex:'none',display:'flex',flexDirection:'column',alignItems:'center',gap:6}},[
+        h('div',{style:{width:60,height:60,borderRadius:999,display:'grid',placeItems:'center',background:f,border:'2px solid '+b,fontFamily:'var(--font-heading)',fontSize:22,color:C.text}}, n.name),
+        isMaj?h('span',{className:'tag tag-accent',style:{fontSize:10,whiteSpace:'nowrap'}},'tónica mayor · I')
+        : isMin?h('span',{className:'tag tag-accent-2',style:{fontSize:10,whiteSpace:'nowrap'}},'tónica menor · vi')
+        : h('span',{style:{fontSize:10,color:C.n600}}, n.deg||'')
+      ]);
+    };
+    return h('div',{style:{display:'flex',gap:12,minWidth:'max-content',paddingBottom:4}}, notes.map(bub));
+  }
+
+  // ===== SCALE FORMULA BADGE (T/S) =====
+  scaleFormula(kind, seq){
+    const h=React.createElement, C=this.COL;
+    const col = kind==='mayor'?C.ac:C.ac2, tint=kind==='mayor'?C.a100:C.s100, deep=kind==='mayor'?C.a700:C.s700;
+    const pills=[];
+    seq.forEach((s,i)=>{
+      const isS=s==='S';
+      pills.push(h('span',{key:'p'+i,style:{width:34,height:34,borderRadius:999,display:'grid',placeItems:'center',fontFamily:'var(--font-heading)',fontSize:15,
+        background:isS?col:'transparent', color:isS?C.bg:C.text, border:'2px solid '+(isS?col:C.n300)}}, s));
+      if(i<seq.length-1) pills.push(h('span',{key:'d'+i,style:{color:C.n300}},'·'));
+    });
+    return h('div',{style:{display:'inline-flex',flexDirection:'column',gap:10,padding:'16px 20px',borderRadius:22,background:tint,border:'1px solid '+col}},[
+      h('span',{key:'k',style:{fontFamily:'var(--font-heading)',fontSize:13,letterSpacing:'.04em',textTransform:'uppercase',color:deep}}, 'Escala '+kind),
+      h('div',{key:'r',style:{display:'flex',alignItems:'center',gap:6,flexWrap:'wrap'}}, pills),
+      h('span',{key:'l',style:{fontSize:12,color:deep}}, 'los semitonos (S) están resaltados')
+    ]);
+  }
+
+  // ===== VERTICAL NOTE STACK =====
+  noteStack(notes, opts){ // notes grave->agudo [{name,func,role,added}]
+    const h=React.createElement, C=this.COL; opts=opts||{};
+    const bubbles=notes.map((nt,i)=>{
+      const rc=this.roleCol(nt.role);
+      return h('div',{key:i,style:{display:'flex',alignItems:'center',gap:10}},[
+        h('div',{style:{width:58,height:58,borderRadius:999,display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',background:rc.f,border:(nt.added?'2px dashed '+rc.b:'2px solid '+rc.b),color:C.text}},[
+          h('span',{key:'n',style:{fontFamily:'var(--font-heading)',fontSize:20,lineHeight:1}}, nt.name),
+          h('span',{key:'f',style:{fontSize:10,marginTop:1,color:rc.b}}, nt.func)
+        ]),
+        nt.added?h('span',{className:'tag tag-accent',style:{fontSize:10}},'+ 3ª'):h('span',{style:{width:44}})
+      ]);
+    });
+    return h('div',{style:{display:'flex',flexDirection:'column-reverse',gap:8}}, bubbles);
+  }
+  triadTo7(){
+    const h=React.createElement, C=this.COL;
+    const triad=this.noteStack([{name:'C',func:'1',role:'fund'},{name:'E',func:'3',role:'third'},{name:'G',func:'5',role:'fifth'}]);
+    const seventh=this.noteStack([{name:'C',func:'1',role:'fund'},{name:'E',func:'3',role:'third'},{name:'G',func:'5',role:'fifth'},{name:'B',func:'7',role:'seventh',added:true}]);
+    const col=(title,node)=>h('div',{className:'card elev-sm',style:{flex:'none',alignItems:'center',gap:10,padding:'18px 22px'}},[
+      h('span',{key:'t',className:'card-kicker'}, title), node
+    ]);
+    return h('div',{style:{display:'flex',alignItems:'center',gap:18,minWidth:'max-content'}},[
+      col('Tríada · 1-3-5', triad),
+      h('span',{key:'a',style:{fontSize:26,color:C.a700}},'→'),
+      col('Séptima · 1-3-5-7', seventh)
+    ]);
+  }
+
+  // ===== SEVENTH SPECIES CARDS =====
+  speciesCards(){
+    const h=React.createElement, C=this.COL;
+    const data=[
+      {k:'maj7',name:'Maj7',formula:'1 – 3 – 5 – 7',fromRoot:'0 – 4 – 7 – 11',between:'4 + 3 + 4',ex:'C – E – G – B'},
+      {k:'m7',name:'m7',formula:'1 – ♭3 – 5 – ♭7',fromRoot:'0 – 3 – 7 – 10',between:'3 + 4 + 3',ex:'C – E♭ – G – B♭'},
+      {k:'dom',name:'7',formula:'1 – 3 – 5 – ♭7',fromRoot:'0 – 4 – 7 – 10',between:'4 + 3 + 3',ex:'C – E – G – B♭'}
+    ];
+    const row=(lbl,val,c)=>h('div',{style:{display:'flex',justifyContent:'space-between',gap:12,fontSize:13}},[
+      h('span',{style:{color:C.n600}}, lbl), h('span',{style:{fontFamily:'var(--font-heading)',color:c}}, val)
+    ]);
+    return data.map((d,i)=>{ const t=this.tc(d.k);
+      return h('div',{key:i,style:{flex:'1',minWidth:210,display:'flex',flexDirection:'column',gap:10,padding:'18px 20px',borderRadius:22,background:t.tint,border:'2px solid '+t.b}},[
+        h('span',{key:'n',style:{fontFamily:'var(--font-heading)',fontSize:28,color:t.deep}}, d.name),
+        h('div',{key:'b',style:{display:'flex',flexDirection:'column',gap:6}},[
+          row('Fórmula',d.formula,t.deep),
+          row('Desde la fund.',d.fromRoot,C.text),
+          row('Entre notas',d.between,C.text)
+        ]),
+        h('div',{key:'e',style:{marginTop:2,padding:'8px 12px',borderRadius:14,background:C.bg,fontFamily:'var(--font-heading)',fontSize:15,textAlign:'center'}}, 'C'+(d.name==='7'?'7':d.name.toLowerCase())+' = '+d.ex)
+      ]);
+    });
+  }
+
+  // ===== TRANSFORM ROW (one note changes) =====
+  transform(fromN, toN, changedIdx){
+    const h=React.createElement, C=this.COL;
+    const row=(notes,dim)=>h('div',{style:{display:'flex',gap:8,alignItems:'center'}}, notes.map((n,i)=>{
+      const on=i===changedIdx;
+      return h('div',{key:i,style:{width:52,height:52,borderRadius:999,display:'grid',placeItems:'center',background:on?(dim?C.n200:C.a200):C.surf,border:'2px solid '+(on?(dim?C.n700:C.a700):C.div),fontFamily:'var(--font-heading)',fontSize:18,color:C.text}}, n);
+    }));
+    return h('div',{style:{display:'flex',alignItems:'center',gap:16,flexWrap:'wrap'}},[
+      row(fromN,true),
+      h('span',{key:'a',style:{color:C.a700,fontFamily:'var(--font-heading)',fontSize:14,whiteSpace:'nowrap'}},'↓ 1 semitono →'),
+      row(toN,false)
+    ]);
+  }
+
+  // ===== NUMBERED 12-STEP RULER =====
+  ruler(cells, arcs, tint){
+    const h=React.createElement, C=this.COL; tint=tint||this.tc('maj7');
+    const w=54, gap=6, pitch=w+gap, arcZone=(arcs&&arcs.length)?52:14;
+    const totalW=cells.length*pitch-gap;
+    const cols=cells.map((cell,i)=>{
+      const on=!!cell.chord;
+      const badge = on? h('div',{style:{minWidth:30,height:22,padding:'0 7px',borderRadius:999,background:tint.badge,color:C.bg,fontFamily:'var(--font-heading)',fontSize:11,display:'grid',placeItems:'center',whiteSpace:'nowrap'}}, cell.chord) : h('div',{style:{height:22}});
+      const key=h('div',{style:{width:w,height:60,borderRadius:12,display:'grid',placeItems:'center',background:on?tint.f:(cell.sharp?C.n900:C.surf),border:on?('3px solid '+tint.b):('1px solid '+C.div),color:(cell.sharp&&!on)?'#fff':C.text,fontFamily:'var(--font-heading)',fontSize:cell.name.length>2?11:16,textAlign:'center'}}, cell.name);
+      const isZero=i===0;
+      const num=h('div',{style:{display:'flex',flexDirection:'column',alignItems:'center',gap:3}},[
+        h('div',{style:{width:22,height:22,borderRadius:999,display:'grid',placeItems:'center',fontFamily:'var(--font-heading)',fontSize:12,background:isZero?C.ac:C.n200,color:isZero?C.bg:C.n700}}, i),
+        isZero?h('span',{style:{fontSize:8,color:C.a700,fontWeight:700,width:60,textAlign:'center',lineHeight:1.1}},'punto de partida'):null
+      ]);
+      return h('div',{key:i,style:{width:w,display:'flex',flexDirection:'column',alignItems:'center',gap:7}}, [badge,key,num]);
+    });
+    let svg=null;
+    if(arcs&&arcs.length){ const P=[],L=[];
+      arcs.forEach((a,i)=>{ const x1=a.from*pitch+w/2, x2=a.to*pitch+w/2, mid=(x1+x2)/2, yB=arcZone-4, yT=8;
+        P.push(h('path',{key:'p'+i,d:`M ${x1} ${yB} Q ${mid} ${yT} ${x2} ${yB}`,fill:'none',stroke:tint.b,strokeWidth:2,strokeLinecap:'round'}));
+        L.push(h('text',{key:'t'+i,x:mid,y:yT+2,textAnchor:'middle',fontSize:11,fontFamily:'var(--font-body)',fontWeight:700,fill:tint.deep}, a.label));
+      });
+      svg=h('svg',{width:totalW,height:arcZone,style:{position:'absolute',top:0,left:0,overflow:'visible'}},[...P,...L]);
+    }
+    return h('div',{style:{position:'relative',width:totalW,minWidth:'max-content',paddingTop:arcs&&arcs.length?arcZone-8:0,paddingBottom:16}}, [svg, h('div',{key:'r',style:{display:'flex',gap:gap}}, cols)]);
+  }
+  cCells(kind){
+    const base=['C','C\u266f','D','D\u266f','E','F','F\u266f','G','G\u266f','A','A\u266f','B'];
+    const cells=base.map(n=>({name:n,sharp:n.length>1}));
+    cells[0].chord='1'; cells[7].chord='5';
+    if(kind==='maj7'){ cells[4].chord='3'; cells[11].chord='7'; }
+    else if(kind==='m7'){ cells[3]={name:'E\u266d',sharp:true,chord:'b3'}; cells[10]={name:'B\u266d',sharp:true,chord:'b7'}; }
+    else { cells[4].chord='3'; cells[10]={name:'B\u266d',sharp:true,chord:'b7'}; }
+    return cells;
+  }
+  fCells(){ // Fmaj7 : root F
+    const base=['F','F\u266f/G\u266d','G','G\u266f/A\u266d','A','A\u266f/B\u266d','B','C','C\u266f/D\u266d','D','D\u266f/E\u266d','E'];
+    const cells=base.map(n=>({name:n,sharp:n.length>2}));
+    cells[0].chord='1'; cells[4].chord='3'; cells[7].chord='5'; cells[11].chord='7';
+    return cells;
+  }
+
+  // ===== TRITONE KEYBOARD =====
+  kbFrag(whites, active, labels, arc){
+    const h=React.createElement, C=this.COL;
+    const whiteW=64, kbH=150, bw=whiteW*0.58, zone=54;
+    const cen={}, bkeys=[];
+    const SHARP={C:1,D:1,F:1,G:1,A:1};
+    whites.forEach((L,i)=>{ cen[L]=i*whiteW+whiteW/2; });
+    for(let i=0;i<whites.length-1;i++){ if(SHARP[whites[i]]){ const t=whites[i]+'\u266f'; cen[t]=(i+1)*whiteW; bkeys.push({t,x:(i+1)*whiteW}); } }
+    const totalW=whites.length*whiteW;
+    const wEls=whites.map((L,i)=>{ const a=active[L];
+      const f=a==='tri'?C.a200:a==='chord'?C.n200:'#fffdf8', b=a==='tri'?C.a700:a==='chord'?C.n700:C.div;
+      return h('div',{key:'w'+i,style:{position:'absolute',top:zone,left:i*whiteW,width:whiteW-3,height:kbH,background:f,border:'1px solid '+b,borderTop:'none',borderRadius:'0 0 8px 8px',display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'flex-end',paddingBottom:8}},[
+        h('span',{key:'n',style:{fontFamily:'var(--font-heading)',fontSize:18}}, L),
+        labels[L]?h('span',{key:'f',style:{fontSize:10,color:a==='tri'?C.a700:C.n600}}, labels[L]):null
+      ]);
+    });
+    const bEls=bkeys.map((b,i)=>h('div',{key:'b'+i,style:{position:'absolute',top:zone,left:b.x-bw/2,width:bw,height:kbH*0.6,background:C.n900,borderRadius:'0 0 6px 6px',zIndex:2}}));
+    let svg=null;
+    if(arc){ const x1=cen[arc.from], x2=cen[arc.to], mid=(x1+x2)/2, yB=zone-2, yT=6;
+      svg=h('svg',{width:totalW,height:zone,style:{position:'absolute',top:0,left:0,overflow:'visible'}},[
+        h('path',{key:'p',d:`M ${x1} ${yB} Q ${mid} ${yT} ${x2} ${yB}`,fill:'none',stroke:C.a700,strokeWidth:2.5,strokeLinecap:'round',strokeDasharray:'1 7'}),
+        h('text',{key:'t',x:mid,y:yT+1,textAnchor:'middle',fontSize:12,fontFamily:'var(--font-body)',fontWeight:700,fill:C.a700}, arc.label)
+      ]);
+    }
+    return h('div',{style:{position:'relative',width:totalW,height:zone+kbH,minWidth:'max-content'}}, [svg,...wEls,...bEls]);
+  }
+
+  // ===== RESOLUTION (voice arrows) =====
+  movePill(k,amt){
+    const h=React.createElement, C=this.COL;
+    const glyph=k==='up'?'↑':'↓'; const col=C.a500,tint=C.a100,deep=C.a700;
+    return h('div',{style:{display:'flex',flexDirection:'column',alignItems:'center',width:'100%'}},[
+      h('div',{key:'l',style:{width:'100%',height:2,background:C.n300}}),
+      h('div',{key:'p',style:{marginTop:-13,padding:'4px 10px',borderRadius:999,background:tint,border:'1px solid '+col,color:deep,fontFamily:'var(--font-heading)',fontSize:12,whiteSpace:'nowrap'}}, glyph+' '+amt)
+    ]);
+  }
+  resolution(labelA, labelB, rows){
+    const h=React.createElement, C=this.COL;
+    const cw=64, cc=118, lw=90;
+    const header=h('div',{key:'h',style:{display:'flex',alignItems:'center',marginBottom:8}},[
+      h('div',{style:{width:lw,flex:'none'}}),
+      h('div',{style:{width:cw,flex:'none',display:'flex',justifyContent:'center'}}, h('span',{className:'tag tag-neutral',style:{fontFamily:'var(--font-heading)'}}, labelA)),
+      h('div',{style:{width:cc,flex:'none'}}),
+      h('div',{style:{width:cw,flex:'none',display:'flex',justifyContent:'center'}}, h('span',{className:'tag tag-neutral',style:{fontFamily:'var(--font-heading)'}}, labelB))
+    ]);
+    const bubble=(n,tri)=>h('div',{style:{width:56,height:56,borderRadius:999,display:'grid',placeItems:'center',background:tri?C.a200:C.surf,border:'2px solid '+(tri?C.a700:C.div),fontFamily:'var(--font-heading)',fontSize:20}}, n);
+    const rowEl=(r,i)=>h('div',{key:i,style:{display:'flex',alignItems:'center',margin:'8px 0'}},[
+      h('div',{style:{width:lw,flex:'none',fontSize:12,color:r.tri?C.a700:C.n600,fontFamily:'var(--font-heading)'}}, r.tag||''),
+      h('div',{style:{width:cw,flex:'none',display:'flex',justifyContent:'center'}}, bubble(r.from,r.tri)),
+      h('div',{style:{width:cc,flex:'none'}}, this.movePill(r.k,r.amt)),
+      h('div',{style:{width:cw,flex:'none',display:'flex',justifyContent:'center'}}, bubble(r.to,r.tri))
+    ]);
+    return h('div',{style:{minWidth:'max-content',paddingBottom:6}}, [header, ...rows.map(rowEl)]);
+  }
+
+  // ===== INTERACTIVE RETO (sequential) =====
+  get ACC(){ return [
+    ['d','re'],                                   //0 sexto grado
+    ['dmenor','remenor','dm','rem'],              //1 relativa menor
+    ['defgabbcd','defgabbc'],                     //2 escala
+    ['a','la'],                                   //3 3ª
+    ['c','do'],                                   //4 5ª
+    ['e','mi'],                                   //5 7ª
+    ['c','do'],                                   //6 quinto grado
+    ['c7','do7'],                                 //7 V7
+    ['cegbb'],                                    //8 notas C7
+    ['e','mi'],                                   //9 tritono A
+    ['bb','sib'],                                 //10 tritono B
+    ['e','mi'],                                   //11 res: ? -> F
+    ['a','la'],                                   //12 res: Bb -> ?
+    ['c7','do7']                                  //13 progresion V7
+  ]; }
+  get PARTS(){ return [[0,1,2],[3,4,5],[6,7,8,9,10],[11,12,13]]; }
+  setAns(i,v){ const a=this.state.ans.slice(); a[i]=v; this.setState({ans:a}); }
+  norm(s){ return String(s||'').trim().toLowerCase().replace(/[\u266f]/g,'#').replace(/[\u266d]/g,'b').replace('sostenido','#').replace('bemol','b').replace(/[\s\-–,]/g,''); }
+  checkPart(p){
+    const idx=this.PARTS[p]; const st=this.state.status.slice();
+    let ok=true;
+    idx.forEach(i=>{ const good=this.ACC[i].includes(this.norm(this.state.ans[i])); st[i]=good?'ok':(this.state.ans[i]?'no':''); if(!good) ok=false; });
+    const level = ok? Math.max(this.state.level,p+2) : this.state.level;
+    this.setState({status:st, level});
+  }
+  reveal(){ this.setState({ans:['D','D menor','D–E–F–G–A–B♭–C–D','A','C','E','C','C7','C–E–G–B♭','E','B♭','E','A','C7'],status:Array(14).fill('ok'),level:5,revealed:true}); }
+  reset(){ this.setState({ans:Array(14).fill(''),status:Array(14).fill(''),level:1,revealed:false}); }
+
+  field(idx,label,ph,w){
+    const h=React.createElement, C=this.COL, st=this.state.status[idx];
+    const bd=st==='ok'?C.s500:st==='no'?C.ac:C.div, bg=st==='ok'?C.s100:st==='no'?C.a100:C.surf;
+    return h('div',{key:idx,className:'field',style:{width:w||150}},[
+      h('label',{key:'l'}, label),
+      h('input',{key:'i',className:'input',value:this.state.ans[idx],placeholder:ph||'',onChange:e=>this.setAns(idx,e.target.value),style:{background:bg,borderColor:bd}})
+    ]);
+  }
+  partBlock(p, tagText, tagCls, title, fields){
+    const h=React.createElement, C=this.COL;
+    const locked = this.state.level < p+1;
+    const idx=this.PARTS[p];
+    const done = idx.every(i=>this.state.status[i]==='ok');
+    const body = locked
+      ? h('div',{style:{display:'flex',alignItems:'center',gap:10,color:C.n600,padding:'8px 0'}},[
+          h('span',{style:{fontSize:18}},'🔒'),
+          h('span',{}, 'Resuelve la parte anterior para desbloquear.')
+        ])
+      : h('div',{},[
+          h('div',{key:'f',style:{display:'flex',flexWrap:'wrap',gap:14}}, fields),
+          h('button',{key:'b',className:'btn btn-secondary',style:{marginTop:14},onClick:()=>this.checkPart(p)}, 'Comprobar parte '+(p+1)),
+          done?h('span',{key:'ok',style:{marginLeft:12,color:C.s700,fontWeight:600}},'✓ Correcto'):null
+        ]);
+    return h('div',{key:p,className:'card',style:{background:locked?C.n100:C.surf,gap:10,opacity:locked?.7:1}},[
+      h('div',{key:'t',style:{display:'flex',gap:10,alignItems:'center'}},[
+        h('span',{className:'tag '+tagCls}, tagText),
+        h('span',{style:{fontFamily:'var(--font-heading)',fontSize:17}}, title)
+      ]),
+      body
+    ]);
+  }
+  retoBlock(){
+    const h=React.createElement, C=this.COL;
+    const parts=[
+      this.partBlock(0,'Parte 1','tag-accent','Encuentra la relativa menor',[
+        this.field(0,'Sexto grado de F','',150),
+        this.field(1,'Relativa menor','p. ej. D menor',170),
+        this.field(2,'Escala menor natural','D – E – F …',280)
+      ]),
+      this.partBlock(1,'Parte 2','tag-accent','Construye Fmaj7 (1 – 3 – 5 – 7)',[
+        this.field(3,'Tercera mayor','',130),
+        this.field(4,'Quinta justa','',130),
+        this.field(5,'Séptima mayor','',130)
+      ]),
+      this.partBlock(2,'Parte 3','tag-neutral','Construye el V7 de F mayor',[
+        this.field(6,'Quinto grado','',130),
+        this.field(7,'Acorde V7','p. ej. C7',130),
+        this.field(8,'Notas','C – E – G – B♭',200),
+        this.field(9,'Tritono · nota 1','',130),
+        this.field(10,'Tritono · nota 2','',130)
+      ]),
+      this.partBlock(3,'Parte 4','tag-accent-2','Resuelve V7 → I',[
+        this.field(11,'La nota que sube a F','',160),
+        this.field(12,'B♭ baja a…','',150),
+        this.field(13,'Progresión (V7)','p. ej. C7',150)
+      ])
+    ];
+    const allOk=this.state.status.every(s=>s==='ok');
+    return h('div',{style:{margin:'16px 0 8px'}},[
+      h('div',{key:'parts',style:{display:'flex',flexDirection:'column',gap:14}}, parts),
+      h('div',{key:'btns',style:{display:'flex',gap:10,flexWrap:'wrap',marginTop:16}},[
+        h('button',{key:'r',className:'btn btn-primary',onClick:()=>this.reveal()},'Revelar solución completa'),
+        h('button',{key:'x',className:'btn btn-ghost',onClick:()=>this.reset()},'Reiniciar')
+      ]),
+      allOk?h('p',{key:'m',style:{marginTop:12,fontWeight:600,color:C.s700}},'¡Correcto! F mayor ↔ D menor · Fmaj7 = F–A–C–E · C7 = C–E–G–B♭ · C7 → F.'):null
+    ]);
+  }
+
+  renderVals(){
+    const shared=['C','D','E','F','G','A','B'].map(n=>({name:n}));
+    const sharedG=['G','A','B','C','D','E','F\u266f'].map(n=>({name:n}));
+    return {
+      revealed: this.state.revealed,
+      relCA: this.relStrip(shared,'C','A'),
+      relGE: this.relStrip(sharedG,'G','E'),
+      scaleMajBadge: this.scaleFormula('mayor',['T','T','S','T','T','T','S']),
+      scaleMinBadge: this.scaleFormula('menor',['T','S','T','T','S','T','T']),
+      triadTo7: this.triadTo7(),
+      speciesCards: this.speciesCards(),
+      rulerMaj7: this.ruler(this.cCells('maj7'), [{from:0,to:4,label:'+4'},{from:4,to:7,label:'+3'},{from:7,to:11,label:'+4'}], this.tc('maj7')),
+      rulerM7: this.ruler(this.cCells('m7'), [{from:0,to:3,label:'+3'},{from:3,to:7,label:'+4'},{from:7,to:10,label:'+3'}], this.tc('m7')),
+      ruler7: this.ruler(this.cCells('dom'), [{from:0,to:4,label:'+4'},{from:4,to:7,label:'+3'},{from:7,to:10,label:'+3'}], this.tc('dom')),
+      transf1: this.transform(['C','E','G','B'],['C','E','G','B\u266d'],3),
+      transf2: this.transform(['C','E','G','B\u266d'],['C','E\u266d','G','B\u266d'],1),
+      tritono: this.kbFrag(['G','A','B','C','D','E','F'], {G:'chord',B:'tri',D:'chord',F:'tri'}, {G:'1',B:'3',D:'5',F:'♭7'}, {from:'B',to:'F',label:'tritono · 6 semitonos · 3 tonos'}),
+      resGC: this.resolution('G7','C',[
+        {from:'F',to:'E',k:'down',amt:'1 semitono',tri:true,tag:'séptima'},
+        {from:'B',to:'C',k:'up',amt:'1 semitono',tri:true,tag:'sensible'}
+      ]),
+      resCF: this.resolution('C7','F',[
+        {from:'B\u266d',to:'A',k:'down',amt:'1 semitono',tri:true,tag:'séptima'},
+        {from:'E',to:'F',k:'up',amt:'1 semitono',tri:true,tag:'sensible'}
+      ]),
+      rulerFmaj7: this.ruler(this.fCells(), [{from:0,to:4,label:'+4'},{from:4,to:7,label:'+3'},{from:7,to:11,label:'+4'}], this.tc('maj7')),
+      rulerC7: this.ruler(this.cCells('dom'), [{from:0,to:4,label:'+4'},{from:4,to:7,label:'+3'},{from:7,to:10,label:'+3'}], this.tc('dom')),
+      resCF2: this.resolution('C7','F',[
+        {from:'B\u266d',to:'A',k:'down',amt:'1 semitono',tri:true,tag:'séptima'},
+        {from:'E',to:'F',k:'up',amt:'1 semitono',tri:true,tag:'sensible'}
+      ]),
+      reto: this.retoBlock()
+    };
+  }
+}
+</script>
+</body>
+</html>
