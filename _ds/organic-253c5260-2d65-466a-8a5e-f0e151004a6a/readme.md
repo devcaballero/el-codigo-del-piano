@@ -1,6 +1,6 @@
 # Organic design system
 
-Organic is warm, rounded and a little playful: a cream-and-sand ground with a terracotta accent and a sage second accent, Caprasimo display headings over Figtree, 16px radii that grow into pills and soft circular shapes. Photographs are washed so they sit back into the warm page instead of on top of it.
+Organic is warm, rounded and a little playful: a cream-and-sand ground with a terracotta accent and a sage second accent, Caprasimo for large titles and Fraunces for smaller chrome over Figtree body, 16px radii that grow into pills and soft circular shapes. Photographs are washed so they sit back into the warm page instead of on top of it.
 
 ## How to use this
 
@@ -19,7 +19,7 @@ A light ground (`--color-bg` #f5ead8) with `--color-text` #201e1d and two accent
 
 ## Type
 
-Caprasimo for headings over Figtree for body text, loaded as `--font-heading` / `--font-body`. Density 1.10× and radius 16px are already baked into the `--space-*` / `--radius-*` scales — use the variables, not raw numbers.
+Caprasimo (`--font-display`) for large titles (h1–h3) and Fraunces (`--font-heading`, weight 500) for smaller chrome — nav brand, buttons, step numbers, card titles, tags — over Figtree body. On solid accent fills use `--color-on-accent` (ink) instead of cream so small type stays readable. Density 1.10× and radius 16px are already baked into the `--space-*` / `--radius-*` scales — use the variables, not raw numbers.
 
 ## Icons
 
@@ -43,7 +43,7 @@ Interactive states are themed, never browser defaults: give every interactive el
 | `.hr` | A horizontal rule — present, but this system prefers whitespace; avoid it | — |
 | `.washed` | The image wrapper — every content photograph goes through it | foundations/image.html |
 
-States are built in: hovers and pressed states come from the accent ramp, keyboard focus is the 2px accent `:focus-visible` ring, `::selection` is an accent tint, and disabled controls drop to 45% opacity. Don't restyle them per page. The accent-to-ground pair is tuned to at least 3:1 — enough for icons, large text and interface chrome, not for body copy — so for paragraph-size text in the accent use a deep ramp step (`--color-accent-700` on this ground) rather than the accent itself.
+States are built in: hovers and pressed states come from the accent ramp, keyboard focus is the 2px accent `:focus-visible` ring, `::selection` is an accent tint, and disabled controls drop to 45% opacity. Don't restyle them per page. The accent-to-ground pair is tuned to at least 3:1 — enough for icons, large text and interface chrome, not for body copy — so for paragraph-size text in the accent use a deep ramp step (`--color-accent-700` / `--color-accent-800` on this ground) rather than the accent itself. For text sitting on a solid accent fill (step numbers, primary buttons), use `--color-on-accent` on `--color-accent-fill` (a lighter step) rather than cream on the base accent.
 
 ## Do
 
@@ -56,7 +56,7 @@ States are built in: hovers and pressed states come from the accent ramp, keyboa
 
 - Do not draw sharp corners or hairline-only geometry.
 - Do not desaturate the palette into greys — warmth is the point.
-- Do not use condensed or geometric display faces; Caprasimo is the only display voice.
+- Do not use condensed or geometric display faces; Caprasimo (large) and Fraunces (small chrome) are the only display voices.
 - Do not crowd elements; the rounded shapes need air to read as soft.
 
 ## Files

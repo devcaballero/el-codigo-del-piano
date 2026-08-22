@@ -1,5 +1,5 @@
 /* Organic — design-system tokens and component classes. This file is the source of truth for the system's look; retune it here and see readme.md. */
-@import url('https://fonts.googleapis.com/css2?family=Caprasimo:wght@400&family=Figtree:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Figtree:wght@400;600;700&display=swap');
 
 :root {
   --color-bg: #f5ead8;
@@ -8,6 +8,10 @@
   --color-accent: #c67139;
   --color-accent-2: #7a8a5e;
   --color-divider: color-mix(in srgb, #201e1d 16%, transparent);
+  /* Ink on solid accent fills — cream washes out Caprasimo/small type. */
+  --color-on-accent: #201e1d;
+  /* Lighter fill so dark ink keeps contrast (pair with --color-on-accent). */
+  --color-accent-fill: var(--color-accent-400);
 
   /* Tonal ramps — generated in OKLCH on one shared lightness scale, so the
      same step of any role matches the others in visual value. */
@@ -41,8 +45,11 @@
   --color-accent-2-800: #3d472b;
   --color-accent-2-900: #272e1b;
 
-  --font-heading: "Caprasimo", system-ui, sans-serif;
-  --font-heading-weight: 400;
+  /* Caprasimo = large display; Fraunces = smaller chrome / UI labels. */
+  --font-display: "Caprasimo", Georgia, "Times New Roman", serif;
+  --font-display-weight: 400;
+  --font-heading: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-heading-weight: 500;
   --font-body: "Figtree", system-ui, sans-serif;
 
   --space-1: 4.4px;
@@ -68,7 +75,7 @@ body {
   color: var(--color-text);
   font-family: var(--font-body);
 }
-h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: var(--font-heading-weight); }
+h1, h2, h3 { font-family: var(--font-display); font-weight: var(--font-display-weight); }
 
 .washed{filter:saturate(0.6) contrast(0.85) brightness(1.1) opacity(0.94)}
 
@@ -80,8 +87,13 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: var(--font-headi
 
 *, *::before, *::after { box-sizing: border-box; }
 body { margin: 0; font-size: 15px; line-height: 1.55; font-weight: 400; }
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3 {
+  font-family: var(--font-display); font-weight: var(--font-display-weight);
+  line-height: 1.12; letter-spacing: -0.015em; margin: 0 0 var(--space-2);
+}
+h4, h5, h6 {
   font-family: var(--font-heading); font-weight: var(--font-heading-weight);
+  font-optical-sizing: auto;
   line-height: 1.12; letter-spacing: -0.015em; margin: 0 0 var(--space-2);
 }
 h1 { font-size: 42px; }
@@ -123,9 +135,9 @@ figcaption {
 }
 .btn svg { display: block; }
 .btn:disabled { opacity: 0.45; cursor: not-allowed; }
-.btn-primary { background: var(--color-accent); color: var(--color-bg); }
-.btn-primary:hover { background: var(--color-accent-600); }
-.btn-primary:active { background: var(--color-accent-700); }
+.btn-primary { background: var(--color-accent-fill); color: var(--color-on-accent); }
+.btn-primary:hover { background: var(--color-accent-500); }
+.btn-primary:active { background: var(--color-accent-600); }
 .btn-secondary { border-color: var(--color-divider); }
 .btn-secondary:hover { background: color-mix(in srgb, var(--color-text) 7%, transparent); }
 .btn-secondary:active { background: color-mix(in srgb, var(--color-text) 14%, transparent); }
@@ -172,7 +184,7 @@ textarea.input { min-height: 90px; resize: vertical; }
   padding: 7px 12px; font-size: 13px; cursor: pointer;
 }
 .seg-opt + .seg-opt { border-left: 1px solid var(--color-divider); }
-.seg-opt:has(input:checked) { background: var(--color-accent); color: var(--color-bg); }
+.seg-opt:has(input:checked) { background: var(--color-accent-fill); color: var(--color-on-accent); }
 .seg-opt:not(:has(input:checked)):hover { background: color-mix(in srgb, var(--color-text) 7%, transparent); }
 .seg-opt:has(input:focus-visible) { outline: 2px solid var(--color-accent); outline-offset: -2px; }
 
@@ -214,10 +226,20 @@ textarea.input { min-height: 90px; resize: vertical; }
 }
 .nav-brand {
   font-family: var(--font-heading); font-weight: var(--font-heading-weight);
+  font-optical-sizing: auto;
   font-size: 18px; margin-right: auto;
+  color: var(--color-accent-800);
 }
 .nav a { color: inherit; text-decoration: none; font-size: 14px; }
 .nav a:hover, .nav a[aria-current='page'] { color: var(--color-accent); }
+.nav a.nav-brand,
+.nav a.nav-brand:hover,
+.nav a.nav-brand[aria-current='page'] {
+  color: var(--color-accent-800);
+}
+.nav a.nav-brand:hover {
+  color: var(--color-accent-900);
+}
 
 /* — tables — */
 .table { width: 100%; border-collapse: collapse; font-size: 14px; }

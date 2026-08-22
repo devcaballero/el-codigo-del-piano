@@ -27,8 +27,8 @@
         "message": "Raw px value — use a design-system spacing token via var()."
       },
       {
-        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Caprasimo|Figtree))/i]",
-        "message": "Font not provided by the design system. Available: Caprasimo, Figtree."
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Caprasimo|Fraunces|Figtree))/i]",
+        "message": "Font not provided by the design system. Available: Caprasimo, Fraunces, Figtree."
       }
     ]
   },
@@ -76,9 +76,13 @@
       "--color-neutral-700",
       "--color-neutral-800",
       "--color-neutral-900",
+      "--color-on-accent",
+      "--color-accent-fill",
       "--color-surface",
       "--color-text",
       "--font-body",
+      "--font-display",
+      "--font-display-weight",
       "--font-heading",
       "--font-heading-weight",
       "--radius-lg",
@@ -98,6 +102,8 @@
       "--color-bg": "color",
       "--color-surface": "color",
       "--color-text": "font",
+      "--color-on-accent": "color",
+      "--color-accent-fill": "color",
       "--color-accent": "color",
       "--color-accent-2": "color",
       "--color-divider": "color",
@@ -128,6 +134,8 @@
       "--color-accent-2-700": "color",
       "--color-accent-2-800": "color",
       "--color-accent-2-900": "color",
+      "--font-display": "font",
+      "--font-display-weight": "font",
       "--font-heading": "font",
       "--font-heading-weight": "font",
       "--font-body": "font",
@@ -146,6 +154,7 @@
     },
     "fontFamilies": [
       "Caprasimo",
+      "Fraunces",
       "Figtree"
     ]
   }

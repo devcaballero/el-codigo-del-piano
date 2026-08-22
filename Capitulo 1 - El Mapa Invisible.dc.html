@@ -42,7 +42,7 @@
     <header style="padding:48px 0 24px;">
       <span class="tag tag-accent" style="margin-bottom:20px;">Capítulo 1</span>
       <h1 style="font-size:64px;line-height:1.02;margin:16px 0 10px;max-width:12ch;">El Mapa Invisible</h1>
-      <p style="font-size:22px;color:var(--color-accent-700);font-family:var(--font-heading);margin-bottom:28px;">Geografía, Distancias y la Fórmula Mayor</p>
+      <p style="font-size:22px;color:var(--color-accent-800);font-family:var(--font-heading);font-weight:var(--font-heading-weight);margin-bottom:28px;">Geografía, Distancias y la Fórmula Mayor</p>
       <p style="font-size:18px;max-width:60ch;">Bienvenido a tu primer recorrido por el piano. Aprender un instrumento requiere práctica, pero esa práctica se vuelve mucho más eficaz cuando comprendes la lógica que hay detrás de cada movimiento.</p>
       <p style="font-size:18px;max-width:60ch;">Como adulto, cuentas con una ventaja importante: puedes reconocer patrones, comparar estructuras y relacionar conceptos nuevos con conocimientos anteriores. En esta guía no te limitarás a memorizar posiciones. Aprenderás a deducirlas.</p>
     </header>
@@ -52,7 +52,7 @@
     <!-- SECTION 1 -->
     <section style="margin-bottom:72px;">
       <div style="display:flex;gap:18px;align-items:baseline;margin-bottom:8px;">
-        <span style="flex:none;width:46px;height:46px;border-radius:999px;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-size:22px;display:grid;place-items:center;">1</span>
+        <span style="flex:none;width:46px;height:46px;border-radius:999px;background:var(--color-accent-fill);color:var(--color-on-accent);font-family:var(--font-heading);font-size:22px;display:grid;place-items:center;">1</span>
         <h2 style="font-size:34px;">El teclado como mapa visual</h2>
       </div>
       <div style="padding-left:64px;">
@@ -70,7 +70,7 @@
     <!-- SECTION 2 -->
     <section style="margin-bottom:72px;">
       <div style="display:flex;gap:18px;align-items:baseline;margin-bottom:8px;">
-        <span style="flex:none;width:46px;height:46px;border-radius:999px;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-size:22px;display:grid;place-items:center;">2</span>
+        <span style="flex:none;width:46px;height:46px;border-radius:999px;background:var(--color-accent-fill);color:var(--color-on-accent);font-family:var(--font-heading);font-size:22px;display:grid;place-items:center;">2</span>
         <h2 style="font-size:34px;">Geografía del teclado: el patrón de las teclas negras</h2>
       </div>
       <div style="padding-left:64px;">
@@ -105,7 +105,7 @@
     <!-- SECTION 3 -->
     <section style="margin-bottom:72px;">
       <div style="display:flex;gap:18px;align-items:baseline;margin-bottom:8px;">
-        <span style="flex:none;width:46px;height:46px;border-radius:999px;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-size:22px;display:grid;place-items:center;">3</span>
+        <span style="flex:none;width:46px;height:46px;border-radius:999px;background:var(--color-accent-fill);color:var(--color-on-accent);font-family:var(--font-heading);font-size:22px;display:grid;place-items:center;">3</span>
         <h2 style="font-size:34px;">Las distancias básicas: semitono y tono</h2>
       </div>
       <div style="padding-left:64px;">
@@ -138,7 +138,7 @@
     <!-- SECTION 4 -->
     <section style="margin-bottom:72px;">
       <div style="display:flex;gap:18px;align-items:baseline;margin-bottom:8px;">
-        <span style="flex:none;width:46px;height:46px;border-radius:999px;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-size:22px;display:grid;place-items:center;">4</span>
+        <span style="flex:none;width:46px;height:46px;border-radius:999px;background:var(--color-accent-fill);color:var(--color-on-accent);font-family:var(--font-heading);font-size:22px;display:grid;place-items:center;">4</span>
         <h2 style="font-size:34px;">La fórmula de la escala mayor</h2>
       </div>
       <div style="padding-left:64px;">
@@ -159,7 +159,7 @@
     <!-- SECTION 5 -->
     <section style="margin-bottom:40px;">
       <div style="display:flex;gap:18px;align-items:baseline;margin-bottom:8px;">
-        <span style="flex:none;width:46px;height:46px;border-radius:999px;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-size:22px;display:grid;place-items:center;">5</span>
+        <span style="flex:none;width:46px;height:46px;border-radius:999px;background:var(--color-accent-fill);color:var(--color-on-accent);font-family:var(--font-heading);font-size:22px;display:grid;place-items:center;">5</span>
         <h2 style="font-size:34px;">Reto práctico: deduce la escala de Sol mayor</h2>
       </div>
       <div style="padding-left:64px;">
@@ -231,8 +231,8 @@ class Component extends DCLogic {
   get NAMES(){ return {C:'Do',D:'Re',E:'Mi',F:'Fa',G:'Sol',A:'La',B:'Si'}; }
   get SHARP(){ return {C:true,D:true,E:false,F:true,G:true,A:true,B:false}; }
   get COL(){ return {
-    bg:'var(--color-bg)', surf:'var(--color-surface)', text:'var(--color-text)', div:'var(--color-divider)',
-    ac:'var(--color-accent)', ac2:'var(--color-accent-2)',
+    bg:'var(--color-bg)', onAc:'var(--color-on-accent)', surf:'var(--color-surface)', text:'var(--color-text)', div:'var(--color-divider)',
+    ac:'var(--color-accent)', acFill:'var(--color-accent-fill)', ac2:'var(--color-accent-2)',
     n100:'var(--color-neutral-100)', n200:'var(--color-neutral-200)', n300:'var(--color-neutral-300)', n600:'var(--color-neutral-600)', n900:'var(--color-neutral-900)',
     a100:'var(--color-accent-100)', a200:'var(--color-accent-200)', a300:'var(--color-accent-300)', a400:'var(--color-accent-400)', a500:'var(--color-accent-500)', a700:'var(--color-accent-700)', a800:'var(--color-accent-800)',
     s100:'var(--color-accent-2-100)', s200:'var(--color-accent-2-200)', s400:'var(--color-accent-2-400)', s500:'var(--color-accent-2-500)', s700:'var(--color-accent-2-700)', s800:'var(--color-accent-2-800)'
@@ -366,7 +366,7 @@ class Component extends DCLogic {
       const isT = iv==='T';
       return h('div',{key:'iv'+i,style:{flex:'none',width:56,display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'flex-start',paddingTop:18}},[
         h('div',{key:'l',style:{width:'100%',height:2,background:C.n300,position:'relative',top:6}}),
-        h('div',{key:'p',style:{marginTop:0,width:26,height:26,borderRadius:999,display:'grid',placeItems:'center',fontFamily:'var(--font-heading)',fontSize:13,color:C.bg,background:isT?C.ac2:C.ac,zIndex:1,position:'relative'}}, iv)
+        h('div',{key:'p',style:{marginTop:0,width:26,height:26,borderRadius:999,display:'grid',placeItems:'center',fontFamily:'var(--font-heading)',fontSize:13,color:C.onAc,background:isT?C.ac2:C.acFill,zIndex:1,position:'relative'}}, iv)
       ]);
     };
     const row=[];
@@ -382,7 +382,7 @@ class Component extends DCLogic {
     const items=seq.map((s,i)=>{
       const isT=s==='T';
       return h('div',{key:i,style:{display:'flex',flexDirection:'column',alignItems:'center',gap:mini?0:6}},[
-        h('div',{key:'p',style:{width:mini?36:48,height:mini?36:48,borderRadius:999,display:'grid',placeItems:'center',fontFamily:'var(--font-heading)',fontSize:mini?16:22,color:C.bg,background:isT?C.ac2:C.ac}}, s),
+        h('div',{key:'p',style:{width:mini?36:48,height:mini?36:48,borderRadius:999,display:'grid',placeItems:'center',fontFamily:'var(--font-heading)',fontSize:mini?16:22,color:C.onAc,background:isT?C.ac2:C.acFill}}, s),
         mini?null:h('span',{key:'l',style:{fontSize:11,color:isT?C.s700:C.a700}}, long[i])
       ]);
     });
