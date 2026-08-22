@@ -458,7 +458,7 @@ class Component extends DCLogic {
         const out=[h('div',{key:'b'+i,style:{width:cw,flex:'none',display:'flex',flexDirection:'column',alignItems:'center',gap:4}},[
           h('div',{style:{position:'relative',width:R,height:R}},[
             h('div',{key:'d',style:{width:R,height:R,borderRadius:999,display:'grid',placeItems:'center',background:f,border:(isRoot?'3px solid ':'2px solid ')+b,fontFamily:'var(--font-heading)',fontSize:20}}, nt),
-            isRoot?h('span',{key:'st',style:{position:'absolute',top:-8,right:-8,width:20,height:20,borderRadius:999,background:C.ac2,color:C.onAc,fontSize:12,display:'grid',placeItems:'center'}},'★'):null
+            isRoot?h('span',{key:'st',style:{position:'absolute',top:-8,right:-8,width:20,height:20,borderRadius:999,background:C.ac2,color:C.bg,fontSize:12,display:'grid',placeItems:'center'}},'★'):null
           ]),
           v.funcs?h('span',{style:{fontSize:11,color:isRoot?C.s700:C.n600,fontWeight:isRoot?700:400}}, v.funcs[i]):null
         ])];
