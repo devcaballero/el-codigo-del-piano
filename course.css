@@ -82,7 +82,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin: 8px 0 28px;
+  margin: var(--space-4) 0 0;
 }
 
 .course-num {
@@ -98,6 +98,16 @@
   font-size: 22px;
   display: grid;
   place-items: center;
+  text-decoration: none;
+}
+
+a.course-num:hover {
+  background: var(--color-accent-500);
+  color: var(--color-on-accent);
+}
+
+a.course-num:active {
+  background: var(--color-accent-600);
 }
 
 .course-num-sm {
